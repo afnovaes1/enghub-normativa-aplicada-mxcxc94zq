@@ -667,6 +667,109 @@ const nbr5410Blocks = {
   },
 }
 
+const nbr5626Blocks = {
+  ondeEntra: {
+    title: 'Onde entra na obra',
+    bullets: [
+      'projeto hidráulico',
+      'distribuição de água',
+      'reservação',
+      'pressões no sistema',
+      'execução das tubulações',
+    ],
+    takeaway: 'hidráulica mal resolvida não falha na obra — falha no uso',
+  },
+  controle: {
+    title: 'O que realmente controla',
+    bullets: ['pressão', 'vazão', 'estanqueidade', 'funcionamento simultâneo', 'durabilidade'],
+    takeaway: 'água não respeita projeto — segue caminho físico',
+  },
+  erros: {
+    title: 'Onde todo mundo erra',
+    bullets: [
+      'Subdimensionar tubulação',
+      'Ignorar perdas de carga',
+      'Não considerar uso simultâneo',
+      'Execução sem controle',
+      'Falta de setorização',
+    ],
+    takeaway: 'hidráulica não perdoa erro de dimensionamento',
+  },
+  consequencias: {
+    title: 'O que acontece quando erra',
+    bullets: [
+      'baixa pressão nos pontos',
+      'variação de vazão',
+      'vazamentos',
+      'infiltrações',
+      'ruídos na tubulação',
+      'desgaste prematuro',
+    ],
+    takeaway: 'o problema não aparece no teste — aparece no uso real',
+  },
+  praticas: {
+    title: 'Como fazer certo na prática',
+    bullets: [
+      'dimensionar considerando perdas reais',
+      'prever uso simultâneo',
+      'garantir pressões adequadas',
+      'executar com controle rigoroso',
+      'testar sistema antes da entrega',
+      'prever manutenção',
+    ],
+  },
+  insights: {
+    title: 'Insights rápidos de decisão',
+    insights: [
+      {
+        name: 'Pressão',
+        description:
+          'não é constante mas varia com altura e uso; pode ser insuficiente ou excessiva',
+      },
+      {
+        name: 'Vazão',
+        description:
+          'não é só volume mas depende do sistema como um todo; simultaneidade muda completamente o cenário',
+      },
+      {
+        name: 'Tubulação',
+        description: 'não é só diâmetro mas percurso influencia; conexões impactam diretamente',
+      },
+      {
+        name: 'Reservação',
+        description:
+          'não é só capacidade mas influencia pressão e funcionamento; mal dimensionada compromete tudo',
+      },
+    ],
+    takeaway: 'água não “aceita” erro — ela evidencia',
+  },
+  perito: {
+    title: 'Visão de perito',
+    bullets: [
+      'infiltração raramente é onde aparece',
+      'origem costuma estar distante',
+      'muitos problemas são de execução mas nascem no dimensionamento',
+      'ausência de testes e registros é comum e fragiliza qualquer análise',
+      'sistema hidráulico é interdependente',
+      'erro local afeta o todo',
+    ],
+    takeaway: 'água percorre — o problema também',
+  },
+  aprofundamentos: {
+    title: 'Aprofundamentos',
+    links: [
+      'Perda de carga na prática',
+      'Pressão insuficiente: causas reais',
+      'Uso simultâneo: como impacta',
+      'Vazamentos ocultos',
+      'Ruídos em tubulação',
+      'Reservatórios: impacto no sistema',
+      'Execução hidráulica: onde se erra',
+      'Como testar corretamente',
+    ],
+  },
+}
+
 export const normas: Norma[] = [
   {
     id: '6122',
@@ -713,9 +816,9 @@ export const normas: Norma[] = [
   {
     id: '5626',
     code: 'NBR 5626',
-    title: 'Sistemas Prediais de Água Fria e Quente',
+    title: 'INSTALAÇÕES PREDIAIS DE ÁGUA FRIA (versão EngHub — padrão aplicado)',
     category: 'Instalações',
-    blocks: { ...baseBlocks },
+    blocks: nbr5626Blocks,
   },
 ]
 
