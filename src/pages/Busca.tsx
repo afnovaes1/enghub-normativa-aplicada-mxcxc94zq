@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Input } from '@/components/ui/input'
-import { Search, History, TrendingUp, BookOpen, AlertTriangle, Link2 } from 'lucide-react'
+import { Search, History, TrendingUp, BookOpen, AlertTriangle, Link2, Activity } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import { normas, problemas } from '@/lib/data'
+import { normas, problemas, diagnosticos } from '@/lib/data'
 
 export default function Busca() {
   const [query, setQuery] = useState('')
@@ -56,6 +56,19 @@ export default function Busca() {
               code: a.normaCode,
               type: 'aprofundamento' as const,
               path: `/normas/${a.normaId}/aprofundamentos/${a.id}`,
+            })),
+          ...diagnosticos
+            .filter(
+              (d) =>
+                d.title.toLowerCase().includes(query.toLowerCase()) ||
+                d.oQueEstaAcontecendo.toLowerCase().includes(query.toLowerCase()),
+            )
+            .map((d) => ({
+              id: d.id,
+              title: d.title,
+              code: 'Caso Clínico',
+              type: 'diagnóstico' as const,
+              path: `/diagnostico/${d.id}`,
             })),
         ]
       : []
@@ -131,7 +144,9 @@ export default function Busca() {
                       ? 'bg-enghub-orange/10'
                       : item.type === 'aprofundamento'
                         ? 'bg-enghub-teal/10'
-                        : 'bg-enghub-navy/10'
+                        : item.type === 'diagnóstico'
+                          ? 'bg-enghub-teal/10'
+                          : 'bg-enghub-navy/10'
                   }`}
                 >
                   {item.type === 'problema' && (
@@ -139,6 +154,7 @@ export default function Busca() {
                   )}
                   {item.type === 'aprofundamento' && <Link2 className="w-6 h-6 text-enghub-teal" />}
                   {item.type === 'norma' && <BookOpen className="w-6 h-6 text-enghub-navy" />}
+                  {item.type === 'diagnóstico' && <Activity className="w-6 h-6 text-enghub-teal" />}
                 </div>
                 <div>
                   <div className="flex items-center gap-2 mb-1.5">

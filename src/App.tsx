@@ -11,6 +11,8 @@ import NormaDetail from './pages/NormaDetail'
 import AprofundamentoDetail from './pages/AprofundamentoDetail'
 import Problemas from './pages/Problemas'
 import ProblemaDetail from './pages/ProblemaDetail'
+import DiagnosticoList from './pages/DiagnosticoList'
+import DiagnosticoDetail from './pages/DiagnosticoDetail'
 import Busca from './pages/Busca'
 import NotFound from './pages/NotFound'
 
@@ -28,6 +30,8 @@ const App = () => (
           <Route path="/normas/:id/aprofundamentos/:aprofId" element={<AprofundamentoDetail />} />
           <Route path="/problemas" element={<Problemas />} />
           <Route path="/problemas/:id" element={<ProblemaDetail />} />
+          <Route path="/diagnostico" element={<DiagnosticoList />} />
+          <Route path="/diagnostico/:id" element={<DiagnosticoDetail />} />
           <Route path="/busca" element={<Busca />} />
         </Route>
         <Route path="*" element={<NotFound />} />

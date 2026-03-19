@@ -1,5 +1,5 @@
 import { Outlet, Link, useLocation } from 'react-router-dom'
-import { Home, BookOpen, AlertTriangle, Search, User, HardHat } from 'lucide-react'
+import { Home, BookOpen, AlertTriangle, Search, User, HardHat, Activity } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 export default function Layout() {
@@ -17,6 +17,7 @@ export default function Layout() {
   const navItems = [
     { label: 'Home', path: '/home', icon: Home },
     { label: 'Normas', path: '/normas', icon: BookOpen },
+    { label: 'Diagnóstico', path: '/diagnostico', icon: Activity },
     { label: 'Erros', path: '/problemas', icon: AlertTriangle },
     { label: 'Busca', path: '/busca', icon: Search },
   ]
@@ -65,7 +66,7 @@ export default function Layout() {
         </main>
       </div>
 
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 h-[4.5rem] bg-enghub-navy-dark flex items-center justify-around px-2 shadow-[0_-4px_20px_rgba(0,0,0,0.2)] z-20 pb-2">
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 h-[4.5rem] bg-enghub-navy-dark flex items-center justify-around px-1 shadow-[0_-4px_20px_rgba(0,0,0,0.2)] z-20 pb-2">
         {navItems.map((item) => {
           const isActive = location.pathname.startsWith(item.path)
           return (
@@ -73,19 +74,21 @@ export default function Layout() {
               key={item.path}
               to={item.path}
               className={cn(
-                'flex flex-col items-center justify-center w-16 h-full gap-1 transition-all',
+                'flex flex-col items-center justify-center w-full max-w-[4.5rem] h-full gap-1 transition-all',
                 isActive ? 'text-white' : 'text-enghub-skyblue',
               )}
             >
               <div
                 className={cn(
-                  'p-1.5 rounded-lg transition-colors',
+                  'p-1.5 rounded-lg transition-colors flex items-center justify-center',
                   isActive && 'bg-enghub-navy shadow-sm',
                 )}
               >
                 <item.icon className="w-5 h-5 text-enghub-orange" />
               </div>
-              <span className="text-[10px] font-medium tracking-wide">{item.label}</span>
+              <span className="text-[9px] font-medium tracking-wide truncate w-full text-center px-0.5">
+                {item.label}
+              </span>
             </Link>
           )
         })}

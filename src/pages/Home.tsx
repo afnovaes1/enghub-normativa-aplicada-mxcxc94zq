@@ -1,4 +1,4 @@
-import { Search, BookOpen, AlertTriangle, Lightbulb } from 'lucide-react'
+import { Search, BookOpen, AlertTriangle, Lightbulb, Activity } from 'lucide-react'
 import { Link, useNavigate } from 'react-router-dom'
 
 export default function Home() {
@@ -34,6 +34,21 @@ export default function Home() {
         </Link>
 
         <Link
+          to="/diagnostico"
+          className="md:col-span-2 bg-enghub-beige p-6 rounded-2xl shadow-md hover:shadow-lg flex flex-col items-center md:flex-row md:justify-center md:text-left text-center gap-5 transition-all active:scale-[0.98] duration-200 border-b-4 border-enghub-teal"
+        >
+          <div className="bg-enghub-teal/10 p-4 rounded-2xl shrink-0">
+            <Activity className="w-10 h-10 text-enghub-teal" />
+          </div>
+          <div>
+            <div className="font-bold text-enghub-navy text-2xl">Diagnóstico e Estratégias</div>
+            <div className="text-sm text-enghub-navy/70 font-medium mt-1">
+              [Estudos de caso reais e estratégias independentes de normas]
+            </div>
+          </div>
+        </Link>
+
+        <Link
           to="/problemas"
           className="bg-enghub-beige p-5 rounded-2xl shadow-sm hover:shadow-md flex items-center gap-4 transition-all active:scale-[0.98] duration-200"
         >
@@ -49,8 +64,8 @@ export default function Home() {
           to="/busca"
           className="bg-enghub-beige p-5 rounded-2xl shadow-sm hover:shadow-md flex items-center gap-4 transition-all active:scale-[0.98] duration-200"
         >
-          <div className="bg-enghub-orange/10 p-3 rounded-xl">
-            <Search className="w-5 h-5 text-enghub-orange" />
+          <div className="bg-enghub-navy/5 p-3 rounded-xl">
+            <Search className="w-5 h-5 text-enghub-navy" />
           </div>
           <div>
             <div className="font-bold text-enghub-navy text-base">Busca Global</div>

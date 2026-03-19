@@ -1131,3 +1131,35 @@ export const getAprofundamento = (normaId: string, id: string): Aprofundamento |
     fechamento: detalhe.fechamento,
   }
 }
+
+export type Diagnostico = {
+  id: string
+  title: string
+  oQueEstaAcontecendo: string
+  oQueObservarEmCampo: string
+  leituraTecnica: string
+  hipotesesProvaveis: string
+  comoConfirmar: string
+  estrategiasTecnicas: string
+  erroComum: string
+  quandoSeTornaCritico: string
+  sinteseTecnica: string
+  baseTecnica: string
+}
+
+export const diagnosticos: Diagnostico[] = [
+  {
+    id: 'recalque-trinca-inclinada',
+    title: 'Recalque com trinca inclinada em alvenaria',
+    oQueEstaAcontecendo: '[Inserir descrição técnica do que está ocorrendo aqui]',
+    oQueObservarEmCampo: '[Inserir os sinais e evidências visuais a serem buscados na obra]',
+    leituraTecnica: '[Inserir a interpretação do comportamento estrutural/geotécnico]',
+    hipotesesProvaveis: '[Inserir as principais causas que podem estar gerando o problema]',
+    comoConfirmar: '[Inserir ensaios, medições ou análises para confirmar a causa]',
+    estrategiasTecnicas: '[Inserir as abordagens possíveis para solução ou mitigação]',
+    erroComum: '[Inserir o que profissionais geralmente erram ao lidar com isso]',
+    quandoSeTornaCritico: '[Inserir os sinais de que a situação exige ação imediata]',
+    sinteseTecnica: '[Inserir um resumo executivo para rápida tomada de decisão]',
+    baseTecnica: '[Inserir normas, referências e literatura técnica aplicável]',
+  },
+]
