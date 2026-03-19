@@ -810,58 +810,173 @@ export const normas: Norma[] = [
   },
 ]
 
-export const problemas = [
+export type Problema = {
+  id: string
+  title: string
+  contexto: string
+  naObra: string
+  causa: string
+  consequencia: string
+  comoLer: string
+  oQueFazer: string
+  normaId: string
+  normaCode: string
+  normaDisplay: string
+  fechamento: string
+  aprofundamentoId?: string
+}
+
+export const problemas: Problema[] = [
   {
-    id: '1',
-    title: 'Recalque Diferencial em Fundações Rasas',
-    description:
-      'Apoio de sapatas sobre solos de diferentes compressibilidades ou camadas mal compactadas.',
+    id: 'nbr6122-01',
+    title: 'ERRO QUE CUSTA CARO 01: Recalque diferencial em sapatas',
+    contexto:
+      'A fundação está se movimentando de forma desigual. Não é a estrutura que está falhando, é o solo respondendo de forma diferente sob cargas próximas. Sapata não “erra”. Ela responde ao que o solo entrega.',
+    naObra:
+      'trincas inclinadas em paredes; portas e esquadrias desalinhadas; fissuras que aumentam com o tempo; diferenças de nível entre pontos da edificação.',
     causa:
-      'Falta de investigação geotécnica adequada (sondagem) ou má interpretação do perfil do solo sob a área de influência do bulbo de tensões.',
+      'solo heterogêneo não identificado; SPT não interpretado corretamente; sapatas apoiadas em camadas com comportamento diferente; presença de água alterando resistência local; ausência de rigidez suficiente da estrutura.',
     consequencia:
-      'Fissuração em alvenarias (formato 45 graus), desaprumo da estrutura e, em casos graves, colapso parcial ou total da edificação.',
+      'fissuração progressiva; perda de funcionalidade da edificação; desvalorização do imóvel; necessidade de reforço de fundação; conflito técnico e jurídico.',
+    comoLer:
+      'não olhar apenas a trinca; identificar padrão de deformação; correlacionar com posição das sapatas; avaliar histórico (chuva, uso, tempo).',
+    oQueFazer:
+      'confirmar se o recalque está ativo; mapear deformações; investigar o solo sob cada apoio; avaliar necessidade de reforço de fundação; não tratar apenas o sintoma (trinca).',
     normaId: '6122',
     normaCode: 'NBR 6122',
+    normaDisplay: 'NBR 6122 — Fundações',
+    fechamento:
+      'trinca é aviso. recalque diferencial é a causa. ignorar isso só adia o problema — e encarece.',
     aprofundamentoId: 'recalque',
   },
   {
-    id: '2',
-    title: 'Fissuração por Falta de Armadura de Pele',
-    description:
-      'Vigas altas sem armadura lateral suficiente, gerando fissuras verticais e inclinadas no terço médio do vão.',
+    id: 'nbr6122-02',
+    title: 'ERRO QUE CUSTA CARO 02: SPT não converge e a decisão ignora isso',
+    contexto:
+      'Os furos de sondagem mostram comportamentos diferentes, mas a decisão de fundação trata o solo como se fosse uniforme. O dado está mostrando incerteza, o projeto está assumindo certeza.',
+    naObra:
+      'furos próximos com NSPT diferentes; camadas inconsistentes entre pontos; variação de resistência sem padrão claro; sondagem que “não fecha” quando analisada em conjunto.',
     causa:
-      'Detalhamento estrutural deficiente. Ignorar a exigência normativa para vigas com altura significativa.',
+      'leitura isolada de cada furo; escolha do cenário mais favorável; tentativa de simplificar o comportamento do solo; pressão por solução rápida ou econômica; ausência de análise crítica da sondagem.',
     consequencia:
-      'Abertura de fissuras que comprometem a durabilidade do concreto armado, facilitando a entrada de agentes agressivos e corrosão das armaduras.',
-    normaId: '6118',
-    normaCode: 'NBR 6118',
-    aprofundamentoId: 'fissuracao',
-  },
-  {
-    id: '3',
-    title: 'Subdimensionamento de Cargas de Uso',
-    description:
-      'Utilização de valores mínimos de tabela sem considerar o uso real (ex: estoques não previstos, equipamentos pesados).',
-    causa:
-      'Ausência de entrevista detalhada com o cliente sobre o uso futuro ou adoção preguiçosa de cargas padrão para economia de tempo.',
-    consequencia:
-      'Deformações excessivas (flechas), fissuração não prevista e necessidade de reforço estrutural de alto custo pós-ocupação.',
-    normaId: '6120',
-    normaCode: 'NBR 6120',
-    aprofundamentoId: 'carga-uso',
-  },
-  {
-    id: '4',
-    title: 'SPT não converge com o esperado',
-    description:
-      'Valores de NSPT que não apresentam crescimento lógico, indicando possíveis anomalias no subsolo que são frequentemente ignoradas.',
-    causa:
-      'Leitura automática do laudo de sondagem sem análise crítica do perfil geotécnico e do histórico da região.',
-    consequencia:
-      'Apoio de fundação profunda em camada de "falsa recusa" (ex: matacão), resultando em recalque severo ao atingir a camada de solo mole subjacente.',
+      'fundações apoiadas em condições diferentes; recalque diferencial; desempenho imprevisível; necessidade de reforço posterior; dificuldade de justify decisão técnica.',
+    comoLer:
+      'analisar os furos em conjunto, não isoladamente; alinhar cotas, não apenas profundidades; considerar variabilidade lateral do solo; identificar padrões ou ausência deles; assumir cenário crítico quando houver dúvida.',
+    oQueFazer:
+      'não escolher o furo mais favorável; não fazer média simplificada; considerar ampliar investigação, se necessário; ajustar solução de fundação à variabilidade; adotar abordagem mais conservadora.',
     normaId: '6122',
     normaCode: 'NBR 6122',
+    normaDisplay: 'NBR 6122 — Fundações',
+    fechamento:
+      'quando o SPT não converge, o risco está explícito. Ignorar isso é escolher não ver.',
     aprofundamentoId: 'spt-nao-converge',
+  },
+  {
+    id: 'nbr6122-03',
+    title: 'ERRO QUE CUSTA CARO 03: Radier adotado como solução universal',
+    contexto:
+      'O radier está sendo escolhido não porque é a melhor solução, mas porque “resolve tudo de uma vez”. Só que isso é percepção — não comportamento real.',
+    naObra:
+      'residências de pequeno e médio porte; terrenos com solo duvidoso; obras sem investigação aprofundada; substituição rápida de sapata por radier; decisões baseadas em custo ou praticidade.',
+    causa:
+      'ideia de que o radier “distribui tudo”; tentativa de simplificar o projeto; ausência de leitura crítica do solo; pressão por solução rápida; desconhecimento do comportamento do sistema.',
+    consequencia:
+      'recalques totais elevados; recalques diferenciais mesmo com radier; fissuração generalizada; perda de desempenho da edificação; dificuldade de correção posterior.',
+    comoLer:
+      'radier não aumenta capacidade do solo; apenas distribui carga; se o solo é ruim -> continua ruim; se é heterogêneo -> continua heterogêneo.',
+    oQueFazer:
+      'avaliar solo com profundidade, não superficialmente; entender deformabilidade (não só resistência); analisar sensibilidade ao recalque; considerar interação solo–estrutura; usar radier quando fizer sentido técnico, não por padrão.',
+    normaId: '6122',
+    normaCode: 'NBR 6122',
+    normaDisplay: 'NBR 6122 — Fundações',
+    fechamento:
+      'radier não é solução universal. Quando usado sem critério, ele só distribui o erro.',
+    aprofundamentoId: 'escolha-fundacao',
+  },
+  {
+    id: 'nbr6122-04',
+    title: 'ERRO QUE CUSTA CARO 04: Capacidade de carga superestimada por correlação simplificada',
+    contexto:
+      'A capacidade de carga está sendo estimada por correlação direta com NSPT sem considerar o tipo de solo, condição de saturação e mecanismo real de ruptura. O número aparece, mas o comportamento não foi entendido.',
+    naObra:
+      'dimensionamento rápido de sapatas; estimativa de carga em estacas; uso direto de tabelas “prontas”; decisões baseadas apenas em NSPT médio.',
+    causa:
+      'uso automático de fórmulas empíricas; falta de distinção entre tipos de solo; ignorar influência da água; não avaliar deformabilidade; ausência de verificação cruzada.',
+    consequencia:
+      'fundações trabalhando no limite real; recalques acima do previsto; perda de desempenho ao longo do tempo; reforços não planejados; dificuldade de justificar tecnicamente após falha.',
+    comoLer:
+      'NSPT não é capacidade de carga; é um indicativo — não uma resposta; solos iguais em NSPT podem ter comportamentos diferentes; solos secos e saturados respondem diferente; ruptura e deformação são coisas distintas.',
+    oQueFazer:
+      'usar correlação como ponto de partida, não como conclusão; identificar tipo de solo corretamente; considerar condição crítica (saturada); avaliar recalque além da ruptura; aplicar mais de um método (ex: Décourt-Quaresma, Aoki-Velloso); fazer “duplo check” antes de fechar a carga.',
+    normaId: '6122',
+    normaCode: 'NBR 6122',
+    normaDisplay: 'NBR 6122 — Fundações',
+    fechamento:
+      'quando a capacidade vem fácil demais, desconfie. Solo não é simples — o erro costuma ser.',
+    aprofundamentoId: 'capacidade-carga',
+  },
+  {
+    id: 'nbr6122-05',
+    title: 'ERRO QUE CUSTA CARO 05: Execução de estaca sem controle = capacidade fictícia',
+    contexto:
+      'A estaca foi dimensionada corretamente, mas a execução não garantiu que ela realmente existe como projetada. O projeto prevê uma capacidade, a obra entrega outra.',
+    naObra:
+      'estacas escavadas sem controle de verticalidade; variação de diâmetro ao longo do fuste; limpeza inadequada de fundo; concretagem com segregação ou falhas; ausência de registro executivo.',
+    causa:
+      'confiança excessiva na equipe executora; ausência de fiscalização técnica; tentativa de ganhar produtividade; falta de registro de execução; não verificação de parâmetros críticos.',
+    consequencia:
+      'capacidade de carga menor que a prevista; aumento de recalques; comportamento imprevisível; falhas localizadas difíceis de diagnosticar; necessidade de reforço posterior.',
+    comoLer:
+      'estaca não é o que foi projetado, é o que foi executado; pequenas falhas de execução -> grandes impactos; variação de diâmetro -> alteração direta na capacidade; falha de limpeza -> base comprometida.',
+    oQueFazer:
+      'registrar cada estaca executada; controlar profundidade, diâmetro e verticalidade; garantir limpeza de fundo; acompanhar concretagem; exigir relatório executivo completo; aplicar ensaios de verificação quando necessário.',
+    normaId: '6122',
+    normaCode: 'NBR 6122',
+    normaDisplay: 'NBR 6122 — Fundações',
+    fechamento: 'estaca sem controle não é fundação — é aposta.',
+    aprofundamentoId: 'escolha-fundacao',
+  },
+  {
+    id: 'nbr6122-06',
+    title: 'ERRO QUE CUSTA CARO 06: Falta de investigação adequada = decisão no escuro',
+    contexto:
+      'A fundação está sendo definida com base em informação insuficiente do solo. Não é que a decisão esteja errada, é que ela foi tomada sem base suficiente.',
+    naObra:
+      'número reduzido de furos de sondagem; ausência de sondagem em áreas críticas; extrapolação de dados entre pontos distantes; confiança em “experiência de obras próximas”; início de obra antes da investigação completa.',
+    causa:
+      'tentativa de reduzir custo inicial; pressão por prazo; excesso de confiança na experiência; subestimação da variabilidade do solo; desconhecimento do impacto da investigação.',
+    consequencia:
+      'escolha inadequada de fundação; recalques não previstos; necessidade de reforço; aumento de custo durante a obra; conflitos técnicos e jurídicos.',
+    comoLer:
+      'sondagem não é custo, é redução de incerteza; solo não é uniforme; pequenas distâncias podem ter grandes variações; decisão sem dado é suposição.',
+    oQueFazer:
+      'definir campanha de sondagem adequada ao porte da obra; investigar pontos críticos (cargas, divisas, cortes); não extrapolar dados sem critério; revisar solução após obtenção dos dados; considerar investigação complementar quando necessário.',
+    normaId: '6122',
+    normaCode: 'NBR 6122',
+    normaDisplay: 'NBR 6122 — Fundações',
+    fechamento: 'sem investigação, não existe projeto de fundação — existe tentativa com risco.',
+    aprofundamentoId: 'spt-pratica',
+  },
+  {
+    id: 'nbr6122-07',
+    title: 'ERRO QUE CUSTA CARO 07: Falta de registro técnico = perda de defesa',
+    contexto:
+      'As decisões foram tomadas e a obra executada, mas não existe registro técnico consistente. O problema não é só técnico, é ausência de evidência.',
+    naObra:
+      'ausência de relatório de sondagem formal anexado; falta de registro de alterações de projeto; inexistência de diário de obra técnico; execução sem documentação fotográfica adequada; decisões tomadas verbalmente.',
+    causa:
+      'subestimação da importância do registro; foco apenas na execução; falta de organização técnica; confiança excessiva entre as partes; ausência de cultura de rastreabilidade.',
+    consequencia:
+      'impossibilidade de comprovar decisões técnicas; perda de defesa em caso de litígio; responsabilização indevida; dificuldade de análise pericial; conflitos prolongados.',
+    comoLer:
+      'registro técnico não é burocracia, é instrumento de proteção; decisão sem registro -> vulnerável; execução sem evidência -> questionável; ausência de histórico -> interpretação livre de terceiros.',
+    oQueFazer:
+      'manter registro formal de premissas de projeto; documentar todas as alterações; registrar execução (fotos, relatórios, medições); manter rastreabilidade de decisões; organizar documentação técnica da obra.',
+    normaId: '6122',
+    normaCode: 'NBR 6122',
+    normaDisplay: 'NBR 6122 — Fundações (Complementar: NBR 13752:2024 – Perícias de Engenharia)',
+    fechamento: 'quem não registra o que fez, aceita que outros definam o que aconteceu.',
+    aprofundamentoId: 'registro-obra',
   },
 ]
 

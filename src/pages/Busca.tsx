@@ -39,7 +39,7 @@ export default function Busca() {
             .filter(
               (p) =>
                 p.title.toLowerCase().includes(query.toLowerCase()) ||
-                p.description.toLowerCase().includes(query.toLowerCase()),
+                p.contexto.toLowerCase().includes(query.toLowerCase()),
             )
             .map((p) => ({
               id: p.id,

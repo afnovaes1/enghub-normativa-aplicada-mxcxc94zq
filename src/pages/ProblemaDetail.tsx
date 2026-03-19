@@ -1,6 +1,6 @@
 import { useParams, useNavigate, Link } from 'react-router-dom'
-import { problemas, normas } from '@/lib/data'
-import { ArrowLeft, AlertTriangle, Info, Zap, BookOpen, ChevronRight } from 'lucide-react'
+import { problemas } from '@/lib/data'
+import { ArrowLeft, ChevronRight } from 'lucide-react'
 
 export default function ProblemaDetail() {
   const { id } = useParams()
@@ -13,8 +13,6 @@ export default function ProblemaDetail() {
     )
   }
 
-  const norma = normas.find((n) => n.id === problema.normaId)
-
   return (
     <div className="space-y-6 animate-slide-up">
       <button
@@ -25,25 +23,26 @@ export default function ProblemaDetail() {
       </button>
 
       <div className="pb-4 border-b border-enghub-navy-dark">
-        <div className="inline-flex items-center px-2.5 py-1 bg-enghub-orange/20 text-enghub-orange text-xs uppercase tracking-wider font-bold rounded-md mb-3 gap-1.5">
-          <AlertTriangle className="w-3.5 h-3.5" /> Erro Crítico
-        </div>
-        <h1 className="text-3xl font-bold text-enghub-beige tracking-tight leading-tight">
-          {problema.title}
+        <h1 className="text-2xl md:text-3xl font-bold text-enghub-beige tracking-tight leading-tight flex items-start gap-3">
+          <span className="text-2xl md:text-3xl mt-0.5">🚨</span>
+          <span>{problema.title}</span>
         </h1>
       </div>
 
       <div className="space-y-4 pt-2 pb-8">
-        <Section icon={Info} title="Descrição direta" content={problema.description} />
-        <Section icon={AlertTriangle} title="Causa provável" content={problema.causa} />
-        <Section icon={Zap} title="Consequência" content={problema.consequencia} />
+        <Section emoji="📍" title="O que está acontecendo" content={problema.contexto} />
+        <Section emoji="🔎" title="Onde isso aparece na obra" content={problema.naObra} />
+        <Section emoji="⚠️" title="Causa provável" content={problema.causa} />
+        <Section emoji="💥" title="Consequência" content={problema.consequencia} />
+        <Section emoji="🧠" title="Como ler isso corretamente" content={problema.comoLer} />
+        <Section emoji="🔧" title="O que fazer" content={problema.oQueFazer} />
 
-        <div className="bg-enghub-navy-dark p-5 md:p-6 rounded-2xl shadow-sm border-l-4 border-l-enghub-teal flex flex-col md:flex-row gap-5 mt-6">
-          <div className="shrink-0 w-12 h-12 rounded-xl flex items-center justify-center bg-enghub-teal/10">
-            <BookOpen className="w-6 h-6 text-enghub-teal" />
+        <div className="bg-enghub-navy-dark p-5 md:p-6 rounded-2xl shadow-sm border-l-4 border-l-enghub-teal flex flex-col md:flex-row gap-4 mt-6">
+          <div className="shrink-0 w-10 h-10 rounded-xl flex items-center justify-center bg-enghub-teal/10 text-xl">
+            🔗
           </div>
           <div className="pt-1 w-full">
-            <h3 className="font-bold text-enghub-beige text-lg mb-4">Referências Técnicas</h3>
+            <h3 className="font-bold text-enghub-beige text-[17px] mb-4">Referências Técnicas</h3>
             <div className="space-y-3">
               <Link
                 to={`/normas/${problema.normaId}`}
@@ -54,7 +53,7 @@ export default function ProblemaDetail() {
                     Norma Relacionada
                   </span>
                   <span className="text-enghub-beige text-sm font-bold">
-                    {norma?.code} - {norma?.title}
+                    {problema.normaDisplay}
                   </span>
                 </div>
                 <ChevronRight className="w-5 h-5 text-enghub-teal group-hover:translate-x-1 transition-transform shrink-0" />
@@ -79,19 +78,33 @@ export default function ProblemaDetail() {
             </div>
           </div>
         </div>
+
+        <div className="mt-6 bg-enghub-orange/10 border border-enghub-orange/20 p-5 md:p-6 rounded-2xl shadow-sm flex flex-col md:flex-row gap-4 items-start">
+          <div className="shrink-0 w-10 h-10 rounded-xl flex items-center justify-center bg-enghub-orange text-xl">
+            🔻
+          </div>
+          <div className="pt-1">
+            <h3 className="font-bold text-enghub-orange text-xs uppercase tracking-widest mb-1.5">
+              Fechamento
+            </h3>
+            <p className="text-enghub-beige font-bold text-[16px] leading-snug">
+              {problema.fechamento}
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   )
 }
 
-function Section({ icon: Icon, title, content }: { icon: any; title: string; content: string }) {
+function Section({ emoji, title, content }: { emoji: string; title: string; content: string }) {
   return (
-    <div className="bg-enghub-navy-dark p-5 md:p-6 rounded-2xl shadow-sm border-l-4 border-l-enghub-orange flex flex-col md:flex-row gap-5">
-      <div className="shrink-0 w-12 h-12 rounded-xl flex items-center justify-center bg-enghub-orange/10">
-        <Icon className="w-6 h-6 text-enghub-orange" />
+    <div className="bg-enghub-navy-dark p-5 md:p-6 rounded-2xl shadow-sm border-l-4 border-l-enghub-orange flex flex-col md:flex-row gap-4">
+      <div className="shrink-0 w-10 h-10 rounded-xl flex items-center justify-center bg-enghub-orange/10 text-xl">
+        {emoji}
       </div>
       <div className="pt-1">
-        <h3 className="font-bold text-enghub-beige text-lg mb-2">{title}</h3>
+        <h3 className="font-bold text-enghub-beige text-[17px] mb-2">{title}</h3>
         <p className="text-enghub-skyblue text-[15px] leading-relaxed font-medium">{content}</p>
       </div>
     </div>
