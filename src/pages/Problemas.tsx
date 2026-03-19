@@ -23,8 +23,8 @@ export default function Problemas() {
           >
             <div className="relative z-10 flex flex-col h-full">
               <div className="flex items-start gap-4 mb-4">
-                <div className="bg-enghub-navy/5 p-3 rounded-xl shrink-0">
-                  <AlertTriangle className="w-6 h-6 text-enghub-navy" />
+                <div className="bg-enghub-orange/10 p-3 rounded-xl shrink-0">
+                  <AlertTriangle className="w-6 h-6 text-enghub-orange" />
                 </div>
                 <div>
                   <h3 className="font-bold text-lg text-enghub-navy leading-tight mb-1">
@@ -41,7 +41,7 @@ export default function Problemas() {
                   {p.normaCode}
                 </div>
                 <div className="text-enghub-orange text-sm font-bold flex items-center group-hover:translate-x-1 transition-transform">
-                  Ver Solução <ChevronRight className="w-4 h-4 ml-0.5" />
+                  Ver Solução <ChevronRight className="w-4 h-4 text-enghub-orange ml-0.5" />
                 </div>
               </div>
             </div>

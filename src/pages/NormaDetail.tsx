@@ -37,7 +37,7 @@ export default function NormaDetail() {
         onClick={() => nav(-1)}
         className="flex items-center gap-2 text-enghub-skyblue font-semibold mb-2 hover:bg-enghub-navy-dark px-3 py-1.5 rounded-lg transition-colors -ml-3"
       >
-        <ArrowLeft className="w-4 h-4" /> Voltar
+        <ArrowLeft className="w-4 h-4 text-enghub-orange" /> Voltar
       </button>
 
       <div className="pb-4 border-b border-enghub-navy-dark">
@@ -56,8 +56,8 @@ export default function NormaDetail() {
               key={b.key}
               className="bg-enghub-beige p-5 rounded-2xl shadow-sm border-l-4 border-l-enghub-navy-dark flex gap-4"
             >
-              <div className="shrink-0 w-12 h-12 rounded-xl flex items-center justify-center bg-enghub-navy/5 text-enghub-navy">
-                <b.icon className="w-6 h-6" />
+              <div className="shrink-0 w-12 h-12 rounded-xl flex items-center justify-center bg-enghub-orange/10">
+                <b.icon className="w-6 h-6 text-enghub-orange" />
               </div>
               <div className="pt-0.5">
                 <h3 className="font-bold text-enghub-navy text-[15px] mb-1.5">{data.title}</h3>
@@ -76,7 +76,7 @@ export default function NormaDetail() {
       >
         <div className="flex items-center gap-4">
           <div className="bg-enghub-navy p-3 rounded-xl shadow-inner">
-            <BookOpen className="w-6 h-6 text-enghub-teal" />
+            <BookOpen className="w-6 h-6 text-enghub-orange" />
           </div>
           <div className="flex flex-col text-left">
             <span className="font-bold text-lg">Aprofundamento Técnico</span>

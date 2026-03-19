@@ -18,13 +18,13 @@ export default function Normas() {
     <div className="space-y-6 animate-fade-in pb-4">
       <header className="pt-2">
         <h1 className="text-3xl font-bold text-enghub-beige tracking-tight flex items-center gap-3">
-          <BookOpen className="w-8 h-8 text-enghub-teal" />
+          <BookOpen className="w-8 h-8 text-enghub-orange" />
           Biblioteca de Normas
         </h1>
       </header>
 
       <div className="relative sticky top-0 z-10 py-2 bg-enghub-navy -mx-4 px-4 md:mx-0 md:px-0">
-        <Search className="absolute left-8 md:left-4 top-1/2 -translate-y-1/2 text-enghub-skyblue w-5 h-5" />
+        <Search className="absolute left-8 md:left-4 top-1/2 -translate-y-1/2 text-enghub-orange w-5 h-5" />
         <Input
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
@@ -49,13 +49,13 @@ export default function Normas() {
               </h2>
             </div>
             <div className="flex items-center justify-end text-enghub-orange text-sm font-bold mt-6 pt-4 border-t border-enghub-navy/10 group-hover:translate-x-1 transition-transform">
-              Acessar Detalhes <ChevronRight className="w-4 h-4 ml-1" />
+              Acessar Detalhes <ChevronRight className="w-4 h-4 text-enghub-orange ml-1" />
             </div>
           </Link>
         ))}
         {filtered.length === 0 && (
           <div className="col-span-full text-center py-12 text-enghub-skyblue">
-            <BookOpen className="w-12 h-12 text-enghub-skyblue/50 mx-auto mb-3" />
+            <BookOpen className="w-12 h-12 text-enghub-orange/80 mx-auto mb-3" />
             <p className="font-semibold text-lg text-enghub-beige">Nenhuma norma encontrada</p>
           </div>
         )}

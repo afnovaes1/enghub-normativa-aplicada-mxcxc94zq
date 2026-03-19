@@ -11,7 +11,7 @@ export default function Home() {
       </header>
 
       <div className="relative cursor-pointer group" onClick={() => nav('/busca')}>
-        <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-enghub-teal w-5 h-5 group-hover:text-enghub-orange transition-colors" />
+        <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-enghub-orange w-5 h-5 transition-colors" />
         <div className="w-full h-14 bg-enghub-navy-dark shadow-sm rounded-2xl flex items-center pl-12 pr-4 text-enghub-skyblue transition-all font-medium text-sm">
           Buscar NBRs, erros ou soluções...
         </div>
@@ -22,8 +22,8 @@ export default function Home() {
           to="/normas"
           className="md:col-span-2 bg-enghub-beige p-6 rounded-2xl shadow-sm hover:shadow-md flex flex-col sm:flex-row items-start sm:items-center gap-5 transition-all active:scale-[0.98] duration-200"
         >
-          <div className="bg-enghub-navy/5 p-4 rounded-xl text-enghub-navy shrink-0">
-            <BookOpen className="w-8 h-8" />
+          <div className="bg-enghub-orange/10 p-4 rounded-xl shrink-0">
+            <BookOpen className="w-8 h-8 text-enghub-orange" />
           </div>
           <div className="flex-1">
             <div className="font-bold text-enghub-navy text-2xl">Acervo Normativo</div>
@@ -37,8 +37,8 @@ export default function Home() {
           to="/problemas"
           className="bg-enghub-beige p-5 rounded-2xl shadow-sm hover:shadow-md flex items-center gap-4 transition-all active:scale-[0.98] duration-200"
         >
-          <div className="bg-enghub-navy/5 p-3.5 rounded-xl text-enghub-navy">
-            <AlertTriangle className="w-6 h-6" />
+          <div className="bg-enghub-orange/10 p-3.5 rounded-xl">
+            <AlertTriangle className="w-6 h-6 text-enghub-orange" />
           </div>
           <div>
             <div className="font-bold text-enghub-navy text-lg">Erros que custam caro</div>
@@ -49,8 +49,8 @@ export default function Home() {
           to="/busca"
           className="bg-enghub-beige p-5 rounded-2xl shadow-sm hover:shadow-md flex items-center gap-4 transition-all active:scale-[0.98] duration-200"
         >
-          <div className="bg-enghub-navy/5 p-3.5 rounded-xl text-enghub-navy">
-            <Search className="w-6 h-6" />
+          <div className="bg-enghub-orange/10 p-3.5 rounded-xl">
+            <Search className="w-6 h-6 text-enghub-orange" />
           </div>
           <div>
             <div className="font-bold text-enghub-navy text-lg">Busca Global</div>
@@ -60,7 +60,7 @@ export default function Home() {
 
       <section className="pt-2">
         <h2 className="text-lg font-bold text-enghub-beige mb-4 flex items-center gap-2">
-          <Lightbulb className="w-5 h-5 text-enghub-teal" />
+          <Lightbulb className="w-5 h-5 text-enghub-orange" />
           Destaques
         </h2>
         <div className="flex overflow-x-auto gap-4 pb-4 -mx-4 px-4 md:mx-0 md:px-0 hide-scrollbar snap-x">

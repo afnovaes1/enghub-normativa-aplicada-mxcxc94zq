@@ -40,7 +40,7 @@ export default function NormaExtra() {
         onClick={() => nav(-1)}
         className="flex items-center gap-2 text-enghub-navy font-semibold mb-8 hover:bg-enghub-navy/10 px-3 py-1.5 rounded-lg transition-colors -ml-3 mt-2"
       >
-        <ArrowLeft className="w-4 h-4" /> Retornar para {norma.code}
+        <ArrowLeft className="w-4 h-4 text-enghub-orange" /> Retornar para {norma.code}
       </button>
 
       <h1 className="text-3xl md:text-4xl font-bold text-enghub-navy mb-5 leading-tight tracking-tight">
@@ -48,7 +48,7 @@ export default function NormaExtra() {
       </h1>
 
       <div className="flex items-center gap-2 text-enghub-teal text-sm font-bold mb-10 pb-6 border-b border-enghub-navy/10 uppercase tracking-wider">
-        <Clock className="w-4 h-4" />
+        <Clock className="w-4 h-4 text-enghub-orange" />
         <span>[Tempo de leitura — será definido]</span>
       </div>
 

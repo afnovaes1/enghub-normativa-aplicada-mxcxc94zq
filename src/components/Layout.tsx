@@ -25,11 +25,11 @@ export default function Layout() {
     <div className="flex flex-col h-screen bg-enghub-navy overflow-hidden text-enghub-beige font-sans selection:bg-enghub-teal/30">
       <header className="h-16 shrink-0 flex items-center justify-between px-4 lg:px-8 bg-enghub-navy-dark shadow-sm z-10">
         <div className="flex items-center gap-2 text-enghub-orange font-bold text-xl tracking-tight">
-          <HardHat className="w-6 h-6" />
+          <HardHat className="w-6 h-6 text-enghub-orange" />
           <span>EngHub</span>
         </div>
-        <button className="w-9 h-9 rounded-full bg-enghub-skyblue/10 flex items-center justify-center text-enghub-beige hover:bg-enghub-skyblue/20 transition-colors">
-          <User className="w-5 h-5" />
+        <button className="w-9 h-9 rounded-full bg-enghub-skyblue/10 flex items-center justify-center hover:bg-enghub-skyblue/20 transition-colors">
+          <User className="w-5 h-5 text-enghub-orange" />
         </button>
       </header>
 
@@ -48,7 +48,7 @@ export default function Layout() {
                     : 'text-enghub-skyblue hover:bg-enghub-navy/50 hover:text-white',
                 )}
               >
-                <item.icon className={cn('w-5 h-5', isActive && 'text-enghub-orange')} />
+                <item.icon className="w-5 h-5 text-enghub-orange" />
                 <span>{item.label}</span>
               </Link>
             )
@@ -83,7 +83,7 @@ export default function Layout() {
                   isActive && 'bg-enghub-navy shadow-sm',
                 )}
               >
-                <item.icon className={cn('w-5 h-5', isActive && 'text-enghub-orange')} />
+                <item.icon className="w-5 h-5 text-enghub-orange" />
               </div>
               <span className="text-[10px] font-medium tracking-wide">{item.label}</span>
             </Link>

@@ -31,7 +31,7 @@ export default {
       },
       colors: {
         enghub: {
-          navy: '#2F4156',
+          navy: '#3D5670', // Lightened by ~30% for stronger contrast against navy-dark
           'navy-dark': '#2A3A4C',
           beige: '#F5EFEB',
           skyblue: '#C8D9E6',

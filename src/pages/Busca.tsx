@@ -24,7 +24,7 @@ export default function Busca() {
     <div className="space-y-6 animate-fade-in pb-10">
       <div className="sticky top-0 bg-enghub-navy pt-2 pb-4 z-10 -mx-4 px-4 md:-mx-0 md:px-0">
         <div className="relative">
-          <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-enghub-teal w-6 h-6" />
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-enghub-orange w-6 h-6" />
           <Input
             autoFocus
             value={query}
@@ -39,7 +39,7 @@ export default function Busca() {
         <div className="space-y-10 pt-4">
           <section>
             <h3 className="text-xs font-bold text-enghub-skyblue flex items-center gap-2 mb-4 uppercase tracking-widest">
-              <TrendingUp className="w-4 h-4" /> Tópicos em Alta
+              <TrendingUp className="w-4 h-4 text-enghub-orange" /> Tópicos em Alta
             </h3>
             <div className="flex flex-wrap gap-2.5">
               {trendings.map((t) => (
@@ -56,7 +56,7 @@ export default function Busca() {
 
           <section>
             <h3 className="text-xs font-bold text-enghub-skyblue flex items-center gap-2 mb-4 uppercase tracking-widest">
-              <History className="w-4 h-4" /> Buscas Recentes
+              <History className="w-4 h-4 text-enghub-orange" /> Buscas Recentes
             </h3>
             <div className="space-y-2 bg-enghub-navy-dark rounded-2xl p-2 shadow-sm">
               {history.map((h) => (
@@ -65,7 +65,7 @@ export default function Busca() {
                   className="flex items-center gap-3 text-enghub-skyblue px-4 py-3 cursor-pointer hover:bg-enghub-navy rounded-xl font-semibold transition-colors"
                   onClick={() => setQuery(h)}
                 >
-                  <History className="w-4 h-4 text-enghub-skyblue/40" /> {h}
+                  <History className="w-4 h-4 text-enghub-orange opacity-60" /> {h}
                 </div>
               ))}
             </div>
@@ -85,8 +85,8 @@ export default function Busca() {
               className="block bg-enghub-beige p-5 rounded-2xl shadow-sm hover:shadow-md transition-all active:scale-[0.98]"
             >
               <div className="flex items-start gap-4">
-                <div className="bg-enghub-navy/5 p-3 rounded-xl shrink-0 mt-1">
-                  <BookOpen className="w-6 h-6 text-enghub-navy" />
+                <div className="bg-enghub-orange/10 p-3 rounded-xl shrink-0 mt-1">
+                  <BookOpen className="w-6 h-6 text-enghub-orange" />
                 </div>
                 <div>
                   <h4 className="font-bold text-lg text-enghub-navy">{n.code}</h4>
@@ -100,7 +100,7 @@ export default function Busca() {
 
       {query && query.length > 2 && results.length === 0 && (
         <div className="text-center py-16 text-enghub-skyblue animate-fade-in">
-          <Search className="w-16 h-16 mx-auto text-enghub-skyblue/30 mb-4" />
+          <Search className="w-16 h-16 mx-auto text-enghub-orange/80 mb-4" />
           <p className="font-bold text-xl text-enghub-beige mb-1">Nenhum resultado</p>
         </div>
       )}
