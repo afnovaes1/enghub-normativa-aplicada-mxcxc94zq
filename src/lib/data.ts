@@ -443,7 +443,7 @@ const nbr6120Blocks = {
       'ausência de definição clara de cargas fragiliza defesa',
       'sem premissa registrada, tudo vira questionável',
     ],
-    takeaway: 'quem não define carga claramente, assume risco oculto',
+    takeaway: 'quem não define carga clearly, assume risco oculto',
   },
   aprofundamentos: {
     title: 'Aprofundamentos',
@@ -560,6 +560,113 @@ const nbr13752Blocks = {
   },
 }
 
+const nbr5410Blocks = {
+  ondeEntra: {
+    title: 'Onde entra na obra',
+    bullets: [
+      'projeto elétrico',
+      'dimensionamento de circuitos',
+      'distribuição de cargas',
+      'execução das instalações',
+    ],
+    takeaway: 'eletricidade mal resolvida não avisa — ela acontece',
+  },
+  controle: {
+    title: 'O que realmente controla',
+    bullets: [
+      'proteção contra choques',
+      'proteção contra sobrecarga',
+      'proteção contra curto-circuito',
+      'confiabilidade do sistema',
+      'segurança do usuário',
+    ],
+    takeaway: 'instalação elétrica não é conforto — é segurança',
+  },
+  erros: {
+    title: 'Onde todo mundo erra',
+    bullets: [
+      'Subdimensionar circuitos (economia que vira risco)',
+      'Misturar cargas sem critério (circuito sobrecarregado sem perceber)',
+      'Ignorar proteção adequada (disjuntor errado não protege)',
+      'Execução sem padrão (emenda, improviso e adaptação)',
+      'Não prever uso real (instalação pensada para um cenário que não existe)',
+    ],
+    takeaway: 'energia não perdoa erro — ela expõe',
+  },
+  consequencias: {
+    title: 'O que acontece quando erra',
+    bullets: [
+      'aquecimento de condutores',
+      'desarme frequente',
+      'curto-circuito',
+      'risco de incêndio',
+      'choque elétrico',
+      'perda de equipamentos',
+    ],
+    takeaway: 'erro elétrico não é gradual — é abrupto',
+  },
+  praticas: {
+    title: 'Como fazer certo na prática',
+    bullets: [
+      'dimensionar com margem de segurança',
+      'separar circuitos corretamente',
+      'prever crescimento de carga',
+      'utilizar proteção adequada',
+      'executar com padrão e controle',
+      'validar instalação antes de uso',
+    ],
+  },
+  insights: {
+    title: 'Insights rápidos de decisão',
+    insights: [
+      {
+        name: 'Circuitos',
+        description:
+          'não são só divisão funcional mas: evitam sobrecarga, facilitam controle e segurança.',
+      },
+      {
+        name: 'Disjuntores',
+        description:
+          'não são só chave mas: precisam estar compatíveis com o circuito, proteção errada é falsa segurança.',
+      },
+      {
+        name: 'Condutores',
+        description:
+          'não são só fio mas: seção inadequada gera aquecimento, instalação influencia desempenho.',
+      },
+      {
+        name: 'Uso real',
+        description:
+          'quase sempre subestimado mas: equipamentos aumentam, carga cresce com o tempo.',
+      },
+    ],
+    takeaway: 'instalação elétrica deve prever o uso — não o projeto',
+  },
+  perito: {
+    title: 'Visão de perito',
+    bullets: [
+      'Padrões de falha nascem na adaptação frente ao projeto original',
+      'Sobrecarga progressiva pelo uso desordenado',
+      'Impacto severo da ausência de projetos elétricos formais',
+      'Riscos invisíveis gerados por improvisos de campo',
+    ],
+    takeaway: 'instalação elétrica não falha sozinha — ela é forçada ao erro',
+  },
+  aprofundamentos: {
+    title: 'Aprofundamentos',
+    links: [
+      'Como dimensionar circuitos na prática',
+      'Erros comuns com disjuntores',
+      'Sobrecarga: sinais e riscos',
+      'Curto-circuito: causas reais',
+      'Aquecimento de condutores',
+      'Separação de circuitos',
+      'Crescimento de carga ao longo do tempo',
+      'Improviso em instalações',
+    ],
+  },
+}
+
 export const normas: Norma[] = [
   {
     id: '6122',
@@ -601,7 +708,7 @@ export const normas: Norma[] = [
     code: 'NBR 5410',
     title: 'Instalações Elétricas de Baixa Tensão',
     category: 'Instalações',
-    blocks: { ...baseBlocks },
+    blocks: nbr5410Blocks,
   },
   {
     id: '5626',
