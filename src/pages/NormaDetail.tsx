@@ -35,13 +35,13 @@ export default function NormaDetail() {
     <div className="space-y-6 animate-slide-up">
       <button
         onClick={() => nav(-1)}
-        className="flex items-center gap-2 text-enghub-skyblue font-semibold mb-2 hover:bg-enghub-teal/20 px-3 py-1.5 rounded-lg transition-colors -ml-3"
+        className="flex items-center gap-2 text-enghub-skyblue font-semibold mb-2 hover:bg-enghub-navy-dark px-3 py-1.5 rounded-lg transition-colors -ml-3"
       >
         <ArrowLeft className="w-4 h-4" /> Voltar
       </button>
 
-      <div className="pb-4 border-b border-enghub-teal/20">
-        <div className="inline-flex items-center px-2.5 py-1 bg-enghub-teal/20 text-enghub-teal text-xs uppercase tracking-wider font-bold rounded-md mb-3">
+      <div className="pb-4 border-b border-enghub-navy-dark">
+        <div className="inline-flex items-center px-2.5 py-1 bg-enghub-navy-dark text-enghub-skyblue text-xs uppercase tracking-wider font-bold rounded-md mb-3">
           {norma.category}
         </div>
         <h1 className="text-3xl font-bold text-enghub-beige tracking-tight">{norma.code}</h1>
@@ -54,9 +54,9 @@ export default function NormaDetail() {
           return (
             <div
               key={b.key}
-              className="bg-enghub-beige p-5 rounded-2xl shadow-sm border-l-4 border-l-enghub-teal flex gap-4"
+              className="bg-enghub-beige p-5 rounded-2xl shadow-sm border-l-4 border-l-enghub-navy-dark flex gap-4"
             >
-              <div className="shrink-0 w-12 h-12 rounded-xl flex items-center justify-center bg-enghub-navy/10 text-enghub-navy">
+              <div className="shrink-0 w-12 h-12 rounded-xl flex items-center justify-center bg-enghub-navy/5 text-enghub-navy">
                 <b.icon className="w-6 h-6" />
               </div>
               <div className="pt-0.5">
@@ -72,20 +72,17 @@ export default function NormaDetail() {
 
       <Link
         to={`/normas/${id}/extra`}
-        className="mt-8 bg-enghub-orange hover:bg-enghub-orange/90 text-white shadow-lg rounded-2xl p-5 flex items-center justify-between transition-transform active:scale-[0.98] w-full block border border-enghub-orange"
+        className="mt-8 bg-enghub-navy-dark hover:bg-enghub-navy-dark/80 text-enghub-beige shadow-sm rounded-2xl p-5 flex items-center justify-between transition-transform active:scale-[0.98] w-full border border-transparent"
       >
         <div className="flex items-center gap-4">
-          <div className="bg-white/20 p-3 rounded-xl backdrop-blur-sm shadow-inner">
-            <BookOpen className="w-6 h-6" />
+          <div className="bg-enghub-navy p-3 rounded-xl shadow-inner">
+            <BookOpen className="w-6 h-6 text-enghub-teal" />
           </div>
           <div className="flex flex-col text-left">
             <span className="font-bold text-lg">Aprofundamento Técnico</span>
-            <span className="text-sm text-white/80 font-medium mt-0.5">
-              [Descrição técnica — pendente]
-            </span>
           </div>
         </div>
-        <ChevronRight className="w-6 h-6 opacity-80" />
+        <ChevronRight className="w-6 h-6 text-enghub-orange" />
       </Link>
     </div>
   )

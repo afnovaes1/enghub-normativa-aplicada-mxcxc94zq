@@ -28,7 +28,7 @@ export default function NormaExtra() {
     )
 
   return (
-    <div className="max-w-3xl mx-auto bg-enghub-beige min-h-[85vh] rounded-3xl p-6 md:p-10 shadow-lg border border-transparent animate-fade-in relative overflow-hidden">
+    <div className="max-w-3xl mx-auto bg-enghub-beige min-h-[85vh] rounded-3xl p-6 md:p-10 shadow-sm border border-transparent animate-fade-in relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-1.5 z-10 bg-enghub-navy/10">
         <Progress
           value={readProgress}
@@ -49,7 +49,7 @@ export default function NormaExtra() {
 
       <div className="flex items-center gap-2 text-enghub-teal text-sm font-bold mb-10 pb-6 border-b border-enghub-navy/10 uppercase tracking-wider">
         <Clock className="w-4 h-4" />
-        <span>[Descrição técnica — pendente]</span>
+        <span>[Tempo de leitura — será definido]</span>
       </div>
 
       <div className="space-y-6 text-enghub-navy/80 leading-relaxed text-[17px] font-medium">
@@ -57,7 +57,7 @@ export default function NormaExtra() {
           <p key={idx}>{paragraph}</p>
         ))}
 
-        <div className="my-10 bg-enghub-navy/5 rounded-2xl overflow-hidden border border-enghub-navy/10 shadow-sm">
+        <div className="my-10 bg-enghub-navy/5 rounded-2xl overflow-hidden shadow-sm">
           <div className="bg-enghub-navy px-5 py-3 flex items-center gap-2">
             <Info className="w-5 h-5 text-enghub-orange" />
             <h3 className="font-bold text-enghub-beige">[Título da seção]</h3>
@@ -66,18 +66,18 @@ export default function NormaExtra() {
             <table className="w-full text-sm text-left">
               <thead className="bg-enghub-navy/10 text-enghub-navy uppercase tracking-wider text-xs font-bold border-b border-enghub-navy/10">
                 <tr>
-                  <th className="px-5 py-4">[Resumo do conteúdo — será definido]</th>
-                  <th className="px-5 py-4">[Resumo do conteúdo — será definido]</th>
+                  <th className="px-5 py-4">[Resumo — será definido]</th>
+                  <th className="px-5 py-4">[Resumo — será definido]</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-enghub-navy/10 text-enghub-navy font-semibold">
                 <tr className="hover:bg-enghub-navy/5 transition-colors">
-                  <td className="px-5 py-4">[Descrição técnica — pendente]</td>
-                  <td className="px-5 py-4 text-enghub-teal">[Descrição técnica — pendente]</td>
+                  <td className="px-5 py-4">[Conteúdo técnico — aguardando inserção]</td>
+                  <td className="px-5 py-4 text-enghub-teal">[Conteúdo técnico]</td>
                 </tr>
                 <tr className="hover:bg-enghub-navy/5 transition-colors">
-                  <td className="px-5 py-4">[Descrição técnica — pendente]</td>
-                  <td className="px-5 py-4 text-enghub-orange">[Descrição técnica — pendente]</td>
+                  <td className="px-5 py-4">[Conteúdo técnico — aguardando inserção]</td>
+                  <td className="px-5 py-4 text-enghub-orange">[Conteúdo técnico]</td>
                 </tr>
               </tbody>
             </table>

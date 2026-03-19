@@ -6,10 +6,10 @@ import { useNavigate } from 'react-router-dom'
 export default function Index() {
   const nav = useNavigate()
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen px-4 py-12">
+    <div className="flex flex-col items-center justify-center min-h-screen px-4 py-12 bg-enghub-navy">
       <div className="w-full max-w-[380px] p-8 bg-enghub-beige text-enghub-navy rounded-3xl shadow-2xl animate-fade-in-up">
         <div className="flex flex-col items-center mb-10 text-center">
-          <div className="w-16 h-16 bg-enghub-beige border-2 border-enghub-navy/10 rounded-2xl shadow-sm flex items-center justify-center mb-4">
+          <div className="w-16 h-16 bg-enghub-navy border-2 border-enghub-navy-dark rounded-2xl shadow-sm flex items-center justify-center mb-4">
             <HardHat className="w-10 h-10 text-enghub-orange" />
           </div>
           <h1 className="text-3xl font-bold text-enghub-navy tracking-tight">EngHub</h1>
@@ -20,7 +20,7 @@ export default function Index() {
 
         <div className="space-y-5">
           <Button
-            className="w-full bg-enghub-orange hover:bg-enghub-orange/90 text-white font-bold h-12 text-base rounded-xl shadow-lg shadow-enghub-orange/20 transition-transform active:scale-[0.98]"
+            className="w-full bg-enghub-orange hover:bg-enghub-orange/90 text-white font-bold h-12 text-base rounded-xl transition-transform active:scale-[0.98]"
             onClick={() => nav('/home')}
           >
             Entrar com Google

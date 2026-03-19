@@ -17,13 +17,13 @@ export default function Layout() {
   const navItems = [
     { label: 'Home', path: '/home', icon: Home },
     { label: 'Normas', path: '/normas', icon: BookOpen },
-    { label: 'Alertas', path: '/problemas', icon: AlertTriangle },
+    { label: 'Erros', path: '/problemas', icon: AlertTriangle },
     { label: 'Busca', path: '/busca', icon: Search },
   ]
 
   return (
     <div className="flex flex-col h-screen bg-enghub-navy overflow-hidden text-enghub-beige font-sans selection:bg-enghub-teal/30">
-      <header className="h-16 shrink-0 flex items-center justify-between px-4 lg:px-8 bg-enghub-navy border-b border-enghub-teal/20 z-10">
+      <header className="h-16 shrink-0 flex items-center justify-between px-4 lg:px-8 bg-enghub-navy-dark shadow-sm z-10">
         <div className="flex items-center gap-2 text-enghub-orange font-bold text-xl tracking-tight">
           <HardHat className="w-6 h-6" />
           <span>EngHub</span>
@@ -34,7 +34,7 @@ export default function Layout() {
       </header>
 
       <div className="flex flex-1 overflow-hidden relative">
-        <aside className="hidden md:flex flex-col w-[260px] bg-enghub-navy shrink-0 p-4 gap-2 border-r border-enghub-teal/20">
+        <aside className="hidden md:flex flex-col w-[260px] bg-enghub-navy-dark shrink-0 p-4 gap-2 shadow-[2px_0_10px_rgba(0,0,0,0.1)] z-10">
           {navItems.map((item) => {
             const isActive = location.pathname.startsWith(item.path)
             return (
@@ -44,11 +44,11 @@ export default function Layout() {
                 className={cn(
                   'flex items-center gap-3 px-4 py-3.5 rounded-xl transition-all font-medium',
                   isActive
-                    ? 'bg-enghub-teal text-white shadow-md'
-                    : 'text-enghub-skyblue hover:bg-enghub-teal/10 hover:text-white',
+                    ? 'bg-enghub-navy text-white shadow-sm border border-transparent'
+                    : 'text-enghub-skyblue hover:bg-enghub-navy/50 hover:text-white',
                 )}
               >
-                <item.icon className="w-5 h-5" />
+                <item.icon className={cn('w-5 h-5', isActive && 'text-enghub-orange')} />
                 <span>{item.label}</span>
               </Link>
             )
@@ -57,7 +57,7 @@ export default function Layout() {
 
         <main
           id="main-scroll-area"
-          className="flex-1 bg-enghub-navy shadow-2xl overflow-y-auto pb-24 md:pb-0 relative"
+          className="flex-1 bg-enghub-navy overflow-y-auto pb-24 md:pb-0 relative"
         >
           <div className="max-w-4xl mx-auto p-4 md:p-10">
             <Outlet />
@@ -65,7 +65,7 @@ export default function Layout() {
         </main>
       </div>
 
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 h-[4.5rem] bg-enghub-navy flex items-center justify-around px-2 border-t border-enghub-teal/20 z-20 pb-2">
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 h-[4.5rem] bg-enghub-navy-dark flex items-center justify-around px-2 shadow-[0_-4px_20px_rgba(0,0,0,0.2)] z-20 pb-2">
         {navItems.map((item) => {
           const isActive = location.pathname.startsWith(item.path)
           return (
@@ -74,16 +74,16 @@ export default function Layout() {
               to={item.path}
               className={cn(
                 'flex flex-col items-center justify-center w-16 h-full gap-1 transition-all',
-                isActive ? 'text-enghub-orange' : 'text-enghub-skyblue',
+                isActive ? 'text-white' : 'text-enghub-skyblue',
               )}
             >
               <div
                 className={cn(
                   'p-1.5 rounded-lg transition-colors',
-                  isActive && 'bg-enghub-orange/10',
+                  isActive && 'bg-enghub-navy shadow-sm',
                 )}
               >
-                <item.icon className="w-5 h-5" />
+                <item.icon className={cn('w-5 h-5', isActive && 'text-enghub-orange')} />
               </div>
               <span className="text-[10px] font-medium tracking-wide">{item.label}</span>
             </Link>

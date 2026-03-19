@@ -23,9 +23,9 @@ export type Norma = {
   }
 }
 
-const placeholderContent = '[Descrição técnica — pendente]'
+const placeholderContent = '[Conteúdo técnico — aguardando inserção]'
 const placeholderTitle = '[Título da seção]'
-const placeholderSummary = '[Resumo do conteúdo — será definido]'
+const placeholderSummary = '[Resumo do problema — será definido]'
 
 export const normas: Norma[] = [
   {
@@ -129,28 +129,28 @@ export const problemas = [
   {
     id: '1',
     title: 'Recalque',
-    description: placeholderContent,
+    description: placeholderSummary,
     normaId: '6122',
     normaCode: 'NBR 6122',
   },
   {
     id: '2',
     title: 'Fissura',
-    description: placeholderContent,
+    description: placeholderSummary,
     normaId: '6118',
     normaCode: 'NBR 6118',
   },
   {
     id: '3',
     title: 'Erro de Fundação',
-    description: placeholderContent,
+    description: placeholderSummary,
     normaId: '6122',
     normaCode: 'NBR 6122',
   },
   {
     id: '4',
-    title: 'SPT Incoerente',
-    description: placeholderContent,
+    title: 'SPT não converge',
+    description: placeholderSummary,
     normaId: '6122',
     normaCode: 'NBR 6122',
   },
