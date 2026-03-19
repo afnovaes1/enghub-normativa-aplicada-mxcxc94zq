@@ -22,8 +22,8 @@ export default function Layout() {
   ]
 
   return (
-    <div className="flex flex-col h-screen bg-enghub-navy overflow-hidden text-slate-800 font-sans selection:bg-enghub-teal/30">
-      <header className="h-16 shrink-0 flex items-center justify-between px-4 lg:px-8 bg-enghub-navy border-b border-enghub-navy z-10">
+    <div className="flex flex-col h-screen bg-enghub-navy overflow-hidden text-enghub-beige font-sans selection:bg-enghub-teal/30">
+      <header className="h-16 shrink-0 flex items-center justify-between px-4 lg:px-8 bg-enghub-navy border-b border-enghub-teal/20 z-10">
         <div className="flex items-center gap-2 text-enghub-orange font-bold text-xl tracking-tight">
           <HardHat className="w-6 h-6" />
           <span>EngHub</span>
@@ -34,7 +34,7 @@ export default function Layout() {
       </header>
 
       <div className="flex flex-1 overflow-hidden relative">
-        <aside className="hidden md:flex flex-col w-[260px] bg-enghub-navy shrink-0 p-4 gap-2">
+        <aside className="hidden md:flex flex-col w-[260px] bg-enghub-navy shrink-0 p-4 gap-2 border-r border-enghub-teal/20">
           {navItems.map((item) => {
             const isActive = location.pathname.startsWith(item.path)
             return (
@@ -45,7 +45,7 @@ export default function Layout() {
                   'flex items-center gap-3 px-4 py-3.5 rounded-xl transition-all font-medium',
                   isActive
                     ? 'bg-enghub-teal text-white shadow-md'
-                    : 'text-enghub-skyblue hover:bg-white/5 hover:text-white',
+                    : 'text-enghub-skyblue hover:bg-enghub-teal/10 hover:text-white',
                 )}
               >
                 <item.icon className="w-5 h-5" />
@@ -57,7 +57,7 @@ export default function Layout() {
 
         <main
           id="main-scroll-area"
-          className="flex-1 bg-enghub-beige md:rounded-tl-3xl shadow-2xl overflow-y-auto pb-24 md:pb-0 relative"
+          className="flex-1 bg-enghub-navy shadow-2xl overflow-y-auto pb-24 md:pb-0 relative"
         >
           <div className="max-w-4xl mx-auto p-4 md:p-10">
             <Outlet />
@@ -65,7 +65,7 @@ export default function Layout() {
         </main>
       </div>
 
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 h-[4.5rem] bg-enghub-navy flex items-center justify-around px-2 border-t border-white/5 z-20 pb-2">
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 h-[4.5rem] bg-enghub-navy flex items-center justify-around px-2 border-t border-enghub-teal/20 z-20 pb-2">
         {navItems.map((item) => {
           const isActive = location.pathname.startsWith(item.path)
           return (

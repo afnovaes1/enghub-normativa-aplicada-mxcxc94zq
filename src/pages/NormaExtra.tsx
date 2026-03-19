@@ -23,11 +23,13 @@ export default function NormaExtra() {
   }, [])
 
   if (!norma)
-    return <div className="p-8 text-center text-slate-500 font-medium">Conteúdo não encontrado</div>
+    return (
+      <div className="p-8 text-center text-enghub-skyblue font-medium">Conteúdo não encontrado</div>
+    )
 
   return (
-    <div className="max-w-3xl mx-auto bg-white min-h-[85vh] rounded-3xl p-6 md:p-10 shadow-sm border border-slate-100 animate-fade-in relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-1.5 z-10 bg-slate-100">
+    <div className="max-w-3xl mx-auto bg-enghub-beige min-h-[85vh] rounded-3xl p-6 md:p-10 shadow-lg border border-transparent animate-fade-in relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-1.5 z-10 bg-enghub-navy/10">
         <Progress
           value={readProgress}
           className="h-full rounded-none bg-transparent [&>div]:bg-enghub-orange transition-all duration-100"
@@ -36,7 +38,7 @@ export default function NormaExtra() {
 
       <button
         onClick={() => nav(-1)}
-        className="flex items-center gap-2 text-enghub-teal font-semibold mb-8 hover:bg-enghub-teal/10 px-3 py-1.5 rounded-lg transition-colors -ml-3 mt-2"
+        className="flex items-center gap-2 text-enghub-navy font-semibold mb-8 hover:bg-enghub-navy/10 px-3 py-1.5 rounded-lg transition-colors -ml-3 mt-2"
       >
         <ArrowLeft className="w-4 h-4" /> Retornar para {norma.code}
       </button>
@@ -45,41 +47,37 @@ export default function NormaExtra() {
         {norma.extra.title}
       </h1>
 
-      <div className="flex items-center gap-2 text-enghub-teal text-sm font-bold mb-10 pb-6 border-b border-slate-100 uppercase tracking-wider">
+      <div className="flex items-center gap-2 text-enghub-teal text-sm font-bold mb-10 pb-6 border-b border-enghub-navy/10 uppercase tracking-wider">
         <Clock className="w-4 h-4" />
-        <span>{norma.extra.readTime} de leitura focada</span>
+        <span>[Descrição técnica — pendente]</span>
       </div>
 
-      <div className="space-y-6 text-slate-700 leading-relaxed text-[17px] font-medium">
+      <div className="space-y-6 text-enghub-navy/80 leading-relaxed text-[17px] font-medium">
         {norma.extra.content.map((paragraph, idx) => (
           <p key={idx}>{paragraph}</p>
         ))}
 
-        <div className="my-10 bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+        <div className="my-10 bg-enghub-navy/5 rounded-2xl overflow-hidden border border-enghub-navy/10 shadow-sm">
           <div className="bg-enghub-navy px-5 py-3 flex items-center gap-2">
             <Info className="w-5 h-5 text-enghub-orange" />
-            <h3 className="font-bold text-white">Guia de Decisão Prática</h3>
+            <h3 className="font-bold text-enghub-beige">[Título da seção]</h3>
           </div>
           <div className="p-0 overflow-x-auto">
             <table className="w-full text-sm text-left">
-              <thead className="bg-slate-100/50 text-slate-500 uppercase tracking-wider text-xs font-bold border-b border-slate-200">
+              <thead className="bg-enghub-navy/10 text-enghub-navy uppercase tracking-wider text-xs font-bold border-b border-enghub-navy/10">
                 <tr>
-                  <th className="px-5 py-4">Situação Identificada</th>
-                  <th className="px-5 py-4">Ação Recomendada em Campo</th>
+                  <th className="px-5 py-4">[Resumo do conteúdo — será definido]</th>
+                  <th className="px-5 py-4">[Resumo do conteúdo — será definido]</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-100 bg-white text-enghub-navy font-semibold">
-                <tr className="hover:bg-slate-50 transition-colors">
-                  <td className="px-5 py-4">Dúvida no cruzamento de dados</td>
-                  <td className="px-5 py-4 text-enghub-teal">
-                    Pausar execução e solicitar projetista
-                  </td>
+              <tbody className="divide-y divide-enghub-navy/10 text-enghub-navy font-semibold">
+                <tr className="hover:bg-enghub-navy/5 transition-colors">
+                  <td className="px-5 py-4">[Descrição técnica — pendente]</td>
+                  <td className="px-5 py-4 text-enghub-teal">[Descrição técnica — pendente]</td>
                 </tr>
-                <tr className="hover:bg-slate-50 transition-colors">
-                  <td className="px-5 py-4">Condição diversa da sondagem/projeto</td>
-                  <td className="px-5 py-4 text-enghub-orange">
-                    Registro fotográfico imediato + RDO
-                  </td>
+                <tr className="hover:bg-enghub-navy/5 transition-colors">
+                  <td className="px-5 py-4">[Descrição técnica — pendente]</td>
+                  <td className="px-5 py-4 text-enghub-orange">[Descrição técnica — pendente]</td>
                 </tr>
               </tbody>
             </table>
