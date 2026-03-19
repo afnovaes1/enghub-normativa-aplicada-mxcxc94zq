@@ -460,6 +460,106 @@ const nbr6120Blocks = {
   },
 }
 
+const nbr13752Blocks = {
+  ondeEntra: {
+    title: 'Onde entra na obra',
+    bullets: [
+      'na identificação de dúvidas, danos ou patologias',
+      'em divergências técnicas e conflitos construtivos',
+      'na disputa judicial, extrajudicial ou arbitral',
+      'na necessidade de esclarecimento técnico estruturado',
+    ],
+    takeaway: 'a perícia começa quando a confiança termina',
+  },
+  controle: {
+    title: 'O que realmente controla',
+    bullets: [
+      'a análise técnica focada na materialidade dos fatos',
+      'a correta identificação das causas (nexo causal)',
+      'a produção e registro de evidências irrefutáveis',
+      'a formatação técnica do laudo ou parecer',
+    ],
+    takeaway: 'controla a materialidade do fato, não a intenção',
+  },
+  erros: {
+    title: 'Onde todo mundo erra',
+    bullets: [
+      'Confundir sintoma com causa (tratar a trinca sem entender o recalque)',
+      'Realizar análise superficial (apenas inspeção visual sem ensaios comprobatórios)',
+      'Falta de imparcialidade (produzir laudo enviesado para o cliente)',
+      'Falta de embasamento técnico e normativo na conclusão',
+      'Não registrar o estado inicial ou as condições de contorno adequadamente',
+    ],
+    takeaway: 'o laudo não pode ser uma opinião, tem que ser uma constatação técnica',
+  },
+  consequencias: {
+    title: 'O que acontece quando erra',
+    bullets: [
+      'diagnóstico incorreto da patologia e agravamento do dano',
+      'prescrição de solução ineficaz com retrabalho e custo extra',
+      'problemas jurídicos decorrentes de laudos contestados',
+      'responsabilização civil do perito e perda de credibilidade',
+    ],
+    takeaway: 'um laudo ruim destrói a defesa de um bom projeto',
+  },
+  praticas: {
+    title: 'Como fazer certo na prática',
+    bullets: [
+      'investigar a fundo a origem antes de concluir',
+      'manter a imparcialidade (os fatos são os protagonistas)',
+      'registrar fotograficamente e documentalmente de forma metódica',
+      'estabelecer o nexo causal com clareza e lógica',
+      'usar linguagem técnica objetiva e fundamentada',
+    ],
+    takeaway: 'siga o método, registre a evidência e seja objetivo',
+  },
+  insights: {
+    title: 'Insights rápidos de decisão',
+    insights: [
+      {
+        name: 'Trinca',
+        description:
+          'O que parece: apenas um problema estético na superfície. Realidade técnica: é o sintoma de uma movimentação; a geometria da trinca revela exatamente a direção do esforço.',
+      },
+      {
+        name: 'Recalque',
+        description:
+          'O que parece: falha isolada de um pilar ou fundação. Realidade técnica: mudança de comportamento do solo que afeta a estrutura globalmente; o mapeamento é essencial.',
+      },
+      {
+        name: 'Infiltração',
+        description:
+          'O que parece: falha evidente no ponto onde a mancha aparece. Realidade técnica: a água percorre caminhos complexos; a origem quase nunca está no mesmo ponto da goteira.',
+      },
+      {
+        name: 'Responsabilidade técnica',
+        description:
+          'O que parece: culpa imediata do construtor ou projetista. Realidade técnica: exige comprovação do nexo causal; a omissão de manutenção pelo usuário frequentemente isenta terceiros.',
+      },
+    ],
+    takeaway: 'todo sintoma tem uma causa, a perícia mapeia o caminho entre eles',
+  },
+  perito: {
+    title: 'Visão de perito',
+    content:
+      'conflitos nascem quando a expectativa não encontra a realidade técnica. a perícia não busca culpados por instinto, mas estabelece uma linha cronológica e técnica irrefutável. a metodologia é a proteção contra a subjetividade de quem quer ter razão a qualquer custo.',
+    takeaway: 'perícia é método, não achismo',
+  },
+  aprofundamentos: {
+    title: 'Aprofundamentos',
+    links: [
+      'Diferença entre sintoma e causa',
+      'Como investigar patologia na prática',
+      'Recalque: leitura pericial',
+      'Infiltração: como rastrear origem',
+      'Nexo causal: o que realmente significa',
+      'Como organizar evidências',
+      'Erros comuns em laudos técnicos',
+      'O que sustenta um parecer técnico',
+    ],
+  },
+}
+
 export const normas: Norma[] = [
   {
     id: '6122',
@@ -488,6 +588,13 @@ export const normas: Norma[] = [
     title: 'Ações para o cálculo de estruturas de edificações',
     category: 'Estrutural',
     blocks: nbr6120Blocks,
+  },
+  {
+    id: '13752',
+    code: 'NBR 13752',
+    title: 'Perícias de Engenharia na Construção Civil',
+    category: 'Perícia',
+    blocks: nbr13752Blocks,
   },
   {
     id: '5410',
