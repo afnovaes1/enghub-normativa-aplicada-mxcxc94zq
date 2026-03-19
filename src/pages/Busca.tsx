@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Input } from '@/components/ui/input'
-import { Search, History, TrendingUp, BookOpen } from 'lucide-react'
+import { Search, History, TrendingUp, BookOpen, AlertTriangle, Link2 } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import { normas } from '@/lib/data'
+import { normas, problemas } from '@/lib/data'
 
 export default function Busca() {
   const [query, setQuery] = useState('')
@@ -10,14 +10,54 @@ export default function Busca() {
   const trendings = ['recalque', 'fissura', 'SPT não converge', 'trinca']
   const history = ['NBR 6122', 'NBR 6118']
 
-  const results =
+  const allAprofundamentos = normas.flatMap((n) =>
+    (n.blocks.aprofundamentos?.links || []).map((l) => ({
+      ...l,
+      normaId: n.id,
+      normaCode: n.code,
+      type: 'aprofundamento' as const,
+    })),
+  )
+
+  const searchResults =
     query.length > 2
-      ? normas.filter(
-          (n) =>
-            n.title.toLowerCase().includes(query.toLowerCase()) ||
-            n.code.toLowerCase().includes(query.toLowerCase()) ||
-            n.category.toLowerCase().includes(query.toLowerCase()),
-        )
+      ? [
+          ...normas
+            .filter(
+              (n) =>
+                n.title.toLowerCase().includes(query.toLowerCase()) ||
+                n.code.toLowerCase().includes(query.toLowerCase()),
+            )
+            .map((n) => ({
+              id: n.id,
+              title: n.title,
+              code: n.code,
+              type: 'norma' as const,
+              path: `/normas/${n.id}`,
+            })),
+          ...problemas
+            .filter(
+              (p) =>
+                p.title.toLowerCase().includes(query.toLowerCase()) ||
+                p.description.toLowerCase().includes(query.toLowerCase()),
+            )
+            .map((p) => ({
+              id: p.id,
+              title: p.title,
+              code: p.normaCode,
+              type: 'problema' as const,
+              path: `/problemas/${p.id}`,
+            })),
+          ...allAprofundamentos
+            .filter((a) => a.title.toLowerCase().includes(query.toLowerCase()))
+            .map((a) => ({
+              id: a.id,
+              title: a.title,
+              code: a.normaCode,
+              type: 'aprofundamento' as const,
+              path: `/normas/${a.normaId}/aprofundamentos/${a.id}`,
+            })),
+        ]
       : []
 
   return (
@@ -73,24 +113,41 @@ export default function Busca() {
         </div>
       )}
 
-      {query && results.length > 0 && (
+      {query && searchResults.length > 0 && (
         <div className="space-y-4 pt-2 animate-fade-in-up">
           <h3 className="text-xs font-bold text-enghub-skyblue mb-4 uppercase tracking-widest">
-            Resultados Encontrados
+            Resultados Encontrados ({searchResults.length})
           </h3>
-          {results.map((n) => (
+          {searchResults.map((item) => (
             <Link
-              key={n.id}
-              to={`/normas/${n.id}`}
+              key={`${item.type}-${item.id}`}
+              to={item.path}
               className="block bg-enghub-beige p-5 rounded-2xl shadow-sm hover:shadow-md transition-all active:scale-[0.98]"
             >
               <div className="flex items-start gap-4">
-                <div className="bg-enghub-orange/10 p-3 rounded-xl shrink-0 mt-1">
-                  <BookOpen className="w-6 h-6 text-enghub-orange" />
+                <div
+                  className={`p-3 rounded-xl shrink-0 mt-1 ${
+                    item.type === 'problema'
+                      ? 'bg-enghub-orange/10'
+                      : item.type === 'aprofundamento'
+                        ? 'bg-enghub-teal/10'
+                        : 'bg-enghub-navy/10'
+                  }`}
+                >
+                  {item.type === 'problema' && (
+                    <AlertTriangle className="w-6 h-6 text-enghub-orange" />
+                  )}
+                  {item.type === 'aprofundamento' && <Link2 className="w-6 h-6 text-enghub-teal" />}
+                  {item.type === 'norma' && <BookOpen className="w-6 h-6 text-enghub-navy" />}
                 </div>
                 <div>
-                  <h4 className="font-bold text-lg text-enghub-navy">{n.code}</h4>
-                  <p className="text-sm font-medium text-enghub-navy/70 mb-3">{n.title}</p>
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-enghub-navy/5 text-enghub-navy/60">
+                      {item.type}
+                    </span>
+                    <span className="font-bold text-xs text-enghub-navy/70">{item.code}</span>
+                  </div>
+                  <h4 className="font-bold text-lg text-enghub-navy leading-tight">{item.title}</h4>
                 </div>
               </div>
             </Link>
@@ -98,7 +155,7 @@ export default function Busca() {
         </div>
       )}
 
-      {query && query.length > 2 && results.length === 0 && (
+      {query && query.length > 2 && searchResults.length === 0 && (
         <div className="text-center py-16 text-enghub-skyblue animate-fade-in">
           <Search className="w-16 h-16 mx-auto text-enghub-orange/80 mb-4" />
           <p className="font-bold text-xl text-enghub-beige mb-1">Nenhum resultado</p>

@@ -5,7 +5,7 @@ export type NormaBlock = {
   bullets?: string[]
   takeaway?: string
   insights?: { name: string; description: string }[]
-  links?: string[]
+  links?: { id: string; title: string }[]
 }
 
 export type Norma = {
@@ -26,16 +26,6 @@ export type Norma = {
 }
 
 const p = '[Conteúdo estrutural — aguardando inserção manual]'
-const baseBlocks = {
-  ondeEntra: { title: 'Onde entra na obra', content: p },
-  controle: { title: 'O que realmente controla', content: p },
-  erros: { title: 'Onde todo mundo erra', content: p },
-  consequencias: { title: 'O que acontece quando erra', content: p },
-  praticas: { title: 'Como fazer certo na prática', content: p },
-  insights: { title: 'Insights rápidos de decisão', content: p },
-  perito: { title: 'Visão de perito', content: p },
-  aprofundamentos: { title: 'Aprofundamentos', content: p },
-}
 
 const nbr6122Blocks = {
   ondeEntra: {
@@ -130,14 +120,14 @@ const nbr6122Blocks = {
   aprofundamentos: {
     title: 'Aprofundamentos',
     links: [
-      'Como interpretar um SPT na prática',
-      'SPT não converge: o que isso indica',
-      'Como escolher entre estaca, sapata ou radier',
-      'Capacidade de carga: o que realmente importa',
-      'Recalque: o problema que aparece depois',
-      'Como o nível d’água muda tudo',
-      'Fundações na divisa',
-      'O que precisa ser registrado na obra',
+      { id: 'spt-pratica', title: 'Como interpretar um SPT na prática' },
+      { id: 'spt-nao-converge', title: 'SPT não converge: o que isso indica' },
+      { id: 'escolha-fundacao', title: 'Como escolher entre estaca, sapata ou radier' },
+      { id: 'capacidade-carga', title: 'Capacidade de carga: o que realmente importa' },
+      { id: 'recalque', title: 'Recalque: o problema que aparece depois' },
+      { id: 'nivel-agua', title: 'Como o nível d’água muda tudo' },
+      { id: 'fundacoes-divisa', title: 'Fundações na divisa' },
+      { id: 'registro-obra', title: 'O que precisa ser registrado na obra' },
     ],
   },
 }
@@ -233,14 +223,14 @@ const nbr15575Blocks = {
   aprofundamentos: {
     title: 'Aprofundamentos',
     links: [
-      'Desempenho acústico: onde mais se erra',
-      'Transmissão lateral de ruído',
-      'Conforto térmico na prática',
-      'Estanqueidade: onde a água entra',
-      'Vida útil de projeto: o que realmente significa',
-      'Interfaces construtivas: onde mora o problema',
-      'Onde o cliente pode cobrar (e cobra)',
-      'Como documentar desempenho',
+      { id: 'acustico-erros', title: 'Desempenho acústico: onde mais se erra' },
+      { id: 'transmissao-lateral', title: 'Transmissão lateral de ruído' },
+      { id: 'conforto-termico', title: 'Conforto térmico na prática' },
+      { id: 'estanqueidade', title: 'Estanqueidade: onde a água entra' },
+      { id: 'vida-util', title: 'Vida útil de projeto: o que realmente significa' },
+      { id: 'interfaces', title: 'Interfaces construtivas: onde mora o problema' },
+      { id: 'cliente-cobra', title: 'Onde o cliente pode cobrar (e cobra)' },
+      { id: 'documentar-desempenho', title: 'Como documentar desempenho' },
     ],
   },
 }
@@ -338,14 +328,14 @@ const nbr6118Blocks = {
   aprofundamentos: {
     title: 'Aprofundamentos',
     links: [
-      'Fissuração: quando é problema de verdade',
-      'Flecha em vigas e lajes',
-      'Vibração em estruturas leves',
-      'Interação estrutura x fundação',
-      'Excentricidade em pilares',
-      'Detalhamento de armadura na prática',
-      'Onde o software induz erro',
-      'Estados limites: o que realmente importa',
+      { id: 'fissuracao', title: 'Fissuração: quando é problema de verdade' },
+      { id: 'flecha', title: 'Flecha em vigas e lajes' },
+      { id: 'vibracao', title: 'Vibração em estruturas leves' },
+      { id: 'interacao-solo', title: 'Interação estrutura x fundação' },
+      { id: 'excentricidade', title: 'Excentricidade em pilares' },
+      { id: 'detalhamento', title: 'Detalhamento de armadura na prática' },
+      { id: 'erro-software', title: 'Onde o software induz erro' },
+      { id: 'estados-limites', title: 'Estados limites: o que realmente importa' },
     ],
   },
 }
@@ -448,14 +438,14 @@ const nbr6120Blocks = {
   aprofundamentos: {
     title: 'Aprofundamentos',
     links: [
-      'Como definir carga de uso na prática',
-      'Erros comuns em estimativa de peso próprio',
-      'Cargas concentradas: onde mora o risco',
-      'Reservatórios: impacto estrutural real',
-      'Mudança de uso: o problema silencioso',
-      'Combinações de carga: o que realmente importa',
-      'Quando a tabela não é suficiente',
-      'Como documentar premissas de carga',
+      { id: 'carga-uso', title: 'Como definir carga de uso na prática' },
+      { id: 'peso-proprio', title: 'Erros comuns em estimativa de peso próprio' },
+      { id: 'cargas-concentradas', title: 'Cargas concentradas: onde mora o risco' },
+      { id: 'reservatorios', title: 'Reservatórios: impacto estrutural real' },
+      { id: 'mudanca-uso', title: 'Mudança de uso: o problema silencioso' },
+      { id: 'combinacoes', title: 'Combinações de carga: o que realmente importa' },
+      { id: 'alem-tabela', title: 'Quando a tabela não é suficiente' },
+      { id: 'documentar-cargas', title: 'Como documentar premissas de carga' },
     ],
   },
 }
@@ -548,14 +538,14 @@ const nbr13752Blocks = {
   aprofundamentos: {
     title: 'Aprofundamentos',
     links: [
-      'Diferença entre sintoma e causa',
-      'Como investigar patologia na prática',
-      'Recalque: leitura pericial',
-      'Infiltração: como rastrear origem',
-      'Nexo causal: o que realmente significa',
-      'Como organizar evidências',
-      'Erros comuns em laudos técnicos',
-      'O que sustenta um parecer técnico',
+      { id: 'sintoma-causa', title: 'Diferença entre sintoma e causa' },
+      { id: 'investigar-patologia', title: 'Como investigar patologia na prática' },
+      { id: 'recalque-pericial', title: 'Recalque: leitura pericial' },
+      { id: 'infiltracao-rastreio', title: 'Infiltração: como rastrear origem' },
+      { id: 'nexo-causal', title: 'Nexo causal: o que realmente significa' },
+      { id: 'organizar-evidencias', title: 'Como organizar evidências' },
+      { id: 'erros-laudos', title: 'Erros comuns em laudos técnicos' },
+      { id: 'sustentar-parecer', title: 'O que sustenta um parecer técnico' },
     ],
   },
 }
@@ -655,14 +645,14 @@ const nbr5410Blocks = {
   aprofundamentos: {
     title: 'Aprofundamentos',
     links: [
-      'Como dimensionar circuitos na prática',
-      'Erros comuns com disjuntores',
-      'Sobrecarga: sinais e riscos',
-      'Curto-circuito: causas reais',
-      'Aquecimento de condutores',
-      'Separação de circuitos',
-      'Crescimento de carga ao longo do tempo',
-      'Improviso em instalações',
+      { id: 'dimensionar-circuitos', title: 'Como dimensionar circuitos na prática' },
+      { id: 'erros-disjuntores', title: 'Erros comuns com disjuntores' },
+      { id: 'sobrecarga-sinais', title: 'Sobrecarga: sinais e riscos' },
+      { id: 'curto-circuito', title: 'Curto-circuito: causas reais' },
+      { id: 'aquecimento-condutores', title: 'Aquecimento de condutores' },
+      { id: 'separacao-circuitos', title: 'Separação de circuitos' },
+      { id: 'crescimento-carga', title: 'Crescimento de carga ao longo do tempo' },
+      { id: 'improviso-instalacoes', title: 'Improviso em instalações' },
     ],
   },
 }
@@ -758,14 +748,14 @@ const nbr5626Blocks = {
   aprofundamentos: {
     title: 'Aprofundamentos',
     links: [
-      'Perda de carga na prática',
-      'Pressão insuficiente: causas reais',
-      'Uso simultâneo: como impacta',
-      'Vazamentos ocultos',
-      'Ruídos em tubulação',
-      'Reservatórios: impacto no sistema',
-      'Execução hidráulica: onde se erra',
-      'Como testar corretamente',
+      { id: 'perda-carga', title: 'Perda de carga na prática' },
+      { id: 'pressao-insuficiente', title: 'Pressão insuficiente: causas reais' },
+      { id: 'uso-simultaneo', title: 'Uso simultâneo: como impacta' },
+      { id: 'vazamentos-ocultos', title: 'Vazamentos ocultos' },
+      { id: 'ruidos-tubulacao', title: 'Ruídos em tubulação' },
+      { id: 'impacto-reservatorios', title: 'Reservatórios: impacto no sistema' },
+      { id: 'execucao-erros', title: 'Execução hidráulica: onde se erra' },
+      { id: 'testar-corretamente', title: 'Como testar corretamente' },
     ],
   },
 }
@@ -816,7 +806,7 @@ export const normas: Norma[] = [
   {
     id: '5626',
     code: 'NBR 5626',
-    title: 'INSTALAÇÕES PREDIAIS DE ÁGUA FRIA (versão EngHub — padrão aplicado)',
+    title: 'Instalações Prediais de Água Fria',
     category: 'Instalações',
     blocks: nbr5626Blocks,
   },
@@ -825,30 +815,88 @@ export const normas: Norma[] = [
 export const problemas = [
   {
     id: '1',
-    title: 'Recalque',
-    description: '[Descrição do problema — aguardando inserção manual]',
+    title: 'Recalque Diferencial em Fundações Rasas',
+    description:
+      'Apoio de sapatas sobre solos de diferentes compressibilidades ou camadas mal compactadas.',
+    causa:
+      'Falta de investigação geotécnica adequada (sondagem) ou má interpretação do perfil do solo sob a área de influência do bulbo de tensões.',
+    consequencia:
+      'Fissuração em alvenarias (formato 45 graus), desaprumo da estrutura e, em casos graves, colapso parcial ou total da edificação.',
     normaId: '6122',
     normaCode: 'NBR 6122',
+    aprofundamentoId: 'recalque',
   },
   {
     id: '2',
-    title: 'Fissura',
-    description: '[Descrição do problema — aguardando inserção manual]',
+    title: 'Fissuração por Falta de Armadura de Pele',
+    description:
+      'Vigas altas sem armadura lateral suficiente, gerando fissuras verticais e inclinadas no terço médio do vão.',
+    causa:
+      'Detalhamento estrutural deficiente. Ignorar a exigência normativa para vigas com altura significativa.',
+    consequencia:
+      'Abertura de fissuras que comprometem a durabilidade do concreto armado, facilitando a entrada de agentes agressivos e corrosão das armaduras.',
     normaId: '6118',
     normaCode: 'NBR 6118',
+    aprofundamentoId: 'fissuracao',
   },
   {
     id: '3',
-    title: 'Erro de Fundação',
-    description: '[Descrição do problema — aguardando inserção manual]',
-    normaId: '6122',
-    normaCode: 'NBR 6122',
+    title: 'Subdimensionamento de Cargas de Uso',
+    description:
+      'Utilização de valores mínimos de tabela sem considerar o uso real (ex: estoques não previstos, equipamentos pesados).',
+    causa:
+      'Ausência de entrevista detalhada com o cliente sobre o uso futuro ou adoção preguiçosa de cargas padrão para economia de tempo.',
+    consequencia:
+      'Deformações excessivas (flechas), fissuração não prevista e necessidade de reforço estrutural de alto custo pós-ocupação.',
+    normaId: '6120',
+    normaCode: 'NBR 6120',
+    aprofundamentoId: 'carga-uso',
   },
   {
     id: '4',
-    title: 'SPT não converge',
-    description: '[Descrição do problema — aguardando inserção manual]',
+    title: 'SPT não converge com o esperado',
+    description:
+      'Valores de NSPT que não apresentam crescimento lógico, indicando possíveis anomalias no subsolo que são frequentemente ignoradas.',
+    causa:
+      'Leitura automática do laudo de sondagem sem análise crítica do perfil geotécnico e do histórico da região.',
+    consequencia:
+      'Apoio de fundação profunda em camada de "falsa recusa" (ex: matacão), resultando em recalque severo ao atingir a camada de solo mole subjacente.',
     normaId: '6122',
     normaCode: 'NBR 6122',
+    aprofundamentoId: 'spt-nao-converge',
   },
 ]
+
+export type Aprofundamento = {
+  id: string
+  normaId: string
+  title: string
+  context: string
+  naPratica: string
+  erroComum: string
+  comoInterpretar: string
+  oQueFazer: string
+}
+
+export const getAprofundamento = (normaId: string, id: string): Aprofundamento | undefined => {
+  const norma = normas.find((n) => n.id === normaId)
+  if (!norma) return undefined
+  const link = norma.blocks.aprofundamentos?.links?.find((l) => l.id === id)
+  if (!link) return undefined
+
+  return {
+    id: link.id,
+    normaId: norma.id,
+    title: link.title,
+    context:
+      '[Contexto — aguardando inserção manual] Explicação breve do conceito técnico abordado e sua importância estrutural ou executiva.',
+    naPratica:
+      '[Onde isso aparece na prática — aguardando inserção manual] Exemplos de situações diárias de obra ou projetos onde este aspecto é decisivo.',
+    erroComum:
+      '[Erro comum relacionado — aguardando inserção manual] O que a maioria dos profissionais costuma fazer errado ou negligenciar neste cenário.',
+    comoInterpretar:
+      '[Como interpretar corretamente — aguardando inserção manual] A visão analítica correta sob a ótica da engenharia e da norma.',
+    oQueFazer:
+      '[O que fazer na prática — aguardando inserção manual] Ação objetiva e recomendada para evitar patologias e assegurar conformidade.',
+  }
+}

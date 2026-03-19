@@ -8,7 +8,9 @@ import Index from './pages/Index'
 import Home from './pages/Home'
 import Normas from './pages/Normas'
 import NormaDetail from './pages/NormaDetail'
+import AprofundamentoDetail from './pages/AprofundamentoDetail'
 import Problemas from './pages/Problemas'
+import ProblemaDetail from './pages/ProblemaDetail'
 import Busca from './pages/Busca'
 import NotFound from './pages/NotFound'
 
@@ -23,7 +25,9 @@ const App = () => (
           <Route path="/home" element={<Home />} />
           <Route path="/normas" element={<Normas />} />
           <Route path="/normas/:id" element={<NormaDetail />} />
+          <Route path="/normas/:id/aprofundamentos/:aprofId" element={<AprofundamentoDetail />} />
           <Route path="/problemas" element={<Problemas />} />
+          <Route path="/problemas/:id" element={<ProblemaDetail />} />
           <Route path="/busca" element={<Busca />} />
         </Route>
         <Route path="*" element={<NotFound />} />

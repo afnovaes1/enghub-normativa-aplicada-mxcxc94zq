@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, Link } from 'react-router-dom'
 import { normas } from '@/lib/data'
 import {
   ArrowLeft,
@@ -114,13 +114,18 @@ export default function NormaDetail() {
                 {data.links && data.links.length > 0 && (
                   <div className="space-y-2 mb-2 mt-1">
                     {data.links.map((link, i) => (
-                      <div
+                      <Link
                         key={i}
-                        className="flex items-center justify-between p-3.5 rounded-xl bg-enghub-navy hover:bg-enghub-navy/80 transition-colors cursor-pointer group shadow-sm"
+                        to={`/normas/${norma.id}/aprofundamentos/${link.id}`}
+                        className="flex items-center justify-between p-3.5 rounded-xl bg-enghub-navy hover:bg-enghub-navy/80 transition-colors group shadow-sm block"
                       >
-                        <span className="text-enghub-beige text-sm font-bold pr-4">{link}</span>
-                        <ChevronRight className="w-4 h-4 text-enghub-orange group-hover:translate-x-1 transition-transform shrink-0" />
-                      </div>
+                        <div className="flex items-center justify-between w-full">
+                          <span className="text-enghub-beige text-sm font-bold pr-4">
+                            {link.title}
+                          </span>
+                          <ChevronRight className="w-4 h-4 text-enghub-orange group-hover:translate-x-1 transition-transform shrink-0" />
+                        </div>
+                      </Link>
                     ))}
                   </div>
                 )}

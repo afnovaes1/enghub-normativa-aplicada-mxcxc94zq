@@ -18,7 +18,7 @@ export default function Problemas() {
         {problemas.map((p) => (
           <Link
             key={p.id}
-            to={`/normas/${p.normaId}`}
+            to={`/problemas/${p.id}`}
             className="group relative bg-enghub-beige p-6 rounded-2xl shadow-sm hover:shadow-md transition-all active:scale-[0.98]"
           >
             <div className="relative z-10 flex flex-col h-full">
@@ -30,7 +30,7 @@ export default function Problemas() {
                   <h3 className="font-bold text-lg text-enghub-navy leading-tight mb-1">
                     {p.title}
                   </h3>
-                  <p className="text-sm text-enghub-navy/70 font-medium leading-relaxed">
+                  <p className="text-sm text-enghub-navy/70 font-medium leading-relaxed line-clamp-2">
                     {p.description}
                   </p>
                 </div>
