@@ -1,6 +1,14 @@
 import { useParams, useNavigate } from 'react-router-dom'
 import { getAprofundamento } from '@/lib/data'
-import { ArrowLeft, BookOpen, AlertCircle, CheckCircle2, Eye, Target } from 'lucide-react'
+import {
+  ArrowLeft,
+  BookOpen,
+  AlertCircle,
+  CheckCircle2,
+  Eye,
+  Target,
+  Lightbulb,
+} from 'lucide-react'
 
 export default function AprofundamentoDetail() {
   const { id, aprofId } = useParams()
@@ -39,6 +47,22 @@ export default function AprofundamentoDetail() {
         <Section icon={AlertCircle} title="Erro comum relacionado" content={aprof.erroComum} />
         <Section icon={Eye} title="Como interpretar corretamente" content={aprof.comoInterpretar} />
         <Section icon={CheckCircle2} title="O que fazer na prática" content={aprof.oQueFazer} />
+
+        {aprof.fechamento && (
+          <div className="mt-6 bg-enghub-orange/10 border border-enghub-orange/20 p-5 md:p-6 rounded-2xl shadow-sm flex flex-col md:flex-row gap-5 items-start">
+            <div className="shrink-0 w-12 h-12 rounded-xl flex items-center justify-center bg-enghub-orange text-white">
+              <Lightbulb className="w-6 h-6" />
+            </div>
+            <div className="pt-1">
+              <h3 className="font-bold text-enghub-orange text-xs uppercase tracking-widest mb-1.5">
+                Fechamento
+              </h3>
+              <p className="text-enghub-beige font-bold text-[17px] leading-snug">
+                {aprof.fechamento}
+              </p>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   )

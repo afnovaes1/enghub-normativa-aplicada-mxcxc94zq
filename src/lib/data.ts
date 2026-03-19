@@ -25,8 +25,6 @@ export type Norma = {
   }
 }
 
-const p = '[Conteúdo estrutural — aguardando inserção manual]'
-
 const nbr6122Blocks = {
   ondeEntra: {
     title: 'Onde entra na obra',
@@ -120,12 +118,12 @@ const nbr6122Blocks = {
   aprofundamentos: {
     title: 'Aprofundamentos',
     links: [
-      { id: 'spt-pratica', title: 'Como interpretar um SPT na prática' },
-      { id: 'spt-nao-converge', title: 'SPT não converge: o que isso indica' },
-      { id: 'escolha-fundacao', title: 'Como escolher entre estaca, sapata ou radier' },
+      { id: 'spt-pratica', title: 'Interpretação de SPT na prática' },
+      { id: 'spt-nao-converge', title: 'SPT não converge: o que isso significa' },
+      { id: 'escolha-fundacao', title: 'Escolha entre estaca, sapata ou radier' },
       { id: 'capacidade-carga', title: 'Capacidade de carga: o que realmente importa' },
-      { id: 'recalque', title: 'Recalque: o problema que aparece depois' },
-      { id: 'nivel-agua', title: 'Como o nível d’água muda tudo' },
+      { id: 'recalque', title: 'Recalque: leitura técnica real' },
+      { id: 'nivel-agua', title: 'Influência da água no comportamento do solo' },
       { id: 'fundacoes-divisa', title: 'Fundações na divisa' },
       { id: 'registro-obra', title: 'O que precisa ser registrado na obra' },
     ],
@@ -876,6 +874,116 @@ export type Aprofundamento = {
   erroComum: string
   comoInterpretar: string
   oQueFazer: string
+  fechamento?: string
+}
+
+const aprofundamentosDetalhes: Record<string, Partial<Aprofundamento>> = {
+  'spt-pratica': {
+    context:
+      'SPT não é número. É leitura de comportamento do solo. O erro começa quando o resultado é tratado como valor absoluto, sem contexto de profundidade, material e condição de execução.',
+    naPratica:
+      'Escolha de tipo de fundação; definição de cota de apoio; estimativa de capacidade de carga; análise de recalque. E principalmente: 👉 quando os furos “parecem bons”, mas a obra começa a responder diferente.',
+    erroComum:
+      'Ler o NSPT isoladamente; comparar furos apenas por profundidade (ignorando cotas); assumir homogeneidade do solo; ignorar transições de camada; desconsiderar condição de saturação. 👉 resultado: decisão baseada em número, não em perfil.',
+    comoInterpretar:
+      'Analisar o perfil completo, não só o valor pontual; alinhar cotas entre furos (profundidade ≠ mesma condição geotécnica); identificar coerência entre camadas; observar variações abruptas; considerar o tipo de solo, não só o índice. 👉 SPT precisa “contar uma história” — não pode ser só tabela.',
+    oQueFazer:
+      'Cruzar informações entre furos; questionar incoerências; considerar cenário mais desfavorável; ajustar decisão ao comportamento esperado do solo; se necessário, complementar investigação. 👉 quando o SPT levanta dúvida, o erro é ignorar — não investigar.',
+    fechamento: 'SPT não erra. Quem erra é quem interpreta sem contexto.',
+  },
+  'spt-nao-converge': {
+    context:
+      'Quando os furos de sondagem apresentam resultados distintos para uma mesma cota ou condição esperada, não é erro do ensaio. 👉 é o solo mostrando que não é homogêneo. A não convergência é um sinal — não um problema do dado.',
+    naPratica:
+      'Dois furos próximos com NSPT diferentes; camadas que “desaparecem” ou mudam de comportamento; variação de resistência sem padrão claro; discrepância entre perfil previsto e comportamento real da obra. 👉 geralmente ignorado quando “um dos furos parece bom”.',
+    erroComum:
+      'Escolher o furo mais favorável; fazer média entre resultados distintos; assumir que um dos furos está “errado”; ignorar variabilidade lateral do solo. 👉 resultado: decisão otimista em solo não confiável.',
+    comoInterpretar:
+      'Considerar que o solo é heterogêneo; identificar zonas de transição ou descontinuidade; avaliar a pior condição como referência; observar padrão regional (não só local); entender que a não convergência pode indicar risco. 👉 divergência de SPT é informação — não ruído.',
+    oQueFazer:
+      'Aumentar número de furos, se necessário; adotar solução mais conservadora; evitar decisões baseadas em um único ponto; revisar escolha de fundação; considerar métodos que reduzam sensibilidade à variabilidade. 👉 quando o solo não é confiável, o projeto precisa ser.',
+    fechamento:
+      'SPT não converge quando o solo não é previsível. Ignorar isso é assumir risco sem perceber.',
+  },
+  'escolha-fundacao': {
+    context:
+      'Não existe fundação “melhor”. Existe fundação adequada ao comportamento do solo e da estrutura. 👉 a escolha errada normalmente nasce de simplificação excessiva.',
+    naPratica:
+      'Fase de projeto de fundação; revisão de solução por custo; adaptação em obra; decisão rápida sem investigação completa. 👉 principalmente quando se tenta padronizar solução para todo o terreno.',
+    erroComum:
+      'Escolher pela carga apenas; adotar solução “mais econômica” no papel; assumir que solo superficial responde igual em toda a área; usar radier como solução universal para obra leve; adotar estaca sem entender o solo ao longo da profundidade. 👉 resultado: solução aparentemente viável, comportamento problemático.',
+    comoInterpretar:
+      '👉 Sapata: funciona bem quando solo superficial é competente e homogêneo (atenção: sensível à variação de solo e saturação). 👉 Radier: funciona bem quando distribuição de carga é uniforme e solo tem comportamento previsível (atenção: não elimina recalque, apenas distribui). 👉 Estaca: funciona bem quando solo superficial é fraco e há camada resistente em profundidade (atenção: depende da execução). 👉 escolha não é pelo tipo de obra — é pelo comportamento esperado.',
+    oQueFazer:
+      'Interpretar o perfil de solo completo; avaliar variabilidade lateral; considerar nível d’água; analisar sensibilidade ao recalque; compatibilizar com rigidez da estrutura; evitar decisões baseadas apenas em custo. 👉 fundação deve responder ao solo — não ao orçamento.',
+    fechamento: 'Não é a fundação que resolve o problema — é a escolha correta dela.',
+  },
+  'capacidade-carga': {
+    context:
+      'Capacidade de carga não é um número fixo. 👉 é o resultado de uma interação entre solo, fundação e condição de carregamento. O erro começa quando ela é tratada como valor isolado.',
+    naPratica:
+      'Definição do tipo de fundação; dimensionamento de sapatas e estacas; validação de soluções “econômicas”; análise de segurança. 👉 principalmente quando o valor “fecha no cálculo”, mas o comportamento não acompanha.',
+    erroComum:
+      'Confiar cegamente em correlação de NSPT; desconsiderar tipo de solo; ignorar influência da água; não avaliar mecanismo de ruptura; tratar capacidade como valor único (e não faixa). 👉 resultado: fundação dimensionada no limite… sem margem real.',
+    comoInterpretar:
+      'Capacidade de carga ≠ só resistência do solo; depende do tipo de fundação, do mecanismo de ruptura, da condição de saturação e da forma de carregamento. 👉 o mesmo solo responde diferente para soluções diferentes.',
+    oQueFazer:
+      'Não depender apenas de SPT; avaliar comportamento do solo como sistema; considerar condição mais crítica (geralmente saturada); entender como a carga será transferida; evitar trabalhar próximo do limite sem controle. 👉 capacidade de carga não é “quanto aguenta” — é como responde.',
+    fechamento: 'Não é o número que define a segurança — é a interpretação dele.',
+  },
+  recalque: {
+    context:
+      'Recalque não é, por si só, um problema. 👉 é um comportamento natural do solo. O problema começa quando ele é excessivo, diferencial ou não previsto.',
+    naPratica:
+      'Trincas em alvenaria; portas e janelas desalinhadas; pisos fissurados; estruturas com deformações visíveis. 👉 muitas vezes tratado como “problema estrutural”, quando é de fundação.',
+    erroComum:
+      'Avaliar recalque apenas visualmente; ignorar a evolução no tempo; tratar sintoma e não causa; assumir que “parou” sem monitoramento; desconsiderar interação solo–estrutura. 👉 resultado: intervenção errada ou tardia.',
+    comoInterpretar:
+      'Recalque absoluto → nem sempre crítico; recalque diferencial → quase sempre crítico; velocidade do recalque → define urgência; padrão de deformação → indica causa. 👉 solo sempre cede. A questão é como e quanto.',
+    oQueFazer:
+      'Identificar padrão das fissuras; correlacionar com posição das fundações; avaliar histórico da edificação; considerar influência de água (principal fator oculto); quando necessário, instrumentar ou simular. 👉 sem entender o mecanismo, qualquer solução é tentativa.',
+    fechamento: 'Recalque não se corrige — se compreende. Só depois se intervém.',
+  },
+  'nivel-agua': {
+    context:
+      'A água não é um fator secundário. 👉 ela é um agente ativo de transformação do solo. Ela altera: resistência, deformabilidade, volume e estabilidade.',
+    naPratica:
+      'Solos que “amolecem” após chuva; surgimento de recalques após períodos úmidos; instabilidade de taludes; perda de capacidade de carga; aumento de deformações ao longo do tempo. 👉 muitas vezes ignorado porque o solo parecia “bom” na execução.',
+    erroComum:
+      'Analisar solo seco e ignorar condição saturada; desconsiderar variação do nível d’água; não prever drenagem; assumir comportamento constante ao longo do tempo. 👉 resultado: projeto válido… até a primeira chuva crítica.',
+    comoInterpretar:
+      'Aumento de umidade → redução de resistência; saturação → aumento de poropressão; perda de sucção em solos finos → perda significativa de capacidade. 👉 solos não saturados são enganosamente resistentes.',
+    oQueFazer:
+      'Sempre considerar cenário saturado (condição crítica); avaliar drenagem natural e artificial; identificar caminhos de fluxo de água; prever sistemas de alívio de pressão (drenos, geossintéticos, etc.); correlacionar com histórico climático da região. 👉 água não cria problema — ela revela fragilidades.',
+    fechamento:
+      'O solo que funciona seco pode falhar molhado. Projetar ignorando isso é projetar incompleto.',
+  },
+  'fundacoes-divisa': {
+    context:
+      'Fundação na divisa não é só questão técnica. 👉 é técnica + interferência + responsabilidade. Você não está lidando apenas com seu solo — está influenciando o do vizinho.',
+    naPratica:
+      'Obras em áreas urbanas densas; fundações próximas a muros ou limites de terreno; escavações junto à divisa; execução de estacas próximas a edificações existentes. 👉 principalmente em terrenos estreitos ou já ocupados lateralmente.',
+    erroComum:
+      'Ignorar influência no solo vizinho; não considerar fundação existente ao lado; executar escavação sem contenção adequada; assumir que “cada lote é independente”; ausência de vistoria prévia no imóvel vizinho. 👉 resultado: dano no vizinho… e responsabilidade direta.',
+    comoInterpretar:
+      'Solo não respeita limite de propriedade; tensões se propagam lateralmente; escavações alteram equilíbrio do terreno; fundações próximas interagem entre si. 👉 o que você faz no seu lote pode afetar o outro.',
+    oQueFazer:
+      'Realizar vistoria cautelar antes de iniciar; avaliar fundações vizinhas; prever contenção, se necessário; controlar escavação e execução; registrar condições antes, durante e depois. 👉 obra na divisa exige controle maior, não menor.',
+    fechamento: 'Na divisa, o erro não fica só na sua obra — ele atravessa o muro.',
+  },
+  'registro-obra': {
+    context:
+      'Obra sem registro é obra sem memória. 👉 e, na prática, também é obra sem defesa. O problema não é só fazer errado. É não conseguir provar o que foi feito.',
+    naPratica:
+      'Divergência entre projeto e execução; surgimento de patologia; questionamento de responsabilidade; necessidade de perícia. 👉 principalmente quando “ninguém lembra exatamente o que aconteceu”.',
+    erroComum:
+      'Não registrar etapas críticas; confiar apenas em comunicação verbal; não documentar alterações em obra; ausência de controle de execução; registros incompletos ou genéricos. 👉 resultado: discussão baseada em versão, não em fato.',
+    comoInterpretar:
+      'Registro técnico não é burocracia; é parte do controle da obra; decisão sem registro = decisão frágil; execução sem evidência = execução questionável. 👉 o que não está documentado, não existe tecnicamente.',
+    oQueFazer:
+      'Registrar sondagens utilizadas; documentar escolha da fundação; registrar alterações de projeto; acompanhar e registrar execução; manter evidências (fotos, relatórios, medições); organizar histórico técnico da obra. 👉 registro não é excesso — é proteção.',
+    fechamento: 'Quem não registra o que fez, aceita que outros definam o que aconteceu.',
+  },
 }
 
 export const getAprofundamento = (normaId: string, id: string): Aprofundamento | undefined => {
@@ -884,19 +992,27 @@ export const getAprofundamento = (normaId: string, id: string): Aprofundamento |
   const link = norma.blocks.aprofundamentos?.links?.find((l) => l.id === id)
   if (!link) return undefined
 
+  const detalhe = aprofundamentosDetalhes[id] || {}
+
   return {
     id: link.id,
     normaId: norma.id,
     title: link.title,
     context:
+      detalhe.context ||
       '[Contexto — aguardando inserção manual] Explicação breve do conceito técnico abordado e sua importância estrutural ou executiva.',
     naPratica:
+      detalhe.naPratica ||
       '[Onde isso aparece na prática — aguardando inserção manual] Exemplos de situações diárias de obra ou projetos onde este aspecto é decisivo.',
     erroComum:
+      detalhe.erroComum ||
       '[Erro comum relacionado — aguardando inserção manual] O que a maioria dos profissionais costuma fazer errado ou negligenciar neste cenário.',
     comoInterpretar:
+      detalhe.comoInterpretar ||
       '[Como interpretar corretamente — aguardando inserção manual] A visão analítica correta sob a ótica da engenharia e da norma.',
     oQueFazer:
+      detalhe.oQueFazer ||
       '[O que fazer na prática — aguardando inserção manual] Ação objetiva e recomendada para evitar patologias e assegurar conformidade.',
+    fechamento: detalhe.fechamento,
   }
 }
