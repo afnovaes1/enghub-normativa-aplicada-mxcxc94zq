@@ -32,7 +32,7 @@ export default {
       colors: {
         enghub: {
           navy: '#2F4156',
-          beige: '#F5EFEB',
+          beige: '#B8B3B0',
           skyblue: '#C8D9E6',
           teal: '#567C8D',
           orange: '#E67E22',
