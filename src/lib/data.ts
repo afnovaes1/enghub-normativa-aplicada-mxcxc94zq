@@ -239,7 +239,7 @@ const nbr15575Blocks = {
       'Estanqueidade: onde a água entra',
       'Vida útil de projeto: o que realmente significa',
       'Interfaces construtivas: onde mora o problema',
-      'O que o cliente pode cobrar (e cobra)',
+      'Onde o cliente pode cobrar (e cobra)',
       'Como documentar desempenho',
     ],
   },
@@ -350,6 +350,116 @@ const nbr6118Blocks = {
   },
 }
 
+const nbr6120Blocks = {
+  ondeEntra: {
+    title: 'Onde entra na obra',
+    content: 'Essa norma entra antes de qualquer dimensionamento.',
+    bullets: [
+      'definição das cargas atuantes',
+      'entendimento do uso da edificação',
+      'base para o cálculo estrutural',
+      'premissas iniciais do projeto',
+    ],
+    takeaway: 'se a carga está errada, todo o resto nasce errado',
+  },
+  controle: {
+    title: 'O que realmente controla',
+    content: 'Não controla estrutura. Controla o que chega nela.',
+    bullets: [
+      'cargas permanentes',
+      'cargas variáveis',
+      'sobrecargas de uso',
+      'ações acidentais',
+      'combinações de carregamento',
+    ],
+    takeaway: 'não existe cálculo certo com carga errada',
+  },
+  erros: {
+    title: 'Onde todo mundo erra',
+    bullets: [
+      'Subestimar carga de uso (considera cenário ideal, não real)',
+      'Ignorar mudanças futuras (uso da edificação muda com o tempo)',
+      'Simplificar demais cargas permanentes (peso próprio mal estimado)',
+      'Não considerar combinações críticas (usa combinação “padrão” sem avaliar pior caso)',
+      'Desconsiderar cargas não previstas (equipamentos, reservatórios, sobrecargas localizadas)',
+    ],
+    takeaway: 'carga não é número — é cenário de uso',
+  },
+  consequencias: {
+    title: 'O que acontece quando erra',
+    bullets: [
+      'deformações excessivas',
+      'fissuração fora do esperado',
+      'sobrecarga estrutural',
+      'reforços corretivos',
+      'redução de vida útil',
+      'risco estrutural progressivo',
+    ],
+    takeaway: 'a estrutura responde exatamente ao que você mandou para ela',
+  },
+  praticas: {
+    title: 'Como fazer certo na prática',
+    bullets: [
+      'entender o uso real da edificação',
+      'considerar cenários desfavoráveis',
+      'avaliar possibilidade de mudança de uso',
+      'estimar corretamente cargas permanentes',
+      'verificar combinações críticas',
+      'validar premissas antes de calcular',
+    ],
+  },
+  insights: {
+    title: 'Insights rápidos de decisão',
+    insights: [
+      {
+        name: 'Carga de uso',
+        description:
+          'não é só tabela mas: depende do comportamento do usuário; pode ser superada facilmente em uso real',
+      },
+      {
+        name: 'Peso próprio',
+        description:
+          'parece trivial mas: aumento de seção impacta diretamente; materiais adicionais são frequentemente ignorados',
+      },
+      {
+        name: 'Reservatórios e equipamentos',
+        description: 'não são detalhe mas: concentram carga; geram esforços localizados críticos',
+      },
+      {
+        name: 'Mudança de uso',
+        description:
+          'quase sempre ignorada mas: transforma estrutura segura em problema; ocorre com frequência maior do que se considera',
+      },
+    ],
+    takeaway: 'estrutura não é dimensionada para hoje — é para o que pode acontecer',
+  },
+  perito: {
+    title: 'Visão de perito',
+    bullets: [
+      'erro raramente está no cálculo estrutural',
+      'está na premissa de carga adotada',
+      'muitos projetos assumem uso ideal',
+      'a realidade entrega uso extremo',
+      'ausência de definição clara de cargas fragiliza defesa',
+      'sem premissa registrada, tudo vira questionável',
+    ],
+    takeaway: 'quem não define carga claramente, assume risco oculto',
+  },
+  aprofundamentos: {
+    title: 'Aprofundamentos',
+    links: [
+      'Como definir carga de uso na prática',
+      'Erros comuns em estimativa de peso próprio',
+      'Cargas concentradas: onde mora o risco',
+      'Reservatórios: impacto estrutural real',
+      'Mudança de uso: o problema silencioso',
+      'Combinações de carga: o que realmente importa',
+      'Quando a tabela não é suficiente',
+      'Como documentar premissas de carga',
+    ],
+  },
+}
+
 export const normas: Norma[] = [
   {
     id: '6122',
@@ -377,7 +487,7 @@ export const normas: Norma[] = [
     code: 'NBR 6120',
     title: 'Ações para o cálculo de estruturas de edificações',
     category: 'Estrutural',
-    blocks: { ...baseBlocks },
+    blocks: nbr6120Blocks,
   },
   {
     id: '5410',
