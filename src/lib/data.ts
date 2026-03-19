@@ -1001,7 +1001,7 @@ const aprofundamentosDetalhes: Record<string, Partial<Aprofundamento>> = {
     erroComum:
       'Ler o NSPT isoladamente; comparar furos apenas por profundidade (ignorando cotas); assumir homogeneidade do solo; ignorar transições de camada; desconsiderar condição de saturação. 👉 resultado: decisão baseada em número, não em perfil.',
     comoInterpretar:
-      'Analisar o perfil completo, não só o valor pontual; alinhar cotas entre furos (profundidade ≠ mesma condição geotécnica); identificar coerência entre camadas; observar variações abruptas; considerar o tipo de solo, não só o índice. 👉 SPT precisa “contar uma história” — não pode ser só tabela.',
+      'Analisar o perfil completo, não só o valor pontual; alinhar cotas entre furos (profundidade ≠ mesma condição geotécnica); identify coerência entre camadas; observar variações abruptas; considerar o tipo de solo, não só o índice. 👉 SPT precisa “contar uma história” — não pode ser só tabela.',
     oQueFazer:
       'Cruzar informações entre furos; questionar incoerências; considerar cenário mais desfavorável; ajustar decisão ao comportamento esperado do solo; se necessário, complementar investigação. 👉 quando o SPT levanta dúvida, o erro é ignorar — não investigar.',
     fechamento: 'SPT não erra. Quem erra é quem interpreta sem contexto.',
@@ -1014,7 +1014,7 @@ const aprofundamentosDetalhes: Record<string, Partial<Aprofundamento>> = {
     erroComum:
       'Escolher o furo mais favorável; fazer média entre resultados distintos; assumir que um dos furos está “errado”; ignorar variabilidade lateral do solo. 👉 resultado: decisão otimista em solo não confiável.',
     comoInterpretar:
-      'Considerar que o solo é heterogêneo; identificar zonas de transição ou descontinuidade; avaliar a pior condição como referência; observar padrão regional (não só local); entender que a não convergência pode indicar risco. 👉 divergência de SPT é informação — não ruído.',
+      'Considerar que o solo é heterogêneo; identify zonas de transição ou descontinuidade; avaliar a pior condição como referência; observar padrão regional (não só local); entender que a não convergência pode indicar risco. 👉 divergência de SPT é informação — não ruído.',
     oQueFazer:
       'Aumentar número de furos, se necessário; adotar solução mais conservadora; evitar decisões baseadas em um único ponto; revisar escolha de fundação; considerar métodos que reduzam sensibilidade à variabilidade. 👉 quando o solo não é confiável, o projeto precisa ser.',
     fechamento:
@@ -1069,7 +1069,7 @@ const aprofundamentosDetalhes: Record<string, Partial<Aprofundamento>> = {
     comoInterpretar:
       'Aumento de umidade → redução de resistência; saturação → aumento de poropressão; perda de sucção em solos finos → perda significativa de capacidade. 👉 solos não saturados são enganosamente resistentes.',
     oQueFazer:
-      'Sempre considerar cenário saturado (condição crítica); avaliar drenagem natural e artificial; identificar caminhos de fluxo de água; prever sistemas de alívio de pressão (drenos, geossintéticos, etc.); correlacionar com histórico climático da região. 👉 água não cria problema — ela revela fragilidades.',
+      'Sempre considerar cenário saturado (condição crítica); avaliar drenagem natural e artificial; identify caminhos de fluxo de água; prever sistemas de alívio de pressão (drenos, geossintéticos, etc.); correlacionar com histórico climático da região. 👉 água não cria problema — ela revela fragilidades.',
     fechamento:
       'O solo que funciona seco pode falhar molhado. Projetar ignorando isso é projetar incompleto.',
   },
@@ -1141,6 +1141,7 @@ export type Diagnostico = {
   hipotesesProvaveis: string
   comoConfirmar: string
   estrategiasTecnicas: string
+  oQueNaoFazer: string
   erroComum: string
   quandoSeTornaCritico: string
   sinteseTecnica: string
@@ -1157,6 +1158,7 @@ export const diagnosticos: Diagnostico[] = [
     hipotesesProvaveis: '[Inserir as principais causas que podem estar gerando o problema]',
     comoConfirmar: '[Inserir ensaios, medições ou análises para confirmar a causa]',
     estrategiasTecnicas: '[Inserir as abordagens possíveis para solução ou mitigação]',
+    oQueNaoFazer: '[Inserir o que NÃO fazer para não agravar o problema]',
     erroComum: '[Inserir o que profissionais geralmente erram ao lidar com isso]',
     quandoSeTornaCritico: '[Inserir os sinais de que a situação exige ação imediata]',
     sinteseTecnica: '[Inserir um resumo executivo para rápida tomada de decisão]',

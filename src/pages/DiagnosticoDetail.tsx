@@ -22,14 +22,15 @@ export default function DiagnosticoDetail() {
   const sections = [
     { key: 'oQueEstaAcontecendo', label: '2. O que está acontecendo' },
     { key: 'oQueObservarEmCampo', label: '3. O que observar em campo' },
-    { key: 'leituraTecnica', label: '4. Leitura técnica do problema' },
-    { key: 'hipotesesProvaveis', label: '5. Hipóteses prováveis' },
+    { key: 'hipotesesProvaveis', label: '4. Hipóteses prováveis' },
+    { key: 'leituraTecnica', label: '5. Leitura técnica do problema' },
     { key: 'comoConfirmar', label: '6. Como confirmar' },
-    { key: 'estrategiasTecnicas', label: '7. Estratégias técnicas possíveis' },
-    { key: 'erroComum', label: '8. Erro comum nesse caso' },
-    { key: 'quandoSeTornaCritico', label: '9. Quando isso se torna crítico' },
-    { key: 'sinteseTecnica', label: '10. Síntese técnica' },
-    { key: 'baseTecnica', label: '11. Base técnica relacionada' },
+    { key: 'estrategiasTecnicas', label: '7. Possíveis caminhos técnicos' },
+    { key: 'oQueNaoFazer', label: '8. O que NÃO fazer' },
+    { key: 'erroComum', label: '9. Erro comum nesse caso' },
+    { key: 'quandoSeTornaCritico', label: '10. Quando isso se torna crítico' },
+    { key: 'sinteseTecnica', label: '11. Síntese técnica' },
+    { key: 'baseTecnica', label: '12. Base técnica relacionada' },
   ]
 
   return (
@@ -54,10 +55,14 @@ export default function DiagnosticoDetail() {
       </div>
 
       <div className="bg-enghub-beige rounded-2xl p-2 md:p-4 shadow-sm mt-6">
-        <Accordion type="single" collapsible className="w-full">
+        <Accordion type="single" collapsible className="w-full space-y-2">
           {sections.map((sec) => (
-            <AccordionItem key={sec.key} value={sec.key} className="border-enghub-navy/10 px-3">
-              <AccordionTrigger className="text-enghub-navy font-bold text-[15px] md:text-base hover:no-underline hover:text-enghub-teal transition-colors py-4 md:py-5 text-left leading-snug">
+            <AccordionItem
+              key={sec.key}
+              value={sec.key}
+              className="border-b-0 border border-enghub-navy/5 bg-white/60 rounded-xl px-4 border-l-[3px] border-l-enghub-orange/40 overflow-hidden shadow-sm"
+            >
+              <AccordionTrigger className="text-enghub-navy font-bold text-[15px] md:text-base hover:no-underline hover:text-enghub-orange/80 transition-colors py-4 text-left leading-snug">
                 {sec.label}
               </AccordionTrigger>
               <AccordionContent className="text-enghub-navy/80 text-[14px] md:text-[15px] leading-relaxed font-medium pb-5 pt-1">
@@ -74,7 +79,7 @@ export default function DiagnosticoDetail() {
         </div>
         <div className="pt-0.5">
           <h3 className="text-enghub-beige font-bold text-sm mb-2 uppercase tracking-wider">
-            12. Nota de Responsabilidade Técnica
+            13. Nota de Responsabilidade Técnica
           </h3>
           <p className="text-enghub-skyblue text-sm leading-relaxed font-medium">
             As estratégias apresentadas possuem caráter técnico-informativo e não substituem a

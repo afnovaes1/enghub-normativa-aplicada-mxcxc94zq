@@ -17,7 +17,7 @@ export default function Layout() {
   const navItems = [
     { label: 'Home', path: '/home', icon: Home },
     { label: 'Normas', path: '/normas', icon: BookOpen },
-    { label: 'Diagnóstico', path: '/diagnostico', icon: Activity },
+    { label: 'Diagnóstico Técnico', path: '/diagnostico', icon: Activity },
     { label: 'Erros', path: '/problemas', icon: AlertTriangle },
     { label: 'Busca', path: '/busca', icon: Search },
   ]
@@ -74,7 +74,7 @@ export default function Layout() {
               key={item.path}
               to={item.path}
               className={cn(
-                'flex flex-col items-center justify-center w-full max-w-[4.5rem] h-full gap-1 transition-all',
+                'flex flex-col items-center justify-center w-full max-w-[5rem] h-full gap-1 transition-all',
                 isActive ? 'text-white' : 'text-enghub-skyblue',
               )}
             >
