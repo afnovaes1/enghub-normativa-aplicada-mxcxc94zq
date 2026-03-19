@@ -142,6 +142,109 @@ const nbr6122Blocks = {
   },
 }
 
+const nbr15575Blocks = {
+  ondeEntra: {
+    title: 'Onde entra na obra',
+    content: 'Essa norma entra quando o usuário começa a usar a edificação.',
+    bullets: [
+      'projeto arquitetônico e sistemas construtivos',
+      'escolha de materiais e soluções',
+      'execução e detalhamento',
+      'entrega do empreendimento',
+    ],
+    takeaway: 'essa norma não aparece na obra — aparece na reclamação',
+  },
+  controle: {
+    title: 'O que realmente controla',
+    content: 'Não controla execução. Controla desempenho.',
+    bullets: [
+      'conforto térmico',
+      'conforto acústico',
+      'estanqueidade',
+      'durabilidade',
+      'vida útil',
+    ],
+    takeaway: 'não basta funcionar — tem que performar ao longo do tempo',
+  },
+  erros: {
+    title: 'Onde todo mundo erra',
+    bullets: [
+      'Achar que desempenho é opcional (trata como “melhoria”, não como exigência)',
+      'Ignorar requisitos mínimos (principalmente acústico e térmico)',
+      'Não validar sistema construtivo (confia no fornecedor sem comprovação)',
+      'Detalhar mal interfaces (encontro de sistemas é onde falha)',
+      'Não considerar uso real (projeto pensado no papel, não no usuário)',
+    ],
+    takeaway: 'o problema não está no sistema — está na expectativa não atendida',
+  },
+  consequencias: {
+    title: 'O que acontece quando erra',
+    bullets: [
+      'reclamações do cliente',
+      'retrabalho pós-entrega',
+      'perda de credibilidade',
+      'ações judiciais',
+      'custo elevado de correção',
+    ],
+    takeaway: 'desempenho ruim vira problema jurídico',
+  },
+  praticas: {
+    title: 'Como fazer certo na prática',
+    bullets: [
+      'definir nível de desempenho desde o projeto',
+      'validar soluções com dados (não só catálogo)',
+      'detalhar bem interfaces entre sistemas',
+      'considerar uso real da edificação',
+      'registrar critérios adotados',
+    ],
+  },
+  insights: {
+    title: 'Insights rápidos de decisão',
+    insights: [
+      {
+        name: 'Acústica',
+        description:
+          'não depende só da laje mas: transmissão lateral costuma ser ignorada; piso resolve impacto, mas não tudo',
+      },
+      {
+        name: 'Térmico',
+        description:
+          'não é só material mas: orientação solar muda tudo; ventilação natural mal resolvida compromete desempenho',
+      },
+      {
+        name: 'Estanqueidade',
+        description:
+          'não é só impermeabilização mas: falha em detalhe construtivo é o principal problema; interface mal resolvida gera infiltração',
+      },
+      {
+        name: 'Durabilidade',
+        description:
+          'não é só material “bom” mas: depende de exposição, uso e manutenção; projeto que ignora isso transfere problema para o usuário',
+      },
+    ],
+    takeaway: 'desempenho não está no material — está no sistema como um todo',
+  },
+  perito: {
+    title: 'Visão de perito',
+    content:
+      'maioria dos problemas não é falha estrutural; é falha de desempenho. expectativa do usuário não atendida vira conflito, mesmo que a obra “esteja de pé”. ausência de definição de desempenho enfraquece defesa. sem critério claro, tudo vira discussão subjetiva.',
+    takeaway: 'sem critério definido, qualquer problema vira culpa sua',
+  },
+  aprofundamentos: {
+    title: 'Aprofundamentos',
+    links: [
+      'Desempenho acústico: onde mais se erra',
+      'Transmissão lateral de ruído',
+      'Conforto térmico na prática',
+      'Estanqueidade: onde a água entra',
+      'Vida útil de projeto: o que realmente significa',
+      'Interfaces construtivas: onde mora o problema',
+      'O que o cliente pode cobrar (e cobra)',
+      'Como documentar desempenho',
+    ],
+  },
+}
+
 export const normas: Norma[] = [
   {
     id: '6122',
@@ -155,7 +258,7 @@ export const normas: Norma[] = [
     code: 'NBR 15575',
     title: 'Edificações Habitacionais - Desempenho',
     category: 'Geral',
-    blocks: { ...baseBlocks },
+    blocks: nbr15575Blocks,
   },
   {
     id: '6118',
