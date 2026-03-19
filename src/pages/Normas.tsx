@@ -49,7 +49,7 @@ export default function Normas() {
               </h2>
             </div>
             <div className="flex items-center justify-end text-enghub-orange text-sm font-bold mt-6 pt-4 border-t border-enghub-navy/10 group-hover:translate-x-1 transition-transform">
-              Acessar Detalhes <ChevronRight className="w-4 h-4 text-enghub-orange ml-1" />
+              Acessar detalhes <ChevronRight className="w-4 h-4 text-enghub-orange ml-1" />
             </div>
           </Link>
         ))}

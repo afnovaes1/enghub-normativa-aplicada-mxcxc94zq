@@ -1,4 +1,4 @@
-import { useParams, Link, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import { normas } from '@/lib/data'
 import {
   ArrowLeft,
@@ -7,8 +7,8 @@ import {
   AlertOctagon,
   Zap,
   CheckCircle2,
+  Lightbulb,
   Eye,
-  ChevronRight,
   BookOpen,
 } from 'lucide-react'
 
@@ -28,7 +28,9 @@ export default function NormaDetail() {
     { key: 'erros', icon: AlertOctagon },
     { key: 'consequencias', icon: Zap },
     { key: 'praticas', icon: CheckCircle2 },
+    { key: 'insights', icon: Lightbulb },
     { key: 'perito', icon: Eye },
+    { key: 'aprofundamentos', icon: BookOpen },
   ]
 
   return (
@@ -48,7 +50,7 @@ export default function NormaDetail() {
         <p className="text-enghub-skyblue font-medium text-lg mt-1.5">{norma.title}</p>
       </div>
 
-      <div className="space-y-4 pt-2">
+      <div className="space-y-4 pt-2 pb-8">
         {blocks.map((b) => {
           const data = norma.blocks[b.key as keyof typeof norma.blocks]
           return (
@@ -59,7 +61,7 @@ export default function NormaDetail() {
               <div className="shrink-0 w-12 h-12 rounded-xl flex items-center justify-center bg-enghub-orange/10">
                 <b.icon className="w-6 h-6 text-enghub-orange" />
               </div>
-              <div className="pt-0.5">
+              <div className="pt-0.5 w-full">
                 <h3 className="font-bold text-enghub-navy text-[15px] mb-1.5">{data.title}</h3>
                 <p className="text-enghub-navy/70 text-[15px] leading-relaxed font-medium">
                   {data.content}
@@ -69,21 +71,6 @@ export default function NormaDetail() {
           )
         })}
       </div>
-
-      <Link
-        to={`/normas/${id}/extra`}
-        className="mt-8 bg-enghub-navy-dark hover:bg-enghub-navy-dark/80 text-enghub-beige shadow-sm rounded-2xl p-5 flex items-center justify-between transition-transform active:scale-[0.98] w-full border border-transparent"
-      >
-        <div className="flex items-center gap-4">
-          <div className="bg-enghub-navy p-3 rounded-xl shadow-inner">
-            <BookOpen className="w-6 h-6 text-enghub-orange" />
-          </div>
-          <div className="flex flex-col text-left">
-            <span className="font-bold text-lg">Aprofundamento Técnico</span>
-          </div>
-        </div>
-        <ChevronRight className="w-6 h-6 text-enghub-orange" />
-      </Link>
     </div>
   )
 }

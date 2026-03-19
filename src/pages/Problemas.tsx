@@ -41,7 +41,7 @@ export default function Problemas() {
                   {p.normaCode}
                 </div>
                 <div className="text-enghub-orange text-sm font-bold flex items-center group-hover:translate-x-1 transition-transform">
-                  Ver Solução <ChevronRight className="w-4 h-4 text-enghub-orange ml-0.5" />
+                  Acessar detalhes <ChevronRight className="w-4 h-4 text-enghub-orange ml-0.5" />
                 </div>
               </div>
             </div>

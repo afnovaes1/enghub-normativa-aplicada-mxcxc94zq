@@ -20,15 +20,15 @@ export default function Home() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <Link
           to="/normas"
-          className="md:col-span-2 bg-enghub-beige p-6 rounded-2xl shadow-sm hover:shadow-md flex flex-col sm:flex-row items-start sm:items-center gap-5 transition-all active:scale-[0.98] duration-200"
+          className="md:col-span-2 bg-enghub-beige p-8 rounded-2xl shadow-md hover:shadow-lg flex flex-col items-center text-center gap-5 transition-all active:scale-[0.98] duration-200 border-b-4 border-enghub-orange"
         >
-          <div className="bg-enghub-orange/10 p-4 rounded-xl shrink-0">
-            <BookOpen className="w-8 h-8 text-enghub-orange" />
+          <div className="bg-enghub-orange/10 p-5 rounded-2xl shrink-0">
+            <BookOpen className="w-12 h-12 text-enghub-orange" />
           </div>
-          <div className="flex-1">
-            <div className="font-bold text-enghub-navy text-2xl">Acervo Normativo</div>
-            <div className="text-sm text-enghub-navy/70 font-medium mt-1">
-              [Acesso ao acervo normativo estruturado]
+          <div>
+            <div className="font-bold text-enghub-navy text-3xl">Acervo Normativo</div>
+            <div className="text-sm text-enghub-navy/70 font-medium mt-2">
+              [Acesso estruturado às normas técnicas]
             </div>
           </div>
         </Link>
@@ -37,11 +37,11 @@ export default function Home() {
           to="/problemas"
           className="bg-enghub-beige p-5 rounded-2xl shadow-sm hover:shadow-md flex items-center gap-4 transition-all active:scale-[0.98] duration-200"
         >
-          <div className="bg-enghub-orange/10 p-3.5 rounded-xl">
-            <AlertTriangle className="w-6 h-6 text-enghub-orange" />
+          <div className="bg-enghub-orange/10 p-3 rounded-xl">
+            <AlertTriangle className="w-5 h-5 text-enghub-orange" />
           </div>
           <div>
-            <div className="font-bold text-enghub-navy text-lg">Erros que custam caro</div>
+            <div className="font-bold text-enghub-navy text-base">Erros que custam caro</div>
           </div>
         </Link>
 
@@ -49,11 +49,11 @@ export default function Home() {
           to="/busca"
           className="bg-enghub-beige p-5 rounded-2xl shadow-sm hover:shadow-md flex items-center gap-4 transition-all active:scale-[0.98] duration-200"
         >
-          <div className="bg-enghub-orange/10 p-3.5 rounded-xl">
-            <Search className="w-6 h-6 text-enghub-orange" />
+          <div className="bg-enghub-orange/10 p-3 rounded-xl">
+            <Search className="w-5 h-5 text-enghub-orange" />
           </div>
           <div>
-            <div className="font-bold text-enghub-navy text-lg">Busca Global</div>
+            <div className="font-bold text-enghub-navy text-base">Busca Global</div>
           </div>
         </Link>
       </div>
@@ -74,13 +74,16 @@ export default function Home() {
                   [Categoria — aguardando]
                 </div>
                 <h3 className="font-bold text-enghub-navy text-base leading-tight mb-2">
-                  [Título do destaque — será definido]
+                  [Título do destaque — aguardando inserção manual]
                 </h3>
                 <p className="text-sm text-enghub-navy/70 line-clamp-2 leading-relaxed">
-                  [Conteúdo técnico — aguardando inserção]
+                  [Conteúdo estrutural — aguardando inserção manual]
                 </p>
               </div>
-              <div className="text-enghub-orange text-xs font-bold mt-4">Acessar &rarr;</div>
+              <div className="text-enghub-orange text-xs font-bold mt-4 flex items-center group">
+                Acessar detalhes{' '}
+                <BookOpen className="w-3 h-3 ml-1 text-enghub-orange group-hover:translate-x-1 transition-transform" />
+              </div>
             </div>
           ))}
         </div>
