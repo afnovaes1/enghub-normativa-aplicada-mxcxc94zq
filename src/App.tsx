@@ -1,14 +1,17 @@
-/* Main App Component - Handles routing (using react-router-dom), query client and other providers - use this file to add all routes */
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Toaster } from '@/components/ui/toaster'
 import { Toaster as Sonner } from '@/components/ui/sonner'
 import { TooltipProvider } from '@/components/ui/tooltip'
-import Index from './pages/Index'
-import NotFound from './pages/NotFound'
 import Layout from './components/Layout'
 
-// ONLY IMPORT AND RENDER WORKING PAGES, NEVER ADD PLACEHOLDER COMPONENTS OR PAGES IN THIS FILE
-// AVOID REMOVING ANY CONTEXT PROVIDERS FROM THIS FILE (e.g. TooltipProvider, Toaster, Sonner)
+import Index from './pages/Index'
+import Home from './pages/Home'
+import Normas from './pages/Normas'
+import NormaDetail from './pages/NormaDetail'
+import NormaExtra from './pages/NormaExtra'
+import Problemas from './pages/Problemas'
+import Busca from './pages/Busca'
+import NotFound from './pages/NotFound'
 
 const App = () => (
   <BrowserRouter future={{ v7_startTransition: false, v7_relativeSplatPath: false }}>
@@ -18,7 +21,12 @@ const App = () => (
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES MUST BE ADDED HERE */}
+          <Route path="/home" element={<Home />} />
+          <Route path="/normas" element={<Normas />} />
+          <Route path="/normas/:id" element={<NormaDetail />} />
+          <Route path="/normas/:id/extra" element={<NormaExtra />} />
+          <Route path="/problemas" element={<Problemas />} />
+          <Route path="/busca" element={<Busca />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
