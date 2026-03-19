@@ -245,6 +245,111 @@ const nbr15575Blocks = {
   },
 }
 
+const nbr6118Blocks = {
+  ondeEntra: {
+    title: 'Onde entra na obra',
+    content: 'Essa norma entra na concepção da estrutura.',
+    bullets: [
+      'definição do sistema estrutural',
+      'dimensionamento de elementos',
+      'detalhamento de armaduras',
+      'execução e controle',
+    ],
+    takeaway: 'estrutura não começa no cálculo — começa na concepção',
+  },
+  controle: {
+    title: 'O que realmente controla',
+    content: 'Não controla só resistência. Controla comportamento.',
+    bullets: [
+      'segurança estrutural',
+      'deformações',
+      'fissuração',
+      'durabilidade',
+      'estabilidade global',
+    ],
+    takeaway: 'estrutura que “passa no cálculo” pode falhar no uso',
+  },
+  erros: {
+    title: 'Onde todo mundo erra',
+    bullets: [
+      'Confiar demais no software (resultado sem crítica vira erro automatizado)',
+      'Ignorar estados limites de serviço (estrutura segura, mas desconfortável)',
+      'Subestimar fissuração (trinca não é só estética)',
+      'Detalhamento mal resolvido (projeto bom, execução comprometida)',
+      'Não considerar interação com fundação (estrutura isolada não existe)',
+    ],
+    takeaway: 'o erro não está no cálculo — está na interpretação',
+  },
+  consequencias: {
+    title: 'O que acontece quando erra',
+    bullets: [
+      'fissuras excessivas',
+      'deformações visíveis',
+      'vibração indesejada',
+      'infiltrações associadas',
+      'patologias progressivas',
+      'perda de desempenho estrutural',
+    ],
+    takeaway: 'estrutura não colapsa primeiro — ela avisa',
+  },
+  praticas: {
+    title: 'Como fazer certo na prática',
+    bullets: [
+      'pensar o sistema estrutural antes de calcular',
+      'validar resultados com senso crítico',
+      'considerar estados limites de serviço',
+      'detalhar para execução real (não ideal)',
+      'compatibilizar com fundações e arquitetura',
+      'prever comportamento ao longo do tempo',
+    ],
+  },
+  insights: {
+    title: 'Insights rápidos de decisão',
+    insights: [
+      {
+        name: 'Viga',
+        description:
+          'não é só resistência mas: deformação excessiva gera problema funcional; flecha mal controlada aparece no uso',
+      },
+      {
+        name: 'Laje',
+        description:
+          'não é só espessura mas: vibração e conforto importam; interação com paredes altera comportamento',
+      },
+      {
+        name: 'Pilar',
+        description:
+          'não é só compressão mas: excentricidade muda tudo; flambagem não perdoa erro de concepção',
+      },
+      {
+        name: 'Armadura',
+        description:
+          'não é só quantidade mas: posicionamento e ancoragem são críticos; detalhamento ruim compromete tudo',
+      },
+    ],
+    takeaway: 'estrutura não falha por falta de aço — falha por erro de conceito',
+  },
+  perito: {
+    title: 'Visão de perito',
+    content:
+      'maioria das falhas não é colapso; é desempenho inadequado; fissura, deformação e vibração são sinais; ignorados no projeto, cobrados depois; detalhamento deficiente é recorrente principalmente em interfaces; ausência de memória de cálculo enfraquece defesa; decisão sem registro vira vulnerabilidade.',
+    takeaway: 'quem não registra decisão, perde discussão técnica',
+  },
+  aprofundamentos: {
+    title: 'Aprofundamentos',
+    links: [
+      'Fissuração: quando é problema de verdade',
+      'Flecha em vigas e lajes',
+      'Vibração em estruturas leves',
+      'Interação estrutura x fundação',
+      'Excentricidade em pilares',
+      'Detalhamento de armadura na prática',
+      'Onde o software induz erro',
+      'Estados limites: o que realmente importa',
+    ],
+  },
+}
+
 export const normas: Norma[] = [
   {
     id: '6122',
@@ -265,7 +370,7 @@ export const normas: Norma[] = [
     code: 'NBR 6118',
     title: 'Projeto de Estruturas de Concreto',
     category: 'Estrutural',
-    blocks: { ...baseBlocks },
+    blocks: nbr6118Blocks,
   },
   {
     id: '6120',
