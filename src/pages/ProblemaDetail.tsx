@@ -9,7 +9,7 @@ export default function ProblemaDetail() {
 
   if (!problema) {
     return (
-      <div className="p-8 text-center text-enghub-skyblue font-medium">Erro não encontrado</div>
+      <div className="p-8 text-center text-enghub-skyblue font-medium">Problema não encontrado</div>
     )
   }
 

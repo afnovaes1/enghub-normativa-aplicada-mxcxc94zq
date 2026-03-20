@@ -179,7 +179,7 @@ export const diagnosticos: Diagnostico[] = [
           acao: 'Investigação pericial sistêmica e estudo de retrofit.',
         },
         {
-          estado: 'Ação judicial ou falha sistêmica sistêmica no condomínio',
+          estado: 'Ação judicial ou falha sistêmica no condomínio',
           acao: 'Mobilização de perícia especializada, ensaios in loco para elaboração de contraprova ou plano de recuperação global.',
         },
       ],

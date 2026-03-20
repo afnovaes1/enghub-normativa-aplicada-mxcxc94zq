@@ -431,7 +431,7 @@ const nbr6120Blocks = {
       'ausência de definição clara de cargas fragiliza defesa',
       'sem premissa registrada, tudo vira questionável',
     ],
-    takeaway: 'quem não define carga clearly, assume risco oculto',
+    takeaway: 'quem não define carga claramente, assume risco oculto',
   },
   aprofundamentos: {
     title: 'Aprofundamentos',
@@ -859,7 +859,7 @@ export const problemas: Problema[] = [
     causa:
       'leitura isolada de cada furo; escolha do cenário mais favorável; tentativa de simplificar o comportamento do solo; pressão por solução rápida ou econômica; ausência de análise crítica da sondagem.',
     consequencia:
-      'fundações apoiadas em condições diferentes; recalque diferencial; desempenho imprevisível; necessidade de reforço posterior; dificuldade de justify decisão técnica.',
+      'fundações apoiadas em condições diferentes; recalque diferencial; desempenho imprevisível; necessidade de reforço posterior; dificuldade de justificar decisão técnica.',
     comoLer:
       'analisar os furos em conjunto, não isoladamente; alinhar cotas, não apenas profundidades; considerar variabilidade lateral do solo; identificar padrões ou ausência deles; assumir cenário crítico quando houver dúvida.',
     oQueFazer:
@@ -883,7 +883,7 @@ export const problemas: Problema[] = [
     consequencia:
       'recalques totais elevados; recalques diferenciais mesmo com radier; fissuração generalizada; perda de desempenho da edificação; dificuldade de correção posterior.',
     comoLer:
-      'radier não aumenta capacidade do solo; apenas distribui carga; se o solo é ruim -> continua ruim; se é heterogêneo -> continua heterogêneo.',
+      'radier não aumenta capacidade do solo; apenas distribui carga; se o solo é ruim → continua ruim; se é heterogêneo → continua heterogêneo.',
     oQueFazer:
       'avaliar solo com profundidade, não superficialmente; entender deformabilidade (não só resistência); analisar sensibilidade ao recalque; considerar interação solo–estrutura; usar radier quando fizer sentido técnico, não por padrão.',
     normaId: '6122',
@@ -907,7 +907,7 @@ export const problemas: Problema[] = [
     comoLer:
       'NSPT não é capacidade de carga; é um indicativo — não uma resposta; solos iguais em NSPT podem ter comportamentos diferentes; solos secos e saturados respondem diferente; ruptura e deformação são coisas distintas.',
     oQueFazer:
-      'usar correlação como ponto de partida, não como conclusão; identificar tipo de solo corretamente; considerar condição crítica (saturada); avaliar recalque além da ruptura; aplicar mais de um método (ex: Décourt-Quaresma, Aoki-Velloso); fazer “duplo check” antes de fechar a carga.',
+      'usar correlação como ponto de partida, não como conclusão; identificar tipo de solo corretamente; considerar condição crítica (saturada); avaliar recalque além da ruptura; aplicar mais de um método (ex: Décourt-Quaresma, Aoki-Velloso); fazer dupla checagem antes de fechar a carga.',
     normaId: '6122',
     normaCode: 'NBR 6122',
     normaDisplay: 'NBR 6122 — Fundações',
@@ -921,13 +921,13 @@ export const problemas: Problema[] = [
     contexto:
       'A estaca foi dimensionada corretamente, mas a execução não garantiu que ela realmente existe como projetada. O projeto prevê uma capacidade, a obra entrega outra.',
     naObra:
-      'estacas escavadas sem controle de verticalidade; variação de diâmetro ao longo do fuste; limpeza inadequada de fundo; concretagem com segregação ou falhas; ausência de registro executivo.',
+      'estacas escavadas sem controle de verticalidade; variação de diâmetro ao longo do fuste; limpeza adequada de fundo; concretagem com segregação ou falhas; ausência de registro executivo.',
     causa:
       'confiança excessiva na equipe executora; ausência de fiscalização técnica; tentativa de ganhar produtividade; falta de registro de execução; não verificação de parâmetros críticos.',
     consequencia:
       'capacidade de carga menor que a prevista; aumento de recalques; comportamento imprevisível; falhas localizadas difíceis de diagnosticar; necessidade de reforço posterior.',
     comoLer:
-      'estaca não é o que foi projetado, é o que foi executado; pequenas falhas de execução -> grandes impactos; variação de diâmetro -> alteração direta na capacidade; falha de limpeza -> base comprometida.',
+      'estaca não é o que foi projetado, é o que foi executado; pequenas falhas de execução → grandes impactos; variação de diâmetro → alteração direta na capacidade; falha de limpeza → base comprometida.',
     oQueFazer:
       'registrar cada estaca executada; controlar profundidade, diâmetro e verticalidade; garantir limpeza de fundo; acompanhar concretagem; exigir relatório executivo completo; aplicar ensaios de verificação quando necessário.',
     normaId: '6122',
@@ -969,7 +969,7 @@ export const problemas: Problema[] = [
     consequencia:
       'impossibilidade de comprovar decisões técnicas; perda de defesa em caso de litígio; responsabilização indevida; dificuldade de análise pericial; conflitos prolongados.',
     comoLer:
-      'registro técnico não é burocracia, é instrumento de proteção; decisão sem registro -> vulnerável; execução sem evidência -> questionável; ausência de histórico -> interpretação livre de terceiros.',
+      'registro técnico não é burocracia, é instrumento de proteção; decisão sem registro → vulnerável; execução sem evidência → questionável; ausência de histórico → interpretação livre de terceiros.',
     oQueFazer:
       'manter registro formal de premissas de projeto; documentar todas as alterações; registrar execução (fotos, relatórios, medições); manter rastreabilidade de decisões; organizar documentação técnica da obra.',
     normaId: '6122',
@@ -1004,7 +1004,7 @@ export const problemas: Problema[] = [
     title:
       'ERRO QUE CUSTA CARO 02: Confiar cegamente em materiais e esquecer o sistema (NBR 15575)',
     contexto:
-      'A falha clássica na interface. O desempenho geral da vedação (acústico, água) depende crucialmente de como o sistema é instalado, e não apenas de ser um material top de linha com selo no catálogo.',
+      'A falha clássica na interface. O desempenho geral da vedação (acústico, água) depende crucialmente de como o sistema é instalado, e não apenas de ser um material de alto padrão com selo no catálogo.',
     naObra:
       'Esquadrias vendidas como "super acústicas" instaladas com frestas e espuma inadequada; mantas asfálticas de altíssima qualidade mal soldadas nos ralos ou viradas soltas nas quinas.',
     causa:
@@ -1052,7 +1052,7 @@ export const problemas: Problema[] = [
     naObra:
       'O dono relata que a fachada está manchada após 3 anos ou que o ruído do elevador incomoda, e a construtora não tem documentação formal para basear sua defesa ou indicar se era necessária manutenção.',
     causa:
-      'Preguiça documental. Tratar manuais do proprietário como folhetos comerciais genéricos, sem o lastro técnico e a especificação exigida pelas normas vigentes.',
+      'Negligência documental. Tratar manuais do proprietário como folhetos comerciais genéricos, sem o lastro técnico e a especificação exigida pelas normas vigentes.',
     consequencia:
       'Todas as reclamações de clientes, mesmo aquelas advindas da total falta de manutenção, convertem-se em "verdades jurídicas" inquestionáveis contra a construtora.',
     comoLer:
@@ -1133,7 +1133,7 @@ const aprofundamentosDetalhes: Record<string, Partial<Aprofundamento>> = {
     erroComum:
       'Ler o NSPT isoladamente; comparar furos apenas por profundidade (ignorando cotas); assumir homogeneidade do solo; ignorar transições de camada; desconsiderar condição de saturação. 👉 resultado: decisão baseada em número, não em perfil.',
     comoInterpretar:
-      'Analisar o perfil completo, não só o valor pontual; alinhar cotas entre furos (profundidade ≠ mesma condição geotécnica); identify coerência entre camadas; observar variações abruptas; considerar o tipo de solo, não só o índice. 👉 SPT precisa “contar uma história” — não pode ser só tabela.',
+      'Analisar o perfil completo, não só o valor pontual; alinhar cotas entre furos (profundidade ≠ mesma condição geotécnica); identificar coerência entre camadas; observar variações abruptas; considerar o tipo de solo, não só o índice. 👉 SPT precisa “contar uma história” — não pode ser só tabela.',
     oQueFazer:
       'Cruzar informações entre furos; questionar incoerências; considerar cenário mais desfavorável; ajustar decisão ao comportamento esperado do solo; se necessário, complementar investigação. 👉 quando o SPT levanta dúvida, o erro é ignorar — não investigar.',
     fechamento: 'SPT não erra. Quem erra é quem interpreta sem contexto.',
@@ -1146,7 +1146,7 @@ const aprofundamentosDetalhes: Record<string, Partial<Aprofundamento>> = {
     erroComum:
       'Escolher o furo mais favorável; fazer média entre resultados distintos; assumir que um dos furos está “errado”; ignorar variabilidade lateral do solo. 👉 resultado: decisão otimista em solo não confiável.',
     comoInterpretar:
-      'Considerar que o solo é heterogêneo; identify zonas de transição ou descontinuidade; avaliar a pior condição como referência; observar padrão regional (não só local); entender que a não convergência pode indicar risco. 👉 divergência de SPT é informação — não ruído.',
+      'Considerar que o solo é heterogêneo; identificar zonas de transição ou descontinuidade; avaliar a pior condição como referência; observar padrão regional (não só local); entender que a não convergência pode indicar risco. 👉 divergência de SPT é informação — não ruído.',
     oQueFazer:
       'Aumentar número de furos, se necessário; adotar solução mais conservadora; evitar decisões baseadas em um único ponto; revisar escolha de fundação; considerar métodos que reduzam sensibilidade à variabilidade. 👉 quando o solo não é confiável, o projeto precisa ser.',
     fechamento:
@@ -1201,7 +1201,7 @@ const aprofundamentosDetalhes: Record<string, Partial<Aprofundamento>> = {
     comoInterpretar:
       'Aumento de umidade → redução de resistência; saturação → aumento de poropressão; perda de sucção em solos finos → perda significativa de capacidade. 👉 solos não saturados são enganosamente resistentes.',
     oQueFazer:
-      'Sempre considerar cenário saturado (condição crítica); avaliar drenagem natural e artificial; identify caminhos de fluxo de água; prever sistemas de alívio de pressão (drenos, geossintéticos, etc.); correlacionar com histórico climático da região. 👉 água não cria problema — ela revela fragilidades.',
+      'Sempre considerar cenário saturado (condição crítica); avaliar drenagem natural e artificial; identificar caminhos de fluxo de água; prever sistemas de alívio de pressão (drenos, geossintéticos, etc.); correlacionar com histórico climático da região. 👉 água não cria problema — ela revela fragilidades.',
     fechamento:
       'O solo que funciona seco pode falhar molhado. Projetar ignorando isso é projetar incompleto.',
   },
@@ -1274,7 +1274,7 @@ const aprofundamentosDetalhes: Record<string, Partial<Aprofundamento>> = {
   },
   estanqueidade: {
     context:
-      'A água possui um comportamento sistêmico e fluído; ela percorre caminhos e descontinuidades, muitas vezes aparecendo muito longe do seu ponto de origem inicial.',
+      'A água possui um comportamento sistêmico e fluido; ela percorre caminhos e descontinuidades, muitas vezes aparecendo muito longe do seu ponto de origem inicial.',
     naPratica:
       'Infiltrações misteriosas em paredes internas, vazamentos em marcos de esquadrias durante chuvas de vento, umidade ascendente em rodapés do térreo, falhas em coberturas e calhas.',
     erroComum:
@@ -1304,7 +1304,7 @@ const aprofundamentosDetalhes: Record<string, Partial<Aprofundamento>> = {
     context:
       'A vasta maioria das falhas de desempenho construtivo se dá nas transições (junções) entre subsistemas diferentes, e raramente no meio da vida de um elemento puro.',
     naPratica:
-      'Infiltração grave no encontro exato de lajes de cobertura com platibandas, trincas recorrentes na interface de estruturas (pilares) com a alvenaria, falhas acústicas no vão de portas.',
+      'Infiltração grave no encontro exato de lajes de cobertura com platibandas, trincas recorrentes na interface de structures (pilares) com a alvenaria, falhas acústicas no vão de portas.',
     erroComum:
       'Detalhar maravilhosamente bem o sistema principal (a parede, a laje) e deixar a interface ou conexão à mercê do pedreiro para "resolver na obra do jeito dele".',
     comoInterpretar:
@@ -1324,7 +1324,7 @@ const aprofundamentosDetalhes: Record<string, Partial<Aprofundamento>> = {
     comoInterpretar:
       'O usuário vai julgar a qualidade final do edifício pelo desempenho que foi entregue. O desconforto sonoro, térmico e hídrico do cliente é classificado como uma não conformidade técnica grave.',
     oQueFazer:
-      'Mapear e estabelecer requisitos mínimos de desempenho desde a concepção (Kickoff). Alinhar firmemente as expectativas e focar não no material, mas no comportamento sistêmico do imóvel.',
+      'Mapear e estabelecer requisitos mínimos de desempenho desde a concepção (reunião inicial/kick-off). Alinhar firmemente as expectativas e focar não no material, mas no comportamento sistêmico do imóvel.',
     fechamento:
       'No fim do dia, o cliente não quer comprar material de construção. Ele compra o direito a silêncio, conforto e paz.',
   },
