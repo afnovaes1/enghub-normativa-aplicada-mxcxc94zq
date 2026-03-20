@@ -1115,133 +1115,134 @@ export const problemas: Problema[] = [
   },
   {
     id: 'nbr6118-01',
-    title: 'ERRO QUE CUSTA CARO 14: Negligenciar o cobrimento e uso de espaçadores',
+    title: 'ERRO QUE CUSTA CARO 14: Detalhamento mal resolvido',
     contexto:
-      'O cobrimento é a única barreira física entre o aço e o ambiente agressivo. Economizar nos espaçadores ou tolerar armadura encostada na fôrma é programar a corrosão futura.',
+      'O projeto no papel é uma coisa, a montagem na fôrma é outra. Os erros começam no campo com armadura mal posicionada, flagrante falta de continuidade nas emendas e ancoragem inadequada nos apoios.',
     naObra:
-      'Armadura visível após desforma; ferrugem precoce surgindo na superfície de vigas; uso de pedaços de madeira, lascas de tijolo ou pedra como espaçador; armadura pisoteada perdendo posição na laje.',
+      'Transpasses de armadura executados todos na mesma seção no meio de vigas; encontros de pilares e vigas abarrotados de aço impedindo a passagem da brita; ganchos dobrados errados ou suprimidos.',
     causa:
-      'Falta de espaçadores plásticos adequados e suficientes; trânsito sobre a armadura sem passarelas durante a concretagem; detalhamento superdenso dificultando montagem e fechamento das fôrmas.',
+      'Projetos focados apenas no cálculo e não na executabilidade; armador dobrando ferro sem seguir a prancha para "facilitar"; falta de defasagem de emendas por praticidade na armação.',
     consequencia:
-      'Corrosão da armadura; desplacamento do concreto de recobrimento; perda de seção resistente de aço; redução drástica e irreparável da vida útil.',
+      'Deslizamento da armadura dentro do concreto sob carga (falha de aderência); rompimento frágil e abrupto de nós de pórtico; concentração de tensões que o detalhamento original dissiparia.',
     comoLer:
-      'Cobrimento não é estética, é proteção passiva. Se a armadura encosta na fôrma, o projeto de durabilidade já falhou antes mesmo de o concreto secar.',
+      'A estabilidade estrutural não depende apenas da massa de aço. O aço precisa estar perfeitamente ancorado em locais onde o concreto consiga abraçá-lo. Barra não ancorada é apenas ferro pesado sem função.',
     oQueFazer:
-      'Garantir amarração rígida; usar espaçadores plásticos na densidade correta (conforme catálogo do fabricante); fiscalizar a cota da armadura (especialmente negativa) antes de liberar a concretagem.',
+      'Garantir a defasagem rigorosa das emendas de barras (máximo de 50% numa mesma seção tracionada); não transpassar em regiões de momento fletor crítico; prever janelas de concretagem nos nós.',
     normaId: '6118',
     normaCode: 'NBR 6118',
     normaDisplay: 'NBR 6118 — Estruturas de Concreto',
-    fechamento: 'Cobrimento não se negocia na obra. Ele é o seguro de vida da sua estrutura.',
-    aprofundamentoId: 'cobrimento-invisivel',
+    fechamento:
+      'Estruturas colapsam mais por detalhamento ruim de nó e ancoragem do que por pura falta de aço no meio do vão.',
+    aprofundamentoId: 'detalhamento-falha',
   },
   {
     id: 'nbr6118-02',
-    title: 'ERRO QUE CUSTA CARO 15: Adição de água na betoneira sem controle',
+    title: 'ERRO QUE CUSTA CARO 15: Execução fora do que foi projetado',
     contexto:
-      'O concreto chega com um abatimento (slump) especificado, mas para "facilitar" o espalhamento, adiciona-se água no canteiro. A trabalhabilidade aumenta na hora, mas a resistência e durabilidade despencam.',
+      'Decisões de campo que alteram a geometria e a proteção da peça armada. Isso se manifesta em cobrimento não respeitado, espaçamento alterado em obra e excesso de improviso em armadura.',
     naObra:
-      'Mangueira lavando a bica diretamente dentro do balão rotativo; concreto extremamente fluido jorrando sem resistência ao adensamento; fissuras de retração mapeadas e severas poucas horas após a secagem.',
+      'Armadura nitidamente encostada na fôrma após a desforma; uso de pedaços de madeira ou pedras no lugar de espaçadores plásticos; armaduras negativas pisoteadas que perdem sua altura útil original na laje.',
     causa:
-      'Pressão extrema por produtividade da equipe; ausência de vibrador adequado e em número suficiente; espera excessiva do caminhão no sol causando perda de slump; ignorância sobre o impacto da relação água/cimento (a/c).',
+      'Economia cega na compra de espaçadores; falta de passarelas elevadas para trânsito da equipe durante a concretagem; ausência de amarração rígida que impede a movimentação do aço ao receber o fluxo de concreto.',
     consequencia:
-      'Queda drástica do fck real na peça; aumento brutal da porosidade (facilitando infiltração e corrosão); retração plástica intensa gerando trincas imediatas.',
+      'Exposição imediata da armadura principal à corrosão (ferrugem precoce); desplacamento expansivo do concreto; redução da altura útil da peça, reduzindo drasticamente o momento fletor resistente.',
     comoLer:
-      'Cada litro extra de água afasta o concreto executado do concreto projetado. O teste de slump não é sugestão de bula, é parâmetro técnico de aceitação inegociável.',
+      'O cobrimento é a única e solitária fronteira passiva que protege o aço de agentes agressivos. Se o aço deforma e muda de cota, a peça perde a capacidade de suportar a carga que a originou.',
     oQueFazer:
-      'Rejeitar categoricamente caminhões fora do slump tolerado; usar aditivos plastificantes (na dosagem correta) em vez de água se precisar de fluidez extra; controlar o tempo de trajeto e de espera rigorosamente.',
+      'Exigir e fiscalizar o uso sistemático de espaçadores na densidade correta. Interditar trânsito sobre armaduras esbeltas e travar estribos firmemente para garantir o projeto estrutural íntegro.',
     normaId: '6118',
     normaCode: 'NBR 6118',
     normaDisplay: 'NBR 6118 — Estruturas de Concreto',
     fechamento:
-      'Concreto não se amolece com água, se plastifica com aditivo. Água extra é fck a menos.',
-    aprofundamentoId: 'concreto-diferente',
+      'Aço deslocado é aço que não trabalha. Cobrimento negligenciado é vida útil interrompida na fonte.',
+    aprofundamentoId: 'cobrimento-invisivel',
   },
   {
     id: 'nbr6118-03',
-    title: 'ERRO QUE CUSTA CARO 16: Retirada precoce ou indevida do escoramento',
+    title: 'ERRO QUE CUSTA CARO 16: Fissuração descontrolada',
     contexto:
-      'A estrutura suporta suas próprias cargas apenas quando o concreto atinge a resistência prevista. Retirar o escoramento antes expõe um material jovem a tensões para as quais ele ainda não está maduro.',
+      'O concreto trinca por natureza, mas a obra trata a movimentação como imprevisto. O erro sistêmico ocorre quando há retração ignorada, falta de controle de deformação geométrica e ausência de juntas de indução.',
     naObra:
-      'Lajes de grande vão que "embarrigam" visivelmente; trincas de esmagamento no topo das alvenarias sob as vigas; portas que começam a raspar no piso logo após a desforma; "re-escoramento" feito de forma errada (empurrando a laje para cima novamente).',
+      'Superfícies de lajes com fissuras mapeadas em teia de aranha surgindo horas após o acabamento; trincas atravessando muros longos ou pisos industriais sem cortes de alívio; esmagamento em bases de apoio.',
     causa:
-      'Pressa para reutilizar fôrmas e escoras em lajes superiores (girar o material); desconhecimento da curva de ganho de resistência do concreto; falta de projeto específico de escoramento e re-escoramento.',
+      'Ausência de planejamento de cura úmida (concreto evaporando água rapidamente sob sol intenso); concretagem de panos extensos de uma só vez; subestimar a variação volumétrica térmica do material jovem.',
     consequencia:
-      'Flechas excessivas e totalmente irreversíveis (fluência prematura); fissuração estrutural ativa; sobrecarga perigosa transmitida para a alvenaria, que não foi dimensionada para ser apoio.',
+      'Queda imediata de resistência superficial; alta permeabilidade criando avenidas para cloretos e carbonatação; patologias crônicas de umidade e fissuração progressiva irreparável esteticamente.',
     comoLer:
-      'O escoramento é a gravidade artificial da obra. Tirá-lo antes do tempo de cura não acelera a obra, apenas acelera a deformação perpétua da peça.',
+      'A retração é um fenômeno físico inescapável da secagem do cimento. O controle não é para evitar a deformação, mas sim para absorvê-la onde o projetista quer, e não onde a física decide sozinha.',
     oQueFazer:
-      'Elaborar e seguir à risca um plano formal de desforma; moldar corpos de prova extras para ensaios de rompimento em idades menores (7, 14 dias) antes de autorizar a desforma; jamais "macaquear" uma laje fletida para tentar devolvê-la à posição original.',
+      'Iniciar a aspersão ou aplicação de película de cura imediatamente após a exsudação; planejar o corte de juntas de retração na idade certa do concreto (corte verde) para induzir a fissura de forma linear.',
     normaId: '6118',
     normaCode: 'NBR 6118',
     normaDisplay: 'NBR 6118 — Estruturas de Concreto',
     fechamento:
-      'O cronograma apressa a obra, mas não apressa a hidratação do cimento. O concreto dita o tempo de desforma.',
+      'A obra festeja o fim da concretagem, mas a verdade é que o trabalho mais crítico (a cura e o controle) apenas começou.',
     aprofundamentoId: 'fissuracao-aviso',
   },
   {
     id: 'nbr6118-04',
-    title: 'ERRO QUE CUSTA CARO 17: Detalhamento negligenciado em nós e ancoragens',
+    title: 'ERRO QUE CUSTA CARO 17: Concreto na prática (não no papel)',
     contexto:
-      'Não basta ter a quantidade de aço certa na seção. Se a barra não está ancorada onde o concreto tem área para "segurá-la" e se o encontro (nó) está tão congestionado que o concreto não passa, a peça falha.',
+      'O caminhão entrega o material ensaiado, mas o canteiro o destrói. O concreto na prática sofre danos irreversíveis com traço alterado (adição de água), lançamento incorreto (alturas excessivas) e adensamento mal feito.',
     naObra:
-      'Transpasses de armadura feitos todos na mesma seção no meio de vigas; encontros de pilares e vigas abarrotados de aço impedindo a entrada do vibrador; ganchos dobrados de forma errada ou suprimidos "para facilitar".',
+      'Mangueira sendo inserida dentro do balão rotativo para "amolecer" a mistura dura; lançamento em pilares de 4 metros sem funil causando separação da brita; gigantescas bicheiras (ninhos de pedra) no pé das fôrmas.',
     causa:
-      'Projetos estruturais focados só no cálculo e não na executabilidade ("passou no software, mando para a obra"); falta de defasagem de emendas por praticidade na montagem; armador que dobra ferro de cabeça sem seguir a prancha.',
+      'Equipes despreparadas com vibradores inadequados ou insuficientes; espera excessiva do caminhão-betoneira no sol causando perda de slump natural; total falta de consciência sobre o que governa a resistência.',
     consequencia:
-      'Deslizamento da armadura dentro do concreto sob carga (falha de aderência); rompimento frágil de nós de pórtico; bicheiras gigantescas nos pontos mais cruciais de transmissão de esforço.',
+      'A relação água/cimento é severamente violada, criando um concreto super poroso de fck muito menor que o projeto; a armadura fica exposta pelo péssimo adensamento; perda global da segurança monolítica.',
     comoLer:
-      'O aço não faz milagre sozinho; ele só traciona aquilo que o concreto consegue ancorar por aderência. Um detalhamento que a brita não atravessa é um detalhamento que já nasceu falho.',
+      'Cada litro extra de água dissolve a resistência mecânica de cálculo. Bicheira não é um defeito de "massa de acabamento", é a ausência crítica do material estrutural onde ele deveria absorver toda a compressão.',
     oQueFazer:
-      'Garantir a defasagem rigorosa das emendas de barras; evitar transpasses em regiões de momento fletor máximo; prever no detalhamento janelas de concretagem e espaço para o mangote do vibrador.',
+      'Rejeitar caminhões fora do slump; proibir qualquer adição de água não homologada (usar aditivo superplastificante); imergir e sacar o mangote de vibração verticalmente de forma lenta em todas as camadas.',
     normaId: '6118',
     normaCode: 'NBR 6118',
     normaDisplay: 'NBR 6118 — Estruturas de Concreto',
     fechamento:
-      'Estruturas de concreto armado colapsam mais por detalhamento ruim de nó e ancoragem do que por falta de barra no meio do vão.',
-    aprofundamentoId: 'detalhamento-falha',
+      'Concreto resistente no catálogo vira argamassa fraca se batido com excesso de água. A resistência real nasce no controle de campo.',
+    aprofundamentoId: 'concreto-diferente',
   },
   {
     id: 'nbr6118-05',
-    title: 'ERRO QUE CUSTA CARO 18: Ausência total de cura úmida',
+    title: 'ERRO QUE CUSTA CARO 18: Interação estrutura × vedação',
     contexto:
-      'O concreto precisa de água para que a reação química do cimento (hidratação) aconteça. Se a água da mistura evapora rapidamente, o cimento não hidrata, a resistência cai e a superfície rasga.',
+      'Tratar a estrutura como inerte, quando na verdade ela se move e flete. O erro clássico surge como fissuras em alvenaria devido à transferência de deformação da laje e total incompatibilidade entre sistemas (rígido vs flexível).',
     naObra:
-      'Lajes expostas ao sol de meio-dia logo após o acabamento, sem manta, sem aspersão ou lâmina d’água; fissuras plásticas em formato de teia de aranha (mapeadas); superfície do concreto "esfarelando" ao ser raspada.',
+      'Surgimento de trincas de esmagamento (horizontais) no topo das paredes logo abaixo das vigas de grandes vãos; portas e esquadrias que empenam repentinamente logo nos primeiros meses de ocupação.',
     causa:
-      'Ignorar que a cura é parte inseparável da concretagem; falta de planejamento de hidratação contínua (ex: focar apenas no final de semana e largar a obra sem molhar); vento forte e calor extremo não mitigados.',
+      'Retirada ultra-precoce do escoramento levando à fluência excessiva; estruturas dimensionadas nos limites de serviço (super flexíveis); e chumbamento rígido (argamassa fechada) da alvenaria na estrutura superior.',
     consequencia:
-      'Perda de até 30% da resistência superficial da peça; altíssima permeabilidade gerando vulnerabilidade a infiltrações; microfissuração generalizada que exige retrabalho com resinas epoxídicas.',
+      'A parede, que não foi projetada para receber peso de andares superiores, passa a trabalhar como um suporte estrutural forçado, levando à ruptura cisalhante de blocos, afundamento e colapso estético sistêmico.',
     comoLer:
-      'Laje concretada sem planejamento de cura é laje jogada fora na sua camada de cobrimento. A resistência de catálogo pressupõe cura úmida contínua. Sem cura, o fck nominal é uma ilusão.',
+      'A estrutura deforma ao assumir o seu próprio peso (flecha inercial). Se você não deixar um espaço seguro (folga) preenchido de material resiliente entre o concreto que desce e a alvenaria, ela inevitavelmente vai quebrar.',
     oQueFazer:
-      "Iniciar a cura úmida ou química (película formadora) imediatamente após o fim da exsudação; manter a superfície saturada por no mínimo 7 dias (lâmina d'água, mantas de algodão úmidas ou aspersão programada).",
+      'Manter o tempo de desforma rigorosamente; executar encunhamento com argamassas flexíveis ou espumas de PU expansivas; detalhar e executar de forma correta as contra-flechas de projeto estrutural.',
     normaId: '6118',
     normaCode: 'NBR 6118',
     normaDisplay: 'NBR 6118 — Estruturas de Concreto',
     fechamento:
-      'A obra comemora o fim da concretagem, mas a verdade é que o trabalho mais importante (a cura) acabou de começar.',
+      'A estrutura de concreto precisa de espaço para se "acomodar". Quem trava seu caminho pagará o preço do esmagamento.',
     aprofundamentoId: 'fissuracao-aviso',
   },
   {
     id: 'nbr6118-06',
-    title: 'ERRO QUE CUSTA CARO 19: Concretagem sem controle de adensamento (bicheiras)',
+    title: 'ERRO QUE CUSTA CARO 19: Controle que não existe',
     contexto:
-      'O concreto lançado carrega vazios (bolhas de ar) que precisam ser expulsos. Sem a vibração correta e sistêmica, o concreto endurece com vazios que destroem a sua resistência monolítica.',
+      'A execução ocorre às cegas, sem lastro técnico. A gestão falha devido à ausência de inspeção real, contínua falta de registro das etapas críticas e o uso irresponsável da aceitação visual como critério de liberação.',
     naObra:
-      'Vibrador que só é "espetado" na superfície; pilares densos vibrados batendo martelo na fôrma por fora; desforma revelando enormes ninhos de pedra (bicheiras) com a armadura principal exposta no fundo de vigas.',
+      'Peças estruturais falhas recebendo "nata de cimento" rápida após a desforma para esconder nichos da fiscalização; ausência de rastreabilidade do concreto; nenhuma moldagem paralela de corpos de prova (CPs) e ensaios ausentes.',
     causa:
-      'Falta de vibradores reserva no canteiro (se um queima, a obra para ou improvisa); vibradorista destreinado; lançamento do concreto de alturas elevadas gerando forte segregação dos agregados graúdos.',
+      'Mentalidade de produção acelerada que vê documentação técnica como atraso; fiscais de obra que não adentram as fôrmas antes do lançamento; falta da cultura obrigatória de as-built de estrutura.',
     consequencia:
-      'Seção de concreto drasticamente reduzida (perda de inércia); armadura exposta ao oxigênio imediatamente (ferrugem precoce); quebra da monoliticidade da peça, exigindo grauteamento estrutural oneroso.',
+      'Uma estrutura totalmente invisível perante auditorias e litígios judiciais. Em caso de sinistros, patologias graves ou perícia futura, a construtora é indefensável por não conseguir provar materialmente o que foi embutido ali.',
     comoLer:
-      'Bicheira não é falha de acabamento estético que se resolve com argamassa fina. Bicheira estrutural é a ausência do material que foi calculado para resistir à compressão naquele ponto exato.',
+      'Concreto armado é o material supremo do "vício oculto" porque ele sela seus defeitos logo nas primeiras horas. O que os olhos veem depois que a fôrma é removida não indica absolutamente nada sobre a alma armada da peça.',
     oQueFazer:
-      'Planejar janelas de lançamento para peças altas (evitar queda livre > 2m); usar vibradores compatíveis com a armadura; imergir a agulha verticalmente atravessando as camadas e retirar de forma lenta; nunca vibrar a armadura diretamente.',
+      'Implementar o uso militar de Fichas de Verificação de Serviço (FVS); exigir o mapeamento fotográfico ostensivo do pré-concretagem; moldar sistematicamente corpos de prova atrelando aos romaneios de entrega de cada caminhão.',
     normaId: '6118',
     normaCode: 'NBR 6118',
     normaDisplay: 'NBR 6118 — Estruturas de Concreto',
     fechamento:
-      'Cobrir bicheira com argamassa não devolve a segurança à peça. Só esconde a patologia da próxima fiscalização.',
+      'Engenharia não se faz de lembrança visual e boca a boca. Sem registro robusto, a qualidade estrutural da obra jamais existiu.',
     aprofundamentoId: 'execucao-sem-controle',
   },
 ]
@@ -1309,7 +1310,7 @@ const aprofundamentosDetalhes: Record<string, Partial<Aprofundamento>> = {
     comoInterpretar:
       'Capacidade de carga ≠ só resistência do solo; depende do tipo de fundação, do mecanismo de ruptura, da condição de saturação e da forma de carregamento. 👉 o mesmo solo responde diferente para soluções diferentes.',
     oQueFazer:
-      'Não depender apenas de SPT; avaliar comportamento do solo como sistema; considerar condição mais crítica (geralmente saturada); entender como a carga será transferida; evitar trabalhar próximo do limite sem controle. 👉 capacidade de carga não é “quanto aguenta” — é como responde.',
+      'Não depender apenas de SPT; avaliar comportamento do solo como sistema; considerar condição mais crítica (geralmente saturada); entender como a carga will be transferida; evitar trabalhar próximo do limite sem controle. 👉 capacidade de carga não é “quanto aguenta” — é como responde.',
     fechamento: 'Não é o número que define a segurança — é a interpretação dele.',
   },
   recalque: {
