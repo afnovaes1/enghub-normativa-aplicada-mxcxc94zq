@@ -978,6 +978,138 @@ export const problemas: Problema[] = [
     fechamento: 'quem não registra o que fez, aceita que outros definam o que aconteceu.',
     aprofundamentoId: 'registro-obra',
   },
+  {
+    id: 'nbr15575-01',
+    title: 'ERRO QUE CUSTA CARO 01: Tratar desempenho como detalhe opcional (NBR 15575)',
+    contexto:
+      'Ignorar os requisitos de desempenho acústico, térmico e lumínico durante a fase de concepção e projeto, tratando-os como "melhorias de luxo" e não como requisitos e obrigações inegociáveis.',
+    naObra:
+      'Empreendimentos entregues que sofrem de fortíssimo desconforto térmico no verão, ruídos de impacto de passos transferidos pelos pisos, e reclamações diárias de insolação não mitigada nas janelas.',
+    causa:
+      'Falsa crença de que garantir desempenho "custa caro na obra", total desconhecimento ou negligência perante a NBR 15575 (Norma de Desempenho).',
+    consequencia:
+      'Retrabalhos muitas vezes impossíveis ou com custo estratosférico pós-obra concluída (ex: refazer contra-pisos inteiros), depreciação acelerada da marca e judicialização da entrega.',
+    comoLer:
+      'O desempenho habitacional não brota de um projeto padrão. Se o projeto de arquitetura e complementares não previu a mitigação, a obra jamais terá como criá-la acidentalmente.',
+    oQueFazer:
+      'Incluir obrigatoriamente diretrizes rigorosas de desempenho (acústico, térmico, lumínico e durabilidade) logo na fase de concepção arquitetônica.',
+    normaId: '15575',
+    normaCode: 'NBR 15575',
+    normaDisplay: 'NBR 15575 — Desempenho Habitacional',
+    fechamento: 'Desempenho não se improvisa na obra. Ou nasce no papel, ou morre no orçamento.',
+    aprofundamentoId: 'conforto-termico',
+  },
+  {
+    id: 'nbr15575-02',
+    title:
+      'ERRO QUE CUSTA CARO 02: Confiar cegamente em materiais e esquecer o sistema (NBR 15575)',
+    contexto:
+      'A falha clássica na interface. O desempenho geral da vedação (acústico, água) depende crucialmente de como o sistema é instalado, e não apenas de ser um material top de linha com selo no catálogo.',
+    naObra:
+      'Esquadrias vendidas como "super acústicas" instaladas com frestas e espuma inadequada; mantas asfálticas de altíssima qualidade mal soldadas nos ralos ou viradas soltas nas quinas.',
+    causa:
+      'Achar que o material faz o trabalho sozinho. Falta de compatibilização e detalhamento de interfaces. Confiança cega em catálogos em detrimento do acompanhamento sistemático de campo.',
+    consequencia:
+      'Infiltrações difusas generalizadas, ruído aéreo invadindo por frestas de portas, perda total e irreversível do alto investimento feito no "material premium".',
+    comoLer:
+      'O material isolante de excelência perde 90% do seu efeito global quando o simples encontro entre ele e a estrutura circundante é falho. Desempenho só existe se a barreira for contínua.',
+    oQueFazer:
+      'Garantir detalhamento exaustivo das interfaces nos projetos executivos. Focar a supervisão de obra pesadamente no acompanhamento das junções, arremates e selagens.',
+    normaId: '15575',
+    normaCode: 'NBR 15575',
+    normaDisplay: 'NBR 15575 — Desempenho Habitacional',
+    fechamento:
+      'A corrente sempre quebra no elo mais fraco. Na obra, esse elo fraco sempre é a interface de materiais.',
+    aprofundamentoId: 'interfaces',
+  },
+  {
+    id: 'nbr15575-03',
+    title: 'ERRO QUE CUSTA CARO 03: Ignorar olimpicamente a percepção do usuário (NBR 15575)',
+    contexto:
+      'Construir focado apenas na estabilidade estática. Se o usuário sente profundo desconforto e as funções básicas de habitação estão prejudicadas, o problema técnico (e jurídico) existe sim.',
+    naObra:
+      'Edificações entregues novinhas, sem trincas, vícios estéticos ou deformações visíveis, mas com dezenas de reclamações de calor insuportável ou barulho do salto da vizinha enlouquecendo o morador de baixo.',
+    causa:
+      'Avaliar o edifício apenas e unicamente pelo prisma de segurança estrutural de colapso, esquecendo a "habitabilidade" e a função primária do imóvel.',
+    consequencia:
+      'Danos letais à imagem da construtora. Multas, processos coletivos por vícios construtivos focados na perda de habitabilidade ou na redução de conforto mínimo normativo.',
+    comoLer:
+      'A percepção sensorial do usuário (ouvir, sentir calor/frio, ver água onde não deveria) é o verdadeiro termômetro do sucesso de desempenho em serviço de um empreendimento.',
+    oQueFazer:
+      'Entender que o ciclo da engenharia não termina com a entrega das chaves. Projetar focando no uso real e no conforto sensorial que deverá ser sustentado por décadas.',
+    normaId: '15575',
+    normaCode: 'NBR 15575',
+    normaDisplay: 'NBR 15575 — Desempenho Habitacional',
+    fechamento:
+      'Obra perfeitamente estruturada, porém inabitável na prática, não é obra entregue. É conflito adiado.',
+    aprofundamentoId: 'cliente-cobra',
+  },
+  {
+    id: 'nbr15575-04',
+    title: 'ERRO QUE CUSTA CARO 04: Não documentar critérios nem VUP (NBR 15575)',
+    contexto:
+      'Entregar o empreendimento sem definir e registrar formalmente (em Manuais) a Vida Útil de Projeto (VUP), condições de manutenção ou classes de isolamento, tirando toda chance de defesa no futuro.',
+    naObra:
+      'O dono relata que a fachada está manchada após 3 anos ou que o ruído do elevador incomoda, e a construtora não tem documentação formal para basear sua defesa ou indicar se era necessária manutenção.',
+    causa:
+      'Preguiça documental. Tratar manuais do proprietário como folhetos comerciais genéricos, sem o lastro técnico e a especificação exigida pelas normas vigentes.',
+    consequencia:
+      'Todas as reclamações de clientes, mesmo aquelas advindas da total falta de manutenção, convertem-se em "verdades jurídicas" inquestionáveis contra a construtora.',
+    comoLer:
+      'Sem um critério técnico formal e pactuado no ato de entrega, qualquer opinião subjetiva ou desleixo do morador vira um "vício ou defeito de obra".',
+    oQueFazer:
+      'Estabelecer níveis de desempenho mínimos em projeto (classe M, I, S), calcular VUPs, e registrar absolutamente tudo, de forma explícita e vinculante, no Manual de Uso e Operação do Edifício.',
+    normaId: '15575',
+    normaCode: 'NBR 15575',
+    normaDisplay: 'NBR 15575 — Desempenho Habitacional',
+    fechamento:
+      'Quem não define as métricas de sucesso em projeto, acaba sendo avaliado pelas métricas de insatisfação do cliente.',
+    aprofundamentoId: 'vida-util',
+  },
+  {
+    id: 'nbr15575-05',
+    title: 'ERRO QUE CUSTA CARO 05: Ausência de provas de execução em campo (NBR 15575)',
+    contexto:
+      'Falta de rastreabilidade construtiva e de ensaios in loco das fases da obra que determinam o desempenho e que ficam ocultas debaixo de argamassas e forros (como mantas acústicas e mantas de laje).',
+    naObra:
+      'Mantas acústicas concretadas sob milhares de metros de contrapiso sem diário fotográfico, áreas molhadas revestidas sem assinatura de liberação com teste de água retida de 72h.',
+    causa:
+      'Foco exclusivo na velocidade e estética, considerando checklists de fiscalização técnica e testes de estanqueidade perdas de produtividade ou mera burocracia.',
+    consequencia:
+      'Dificuldade extrema em responder a litígios e perícias de vizinhança. Em caso de patologias, necessidade de demolições enormes só para tentar descobrir se a camada de isolamento está ali.',
+    comoLer:
+      'Na visão pericial ou judicial da Norma de Desempenho, aquilo que não pode ser fisicamente provado com fotos e laudos na obra tecnicamente nunca existiu.',
+    oQueFazer:
+      'Implementar processos draconianos de rastreabilidade para camadas ocultas. Tornar obrigatórios os ensaios técnicos antes da cobertura de qualquer elemento crítico (FVS).',
+    normaId: '15575',
+    normaCode: 'NBR 15575',
+    normaDisplay: 'NBR 15575 — Desempenho Habitacional',
+    fechamento:
+      'A obra mais bem feita do mundo é perfeitamente inútil perante um tribunal sem os registros probatórios dessa excelência.',
+    aprofundamentoId: 'documentar-desempenho',
+  },
+  {
+    id: 'nbr15575-06',
+    title: 'ERRO QUE CUSTA CARO 06: Tratar patologia de forma não-sistêmica (NBR 15575)',
+    contexto:
+      'Abordar os sintomas evidentes sem buscar compreender ou atacar a origem verdadeira da falha. O desempenho de um prédio é como o corpo humano: raramente uma febre é apenas um problema de pele.',
+    naObra:
+      'Vedar por fora os caixilhos com mastique tentando estancar água sem refazer a calafetação da soleira ou preencher de espuma um vão sem tratar a laje contínua entre ambientes.',
+    causa:
+      'Falta da visão integral "Sintomática vs Sistêmica". Impaciência em aplicar a engenharia investigativa e vontade de resolver no curto prazo com a opção mais barata e rápida.',
+    consequencia:
+      'Patologias e vazamentos completamente recorrentes, custos operacionais inflados por garantias eternas, desgaste crônico de relacionamento com os proprietários condôminos.',
+    comoLer:
+      'Uma patologia habitacional de isolamento não é equivalente a um "corte a ser tapado", e sim ao sintoma de um sistema em desequilíbrio ou rompido em sua cadeia construtiva.',
+    oQueFazer:
+      'Mapear a fundo origens de falha (pontes térmicas não tratadas, caminhos de fuga do som estrutural, rotas ocultas de percolação de líquidos) e sanar a rede defeituosa.',
+    normaId: '15575',
+    normaCode: 'NBR 15575',
+    normaDisplay: 'NBR 15575 — Desempenho Habitacional',
+    fechamento:
+      'Cuidar apenas do sintoma sem entender o sistema é a garantia absoluta de que a dor voltará, mais grave, e talvez noutro ponto vizinho.',
+    aprofundamentoId: 'estanqueidade',
+  },
 ]
 
 export type Aprofundamento = {
@@ -1098,6 +1230,117 @@ const aprofundamentosDetalhes: Record<string, Partial<Aprofundamento>> = {
     oQueFazer:
       'Registrar sondagens utilizadas; documentar escolha da fundação; registrar alterações de projeto; acompanhar e registrar execução; manter evidências (fotos, relatórios, medições); organizar histórico técnico da obra. 👉 registro não é excesso — é proteção.',
     fechamento: 'Quem não registra o que fez, aceita que outros definam o que aconteceu.',
+  },
+  'acustico-erros': {
+    context:
+      'O desempenho acústico é resultado do comportamento coletivo da edificação, não de elementos isolados. O erro estrutural começa ao ignorar a transmissão de vibrações.',
+    naPratica:
+      'Ruído de impacto de passos, conversas audíveis entre unidades, descarga hidráulica em shafts, ruídos de fachadas transferidos para dentro (ex: trânsito).',
+    erroComum:
+      'Avaliar elementos de forma isolada, confiar apenas em catálogos de materiais sem considerar a execução, ignorar interfaces rígidas.',
+    comoInterpretar:
+      'O som se propaga por vibração; se existe uma conexão rígida, existe transmissão de ruído. Uma parede grossa com piso sem junta flutuante transmitirá ruído.',
+    oQueFazer:
+      'Avaliar o sistema como um todo, tratar as interfaces, evitar continuidade rígida entre elementos (dessolidarização), detalhar e controlar a execução das vedações acústicas.',
+    fechamento:
+      'O material isola, mas a interface transmite. O cuidado sempre está no encontro entre as partes.',
+  },
+  'transmissao-lateral': {
+    context:
+      'O som não caminha apenas em linha reta. Ele percorre rotas laterais (flanking) através das estruturas adjacentes (lajes, pilares, fachadas) ao invés da transmissão direta.',
+    naPratica:
+      'Ruído audível entre unidades vizinhas mesmo com paredes "adequadas". O som da televisão do vizinho que viaja por lajes contínuas ou pilares compartilhados.',
+    erroComum:
+      'Achar que engrossar a parede divisória resolve tudo, ignorando as conexões rígidas da parede com o piso, pilares e teto.',
+    comoInterpretar:
+      'O som segue o caminho mais fácil, não apenas o mais curto. Se a via primária está bloqueada, ele desvia pela via secundária não tratada.',
+    oQueFazer:
+      'Prever juntas de dessolidarização, usar pisos flutuantes, tratar encontros entre alvenaria e estrutura, garantir desconexão física onde o som não deve passar.',
+    fechamento: 'Se a estrutura inteira vibra junto, o som viaja junto. Desconectar é a chave.',
+  },
+  'conforto-termico': {
+    context:
+      'O conforto térmico é o resultado da interação complexa entre orientação solar, escolha de materiais da envoltória, e eficiência da ventilação do projeto.',
+    naPratica:
+      'Calor excessivo durante o dia em fachadas poentes, acúmulo de calor à noite (efeito de paredes radiantes), total dependência de sistemas de ar-condicionado.',
+    erroComum:
+      'Ignorar a carta bioclimática da região, escolher esquadrias genéricas e envidraçamentos enormes sem proteção solar, não prever ventilação cruzada.',
+    comoInterpretar:
+      'A edificação deve responder de forma inteligente ao clima local, não resistir ativamente a ele com alto custo energético. O foco é o controle das trocas térmicas.',
+    oQueFazer:
+      'Estudar sombreamentos passivos (brises), dimensionar a inércia térmica correta das vedações, garantir aberturas que permitam ventilação natural cruzada efetiva.',
+    fechamento:
+      'A climatização mecânica (ar-condicionado) deve ser o complemento para o conforto térmico, e não a única solução possível de um projeto mal orientado.',
+  },
+  estanqueidade: {
+    context:
+      'A água possui um comportamento sistêmico e fluído; ela percorre caminhos e descontinuidades, muitas vezes aparecendo muito longe do seu ponto de origem inicial.',
+    naPratica:
+      'Infiltrações misteriosas em paredes internas, vazamentos em marcos de esquadrias durante chuvas de vento, umidade ascendente em rodapés do térreo, falhas em coberturas e calhas.',
+    erroComum:
+      'Tratar a impermeabilização apenas como a manta no chão, ignorando as subidas (rodapés), ralos, caimentos insuficientes e, principalmente, as junções piso-parede.',
+    comoInterpretar:
+      'O sistema de estanqueidade quase nunca falha no meio do elemento. Ele falha nos pontos de fragilidade geométrica e nas descontinuidades construtivas.',
+    oQueFazer:
+      'Focar incansavelmente na continuidade da barreira estanque. Detalhar exaustivamente os arremates de ralos, caixilhos, pingadeiras, e tubulações passantes (shafts).',
+    fechamento:
+      'A água não tem pressa. Ela explora a falha geométrica ou a descontinuidade que o projetista esqueceu de detalhar.',
+  },
+  'vida-util': {
+    context:
+      'A Vida Útil de Projeto (VUP) não é uma garantia de eternidade dos componentes, mas um compromisso técnico de durabilidade condicionado ao uso e à manutenção adequados.',
+    naPratica:
+      'Fachadas que se degradam precocemente, sistemas hidráulicos falhando antes do tempo, surgimento de corrosão em armaduras ou esquadrias que perdem função.',
+    erroComum:
+      'Acreditar (ou deixar o cliente acreditar) que a VUP é de responsabilidade exclusiva do construtor, ignorando que a manutenção predial constante é obrigatória para atingi-la.',
+    comoInterpretar:
+      'O desempenho prolongado no tempo depende de um tripé inseparável: projeto adequado para o clima + execução controlada + manutenção efetiva pelo usuário final.',
+    oQueFazer:
+      'Documentar todos os critérios de durabilidade assumidos, entregar manuais de uso e manutenção hiper claros ao cliente e registrar cronogramas de manutenções recomendadas.',
+    fechamento:
+      'Construção não é um bem isento de manutenção. Atingir a VUP é sempre uma via de mão dupla entre construtor e usuário.',
+  },
+  interfaces: {
+    context:
+      'A vasta maioria das falhas de desempenho construtivo se dá nas transições (junções) entre subsistemas diferentes, e raramente no meio da vida de um elemento puro.',
+    naPratica:
+      'Infiltração grave no encontro exato de lajes de cobertura com platibandas, trincas recorrentes na interface de estruturas (pilares) com a alvenaria, falhas acústicas no vão de portas.',
+    erroComum:
+      'Detalhar maravilhosamente bem o sistema principal (a parede, a laje) e deixar a interface ou conexão à mercê do pedreiro para "resolver na obra do jeito dele".',
+    comoInterpretar:
+      'Diferentes materiais possuem comportamentos, rigidezes e coeficientes de dilatação variados. Isso cria tensões concentradas e descontinuidades críticas nos encontros.',
+    oQueFazer:
+      'Desenhar, calcular e especificar juntas de movimentação, selantes apropriados (poliuretanos, silicones), transições de sistemas de impermeabilização e ancoragens flexíveis.',
+    fechamento:
+      'A obra raramente falha no meio do painel perfeito — ela inevitavelmente falha na junta.',
+  },
+  'cliente-cobra': {
+    context:
+      'A entrada em vigor da Norma de Desempenho mudou o foco técnico e jurídico da engenharia. A avaliação não é mais apenas "a obra ficou de pé", mas se ela atende às expectativas funcionais.',
+    naPratica:
+      'Processos judiciais, laudos cautelares e disputas sobre calor extremo dentro das casas, vazamentos difíceis de arrumar e reclamações constantes sobre ouvir os passos do vizinho de cima.',
+    erroComum:
+      'O engenheiro achar que se não há "risco estrutural de colapso", então "não há problema real" a ser resolvido. Desconsiderando a função de habitabilidade do edifício.',
+    comoInterpretar:
+      'O usuário vai julgar a qualidade final do edifício pelo desempenho que foi entregue. O desconforto sonoro, térmico e hídrico do cliente é classificado como uma não conformidade técnica grave.',
+    oQueFazer:
+      'Mapear e estabelecer requisitos mínimos de desempenho desde a concepção (Kickoff). Alinhar firmemente as expectativas e focar não no material, mas no comportamento sistêmico do imóvel.',
+    fechamento:
+      'No fim do dia, o cliente não quer comprar material de construção. Ele compra o direito a silêncio, conforto e paz.',
+  },
+  'documentar-desempenho': {
+    context:
+      'O desempenho prometido precisa obrigatoriamente ser comprovado por meio de evidências concretas. Em litígios ou perícias, sem documentação a alegação da construtora vira apenas uma opinião.',
+    naPratica:
+      'Exigência legal de testes acústicos pós-obra, vistorias de vizinhança, clientes contratando laudos periciais e juízes cobrando cadernos de rastreabilidade de produtos e ensaios.',
+    erroComum:
+      'Realizar o trabalho perfeito no canteiro, mas não guardar um único registro fotográfico organizado da camada acústica antes da concretagem, nem possuir certificados de laboratório.',
+    comoInterpretar:
+      'Se houver um conflito sobre performance, o que vale para a norma de desempenho e para a justiça é o as-built, o ensaio de laboratório, o checklist fotográfico e o manual assinado.',
+    oQueFazer:
+      'Registrar incansavelmente etapas de execução críticas que ficarão ocultas (isolamentos, mantas sob contrapiso, tubulações de parede). Manter FVS (Ficha de Verificação de Serviço), laudos de ensaios e arquivos de obra impecáveis.',
+    fechamento:
+      'Desempenho executado de forma brilhante, mas que não foi registrado com rigor, é legalmente inexistente perante a norma.',
   },
 }
 

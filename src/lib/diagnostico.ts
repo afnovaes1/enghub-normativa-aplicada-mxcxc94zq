@@ -113,4 +113,83 @@ export const diagnosticos: Diagnostico[] = [
       'Foundation Analysis and Design (Bowles)',
     ],
   },
+  {
+    id: 'desempenho-falha-sistemica',
+    title: 'Desempenho Habitacional: Falha de Sistema x Falha Isolada',
+    oQueEstaAcontecendo: [
+      'A edificação estruturalmente não apresenta risco iminente de colapso, mas as funções habitacionais de conforto térmico, acústico ou estanqueidade estão comprometidas.',
+      'O usuário final percebe um problema contínuo que afeta a sua qualidade de vida e a habitabilidade do ambiente.',
+      '👉 Em vez de perguntar "o que quebrou?", a pergunta central passa a ser: "o que não está performando como deveria?".',
+    ],
+    oQueObservarEmCampo: {
+      pontos: [
+        'Sintomatologia Acústica: Ruído de passos visível, percepção clara da conversa de vizinhos, ruídos das instalações hidrossanitárias?',
+        'Sintomatologia Térmica: Diferenças extremas de temperatura interna ao longo do dia, forte dependência de climatização mecânica, condensação excessiva nas janelas?',
+        'Sintomatologia Estanqueidade: Umidade que não advém de tubulação rompida, mas de fachadas (chuva), umidade ascendente ou condensação superficial?',
+        'Verificação de Interfaces: Como estão os encontros entre materiais diferentes? Existem juntas ou selantes deteriorados precocemente?',
+        'Verificação de Instalações: Os tubos e dutos possuem isolamento? Estão rigidamente fixados à estrutura principal?',
+      ],
+      erroClassico:
+        'Tentar corrigir a patologia pontual (como colocar um silicone num caixilho) sem investigar o desempenho global do sistema (ex: falta de caimento no peitoril).',
+    },
+    hipotesesProvaveis: [
+      'Falha de Projeto (Falta de Compatibilização): Os requisitos de desempenho não foram considerados ou modelados na fase de projeto.',
+      'Falha de Execução (Descontinuidades): O material especificado era bom, mas as interfaces (pontes térmicas, encontros rígidos, falhas na barreira impermeável) arruinaram o desempenho.',
+      'Falha de Uso e Manutenção: O usuário alterou o sistema original (ex: removeu piso flutuante, não realizou manutenção preventiva recomendada no manual).',
+    ],
+    leituraTecnica: {
+      leituraDireta:
+        'Problemas de desempenho como ruído, calor excessivo ou infiltrações difusas raramente são falhas de um único elemento. Eles representam falhas sistêmicas de isolamento e transmissão.',
+      interpretacaoEssencial:
+        'Se o sistema não funciona de forma integrada, ele não performa. O som usa pontes rígidas, o calor usa pontes térmicas e a água segue a menor resistência. A análise deve mapear as rotas de falha, não apenas as origens aparentes.',
+    },
+    comoConfirmar: [
+      'Ensaios Acústicos In Loco: Medição de ruído de impacto ou ruído aéreo entre unidades com sonômetro calibrado e fonte padronizada.',
+      'Ensaios Térmicos/Termografia: Uso de câmera termográfica para identificar vazamentos de ar, infiltrações invisíveis ou pontes térmicas.',
+      'Teste de Estanqueidade (Fachadas): Realização de aspersão dirigida de água seguindo critérios normativos.',
+      'Revisão Documental: Comparar o que foi especificado no projeto com o as-built e os relatórios fotográficos de execução (verificar presenças de mantas acústicas, etc).',
+      'Verificação de Manutenção: Checar o diário de manutenções do condomínio ou usuário.',
+    ],
+    caminhosTecnicos: [
+      'Ação Corretiva Direcionada: Tratamento específico das interfaces construtivas com selantes ou isolantes adequados sem necessidade de demolição massiva.',
+      'Reforço de Barreira (Acústico/Térmico): Execução de forros falsos com lã mineral, contrapisos sobrepostos (quando suportável estruturalmente), ou aplicação de revestimentos externos (EIFS) para isolamento térmico.',
+      'Intervenções Sistêmicas de Impermeabilização: Refazer sistemas que não dão acesso parcial, com atenção a rodapés e desníveis.',
+      'Comprovação por Ensaios: Validação da solução adotada com novo ensaio de desempenho pós-obra.',
+    ],
+    oQueNaoFazer: [
+      'Agir no achismo sem medição: Adicionar materiais para isolamento acústico sem entender se o som está vindo por transmissão lateral (flanking).',
+      'Não avaliar o impacto secundário: Aplicar soluções que resolverão a estanqueidade mas prejudicarão a ventilação e agravarão o desconforto térmico.',
+      'Assumir toda a responsabilidade antes da perícia: Pagar por reformas de desempenho sem antes verificar se o usuário infringiu o manual de uso.',
+    ],
+    erroComum:
+      'Tentar resolver problema de transmissão lateral de ruído isolando apenas a parede divisória. O som vai continuar passando por lajes contínuas ou pilares adjacentes.',
+    quandoSeTornaCritico: {
+      triggers: [
+        'Reclamações coletivas ou ações cíveis conjuntas de múltiplos usuários do empreendimento.',
+        'Sintomas de insalubridade no ambiente (ex: mofo recorrente e persistente causando danos à saúde e bens).',
+        'Condições térmicas extremas que inviabilizam o uso dos cômodos para o propósito original (ex: quartos onde não se consegue dormir).',
+      ],
+      decisao: [
+        {
+          estado: 'Problema estético ou de pequeno desconforto localizado',
+          acao: 'Tratar pontualmente na manutenção rotineira.',
+        },
+        {
+          estado: 'Forte impacto na habitabilidade sem falha estrutural',
+          acao: 'Investigação pericial sistêmica e estudo de retrofit.',
+        },
+        {
+          estado: 'Ação judicial ou falha sistêmica sistêmica no condomínio',
+          acao: 'Mobilização de perícia especializada, ensaios in loco para elaboração de contraprova ou plano de recuperação global.',
+        },
+      ],
+    },
+    sinteseTecnica:
+      'No contexto da norma de desempenho, a dor do usuário não é subjetiva, é um dado pericial. Sem critérios definidos e verificados tecnicamente na obra, não há como diagnosticar e muito menos defender-se de falhas de performance. A avaliação deixa de ser "a parede quebrou?" e passa a ser "a parede isola?".',
+    baseTecnica: [
+      'NBR 15575:2013/2021 - Edificações Habitacionais - Desempenho (Partes 1 a 6)',
+      'Diretrizes de Manutenção Predial (NBR 5674 e NBR 14037)',
+      'Manuais de Desempenho Acústico (ProAcústica)',
+    ],
+  },
 ]

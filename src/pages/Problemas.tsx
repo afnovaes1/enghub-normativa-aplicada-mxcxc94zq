@@ -18,11 +18,19 @@ export default function Problemas() {
         </p>
       </header>
 
-      <div className="mt-8 mb-4 inline-flex items-center px-3 py-2 bg-enghub-navy-dark border border-enghub-teal/30 text-enghub-teal text-xs uppercase tracking-widest font-bold rounded-lg gap-2 shadow-sm">
-        <BookOpen className="w-4 h-4" />
-        <span>Fundações</span>
-        <span className="w-1.5 h-1.5 rounded-full bg-enghub-teal"></span>
-        <span>Módulo Especial NBR 6122</span>
+      <div className="mt-8 mb-4 flex flex-wrap gap-3">
+        <div className="inline-flex items-center px-3 py-2 bg-enghub-navy-dark border border-enghub-teal/30 text-enghub-teal text-xs uppercase tracking-widest font-bold rounded-lg gap-2 shadow-sm">
+          <BookOpen className="w-4 h-4" />
+          <span>Fundações</span>
+          <span className="w-1.5 h-1.5 rounded-full bg-enghub-teal"></span>
+          <span>Módulo NBR 6122</span>
+        </div>
+        <div className="inline-flex items-center px-3 py-2 bg-enghub-navy-dark border border-enghub-orange/30 text-enghub-orange text-xs uppercase tracking-widest font-bold rounded-lg gap-2 shadow-sm">
+          <BookOpen className="w-4 h-4" />
+          <span>Desempenho</span>
+          <span className="w-1.5 h-1.5 rounded-full bg-enghub-orange"></span>
+          <span>Módulo NBR 15575</span>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
