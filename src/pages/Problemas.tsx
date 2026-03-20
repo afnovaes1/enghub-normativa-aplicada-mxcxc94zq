@@ -7,6 +7,7 @@ import { cn } from '@/lib/utils'
 const categories = [
   { id: 'all', title: 'Todos', subtitle: 'Os Módulos' },
   { id: '6122', title: 'Fundações', subtitle: 'Módulo NBR 6122' },
+  { id: '6118', title: 'Estruturas', subtitle: 'Módulo NBR 6118' },
   { id: '15575', title: 'Desempenho', subtitle: 'Módulo NBR 15575' },
 ]
 
@@ -64,10 +65,11 @@ export default function Problemas() {
       </div>
 
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-        {filteredProblemas.map((p, index) => {
+        {filteredProblemas.map((p) => {
           const match = p.title.match(/ERRO QUE CUSTA CARO \d+:\s*(.+)/)
           const titleText = match ? match[1] : p.title
-          const titleNum = index + 1
+          const numMatch = p.title.match(/ERRO QUE CUSTA CARO (\d+):/)
+          const titleNum = numMatch ? numMatch[1] : ''
 
           return (
             <Link
@@ -82,7 +84,7 @@ export default function Problemas() {
                   </div>
                   <div>
                     <h3 className="mb-2 text-lg leading-tight font-bold text-enghub-navy">
-                      <span className="mr-1 text-enghub-orange">#{titleNum}</span>
+                      {titleNum && <span className="mr-1 text-enghub-orange">#{titleNum}</span>}
                       {titleText}
                     </h3>
                     <p className="line-clamp-2 leading-relaxed font-medium text-sm text-enghub-navy/70">
@@ -103,6 +105,14 @@ export default function Problemas() {
             </Link>
           )
         })}
+        {filteredProblemas.length === 0 && (
+          <div className="col-span-full py-12 text-center text-enghub-skyblue">
+            <AlertTriangle className="mx-auto mb-3 h-12 w-12 text-enghub-orange/80" />
+            <p className="text-lg font-semibold text-enghub-beige">
+              Nenhum erro catalogado para este filtro.
+            </p>
+          </div>
+        )}
       </div>
     </div>
   )

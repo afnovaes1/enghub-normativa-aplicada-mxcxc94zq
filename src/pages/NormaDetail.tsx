@@ -1,5 +1,5 @@
 import { useParams, useNavigate, Link } from 'react-router-dom'
-import { normas } from '@/lib/data'
+import { normas, getAprofundamento } from '@/lib/data'
 import {
   ArrowLeft,
   Hammer,
@@ -12,6 +12,12 @@ import {
   BookOpen,
   ChevronRight,
 } from 'lucide-react'
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion'
 
 export default function NormaDetail() {
   const { id } = useParams()
@@ -111,7 +117,82 @@ export default function NormaDetail() {
                   </div>
                 )}
 
-                {data.links && data.links.length > 0 && (
+                {b.key === 'aprofundamentos' && data.links && data.links.length > 0 && (
+                  <Accordion type="single" collapsible className="w-full space-y-2 mb-2 mt-1">
+                    {data.links.map((link, i) => {
+                      const aprofundamentoData = getAprofundamento(norma.id, link.id)
+                      return (
+                        <AccordionItem
+                          value={link.id}
+                          key={i}
+                          className="border-none bg-enghub-navy rounded-xl overflow-hidden shadow-sm"
+                        >
+                          <AccordionTrigger className="px-4 py-3.5 hover:no-underline hover:bg-enghub-navy/80 transition-colors text-enghub-beige data-[state=open]:bg-enghub-navy/80 group">
+                            <span className="text-sm font-bold text-left">{link.title}</span>
+                          </AccordionTrigger>
+                          <AccordionContent className="px-4 pb-4 pt-1">
+                            {aprofundamentoData ? (
+                              <div className="space-y-4 mt-2">
+                                <div className="space-y-1">
+                                  <h4 className="text-xs font-bold text-enghub-orange uppercase tracking-wider">
+                                    Contexto
+                                  </h4>
+                                  <p className="text-enghub-skyblue text-sm leading-relaxed">
+                                    {aprofundamentoData.context}
+                                  </p>
+                                </div>
+                                <div className="space-y-1">
+                                  <h4 className="text-xs font-bold text-enghub-orange uppercase tracking-wider">
+                                    Na Prática
+                                  </h4>
+                                  <p className="text-enghub-skyblue text-sm leading-relaxed">
+                                    {aprofundamentoData.naPratica}
+                                  </p>
+                                </div>
+                                <div className="space-y-1">
+                                  <h4 className="text-xs font-bold text-enghub-orange uppercase tracking-wider">
+                                    Erro Comum
+                                  </h4>
+                                  <p className="text-enghub-skyblue text-sm leading-relaxed">
+                                    {aprofundamentoData.erroComum}
+                                  </p>
+                                </div>
+                                <div className="space-y-1">
+                                  <h4 className="text-xs font-bold text-enghub-orange uppercase tracking-wider">
+                                    Como Interpretar
+                                  </h4>
+                                  <p className="text-enghub-skyblue text-sm leading-relaxed">
+                                    {aprofundamentoData.comoInterpretar}
+                                  </p>
+                                </div>
+                                <div className="space-y-1">
+                                  <h4 className="text-xs font-bold text-enghub-orange uppercase tracking-wider">
+                                    O Que Fazer
+                                  </h4>
+                                  <p className="text-enghub-skyblue text-sm leading-relaxed">
+                                    {aprofundamentoData.oQueFazer}
+                                  </p>
+                                </div>
+                                {aprofundamentoData.fechamento && (
+                                  <div className="mt-4 bg-enghub-orange/10 border border-enghub-orange/20 rounded-xl p-3.5">
+                                    <p className="text-enghub-beige font-bold text-sm leading-snug flex items-start gap-2">
+                                      <Target className="w-4 h-4 text-enghub-orange shrink-0 mt-0.5" />
+                                      {aprofundamentoData.fechamento}
+                                    </p>
+                                  </div>
+                                )}
+                              </div>
+                            ) : (
+                              <p className="text-enghub-skyblue text-sm">Conteúdo em elaboração.</p>
+                            )}
+                          </AccordionContent>
+                        </AccordionItem>
+                      )
+                    })}
+                  </Accordion>
+                )}
+
+                {b.key !== 'aprofundamentos' && data.links && data.links.length > 0 && (
                   <div className="space-y-2 mb-2 mt-1">
                     {data.links.map((link, i) => (
                       <Link

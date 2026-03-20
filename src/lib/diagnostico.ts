@@ -192,4 +192,84 @@ export const diagnosticos: Diagnostico[] = [
       'Manuais de Desempenho Acústico (ProAcústica)',
     ],
   },
+  {
+    id: 'desempenho-estrutural-6118',
+    title: 'Desempenho Estrutural: Falha de Sistema x Comportamento (NBR 6118)',
+    oQueEstaAcontecendo: [
+      'A estrutura apresenta sinais de sofrimento contínuo que não caracterizam colapso iminente, mas comprometem seriamente a habitabilidade e a vida útil.',
+      'Surgimento de flechas visíveis em lajes, fissuras repetitivas ou exposição precoce da armadura à corrosão.',
+      '👉 A pergunta principal não é "a estrutura vai cair?", mas sim "a estrutura está se comportando como planejado ao longo do tempo?".',
+    ],
+    oQueObservarEmCampo: {
+      pontos: [
+        'Deformações: Há lajes embarrigadas? Paredes de alvenaria sob lajes ou vigas estão trincando por esmagamento (trincas horizontais no topo)?',
+        'Fissuração: Qual a geometria das trincas? São mapeadas (retração)? 45 graus em apoios (cisalhamento)? Verticais no centro de vãos (flexão)?',
+        'Durabilidade: Há manchas de ferrugem escorrendo pelo concreto? A armadura está visível ou com cobrimento saltando (desplacamento)?',
+        'Registros de Obra: Existem diários de concretagem, notas de liberação de fôrmas, resultados de ensaios de corpos de prova e laudos de slump test?',
+        'Uso atual: O usuário alterou o peso sobre a estrutura (ex: novos reservatórios, mudança de finalidade do ambiente)?',
+      ],
+      erroClassico:
+        'Passar argamassa ou massa corrida sobre a fissura estrutural sem investigar a origem do esforço, tratando a estrutura como alvenaria simples.',
+    },
+    hipotesesProvaveis: [
+      'Falha de Concepção/Projeto: Estados limites de serviço (ELS) ignorados, resultando em flechas excessivas; detalhamento impraticável que gera bicheiras no canteiro.',
+      'Falha de Execução: Retirada precoce do escoramento, adição de água no caminhão betoneira, ausência de cura úmida ou espaçadores ignorados.',
+      'Falha de Manutenção/Uso: Sobrecargas não previstas ou umidade constante lavando a estrutura por falta de manutenção em impermeabilizações.',
+    ],
+    leituraTecnica: {
+      leituraDireta:
+        'A peça estrutural está se deformando ou degradando além dos limites normativos aceitáveis. O concreto armado é um material compósito: se o concreto não protege ou não ancora o aço, e o aço não absorve a tração, o sistema falha conjuntamente.',
+      interpretacaoEssencial:
+        'Os sinais visuais (fissuras, deformações, desplacamentos) são o mapa de tensões da estrutura desenhado em escala real. A falha quase nunca é no cálculo de ruptura (ELU), mas sim na previsão de deformabilidade (ELS) ou no desrespeito tecnológico no canteiro.',
+    },
+    comoConfirmar: [
+      'Mapeamento de Fissuras: Instalação de fissurômetros ou selos de gesso para atestar se a trinca está ativa ou estabilizada.',
+      'Medição de Flechas: Nivelamento topográfico ou laser para medir a deformação real da peça.',
+      'Ensaios Não Destrutivos: Esclerometria, ultrassom ou pacometria (para verificar a posição e o cobrimento real da armadura).',
+      'Ensaios Destrutivos: Extração de testemunhos (core) para atestar a resistência (fck) real da peça executada.',
+      'Auditoria Documental: Revisão dos projetos estruturais versus relatórios de ensaio de resistência à compressão dos 28 dias.',
+    ],
+    caminhosTecnicos: [
+      'Reforço Estrutural: Adição de fibras de carbono (FRP), chapas metálicas coladas ou aumento de seção com graute.',
+      'Recuperação Superficial: Tratamento da armadura oxidada (escovação e inibidor de corrosão) e recomposição da seção com argamassa polimérica.',
+      'Redução de Carga: Remoção de alvenarias ou contrapisos pesados não estruturais.',
+      'Injeção de Resinas: Selamento de fissuras estabilizadas com resina epóxi para devolver a monoliticidade à peça e proteger a armadura da água.',
+    ],
+    oQueNaoFazer: [
+      'Tampar trincas ativas: Esconder trincas que ainda estão em movimento usando materiais rígidos.',
+      'Adicionar mais peso: Tentar nivelar uma laje fletida enchendo o "embarrigamento" com concreto novo, aumentando drasticamente a carga.',
+      'Romper pilares ou vigas: Rasgar peças estruturais para passar tubulações e esconder o erro depois.',
+    ],
+    erroComum:
+      'Tentar "macaquear" (empurrar para cima com escoras metálicas) uma laje que já sofreu fluência excessiva na tentativa de nivelar o teto. Isso destrói a peça e transfere esforços perigosos para as ligações.',
+    quandoSeTornaCritico: {
+      triggers: [
+        'Esmagamento de pilares (concreto lascando sob compressão visível).',
+        'Flechas visíveis a olho nu que continuam aumentando mês a mês.',
+        'Fissuras cortantes (45 graus) abertas próximas aos apoios.',
+        'Rompimento repentino de pisos cerâmicos sobre lajes estruturais acompanhado de estalos altos.',
+      ],
+      decisao: [
+        {
+          estado: 'Fissuração estabilizada ou de retração plástica superficial',
+          acao: 'Limpar, injetar resina adequada e selar para garantir a durabilidade.',
+        },
+        {
+          estado: 'Deformação excessiva estabilizada (sem risco de ruptura)',
+          acao: 'Tratar a consequência estética/arquitetônica sem adicionar carga estrutural cega.',
+        },
+        {
+          estado: 'Fissuras ativas de cisalhamento ou flechas progressivas (risco de colapso)',
+          acao: 'Escoramento imediato da estrutura afetada, interdição do uso e projeto técnico de reforço estrutural de urgência.',
+        },
+      ],
+    },
+    sinteseTecnica:
+      'Estruturas de concreto armado não falham de surpresa, elas enviam sinais. A norma 6118 não avalia apenas se a obra ficou em pé no dia da inauguração, mas se o cobrimento, o detalhamento e o controle tecnológico garantem que ela ficará em pé, sem deformações que impeçam o seu uso, pelos próximos 50 anos.',
+    baseTecnica: [
+      'NBR 6118:2023 - Projeto de estruturas de concreto - Procedimento',
+      'NBR 14931:2004 - Execução de estruturas de concreto',
+      'NBR 15575:2021 - Norma de Desempenho (Critérios de vida útil e habitabilidade)',
+    ],
+  },
 ]
