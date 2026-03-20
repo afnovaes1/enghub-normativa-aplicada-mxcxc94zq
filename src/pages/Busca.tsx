@@ -8,8 +8,15 @@ import { diagnosticos } from '@/lib/diagnostico'
 export default function Busca() {
   const [query, setQuery] = useState('')
 
-  const trendings = ['recalque', 'fissura', 'SPT não converge', 'trinca', 'sobrecarga']
-  const history = ['NBR 6120', 'NBR 6122', 'NBR 6118']
+  const trendings = [
+    'recalque',
+    'fissura',
+    'SPT não converge',
+    'trinca',
+    'sobrecarga',
+    'curto-circuito',
+  ]
+  const history = ['NBR 5410', 'NBR 6120', 'NBR 6122', 'NBR 6118']
 
   const allAprofundamentos = normas.flatMap((n) =>
     (n.blocks.aprofundamentos?.links || []).map((l) => ({

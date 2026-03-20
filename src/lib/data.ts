@@ -25,6 +25,105 @@ export type Norma = {
   }
 }
 
+const nbr6120Blocks = {
+  ondeEntra: {
+    title: 'Onde entra na obra',
+    content:
+      'Essa norma entra antes de qualquer desenho ou dimensionamento. É a base invisível de todas as premissas estruturais.',
+    bullets: [
+      'definição do uso futuro dos ambientes',
+      'levantamento do peso próprio de todos os acabamentos e fechamentos',
+      'consideração de cargas acidentais e móveis',
+      'documentação do que a estrutura "foi avisada" que suportaria',
+    ],
+    takeaway: 'se a carga está errada, não importa quão perfeito seja o cálculo: o prédio falhará.',
+  },
+  controle: {
+    title: 'O que realmente controla',
+    content: 'Não controla espessura ou resistência. Controla o cenário de uso.',
+    bullets: [
+      'Cargas permanentes (peso dos materiais, vedações, revestimentos pesados).',
+      'Cargas variáveis/acidentais (pessoas, móveis, pequenas divisórias móveis).',
+      'Cargas excepcionais (reservatórios, equipamentos pesados).',
+      'A distribuição teórica das cargas ao longo do tempo.',
+    ],
+    takeaway: 'carga invisível deforma; carga ignorada colapsa.',
+  },
+  erros: {
+    title: 'Onde todo mundo erra',
+    bullets: [
+      'Adotar cargas variáveis mínimas para escritórios e permitir instalação de arquivos deslizantes super pesados.',
+      'Substituir forro leve e piso laminado por gesso denso e porcelanato de grande formato sem avisar o calculista.',
+      'Construir platibandas e marquises exuberantes na obra que não constavam no primeiro projeto arquitetônico enviado ao estrutural.',
+      'Assumir que carga variável atua igualmente distribuída quando ela muitas vezes atua concentrada num pequeno trecho da laje.',
+      'Esquecer de somar o peso da água nas tubulações penduradas e nos mega reservatórios de cobertura.',
+    ],
+    takeaway:
+      'O erro da NBR 6120 não aparece na concretagem, aparece 5 anos depois quando a esquadria trava e a parede amassa.',
+  },
+  consequencias: {
+    title: 'O que acontece quando erra',
+    bullets: [
+      'Flechas (embarrigamentos) crônicas e irreversíveis nas lajes.',
+      'Esmagamento severo de paredes de alvenaria por deflexão da estrutura superior.',
+      'Surgimento de fissuras cortantes ativas (sinal de limite de ruptura) próximas aos pilares e vigas.',
+      'Desconforto vibratório (laje que "pula" ao caminhar).',
+      'Inviabilização de reformas futuras ou necessidade de reforços estruturais caríssimos.',
+    ],
+    takeaway:
+      'Estrutura não mente. Se ela deformou sem erro de Fck, é porque a carga superou a premissa.',
+  },
+  praticas: {
+    title: 'Como fazer certo na prática',
+    bullets: [
+      'Registrar formalmente as premissas de carga nos projetos As-Built e no Manual do Proprietário.',
+      'Criar "Placas de Carga Máxima" em ambientes críticos (ex: áreas técnicas, garagens suspensas, bibliotecas).',
+      'Cruzar a arquitetura de interiores executiva com o memorial estrutural antes de aprovar a compra de acabamentos pesados.',
+      'Não aprovar "puxadinhos" ou acréscimos na cobertura sem recálculo completo da prumada.',
+    ],
+  },
+  insights: {
+    title: 'Insights rápidos de decisão',
+    insights: [
+      {
+        name: 'Mudança de Piso',
+        description:
+          'Trocar um piso vinílico por granito com argamassa espessa pode adicionar mais de 100kg/m² de carga permanente morta que consumirá toda a margem de segurança da laje.',
+      },
+      {
+        name: 'Arquivos e Estoques',
+        description:
+          'O uso de arquivos deslizantes altera a carga de 250kg/m² (escritório padrão) para facilmente 800 a 1000kg/m², esgotando a capacidade da laje e causando fissuração imediata no pavimento de baixo.',
+      },
+      {
+        name: 'Água é pesada',
+        description:
+          'Uma piscina de plástico montada no terraço ou um ofurô não previsto pode ultrapassar a carga acidental projetada com folga. 1m³ de água pesa 1 tonelada exata.',
+      },
+    ],
+    takeaway:
+      'A estrutura é passiva e obediente; se você colocar o peso, ela fará a força para segurar, nem que para isso precise se deformar até romper.',
+  },
+  perito: {
+    title: 'Visão de perito',
+    content:
+      'Em disputas sobre danos estruturais, a primeira defesa técnica é o memorial de cargas. Se o usuário alterou o uso do imóvel, adicionou paredes pesadas onde não existiam, ou lotou o espaço com itens não previstos, a responsabilidade civil pelo dano é exclusivamente dele. Sem registro claro de quais foram as cargas da NBR 6120 no Manual de Entrega, o construtor paga a conta de uma reforma que ele nem fez.',
+    takeaway:
+      'Se a carga projetada não está registrada e clara, qualquer peso adicionado será considerado "uso normal" pelo juiz.',
+  },
+  aprofundamentos: {
+    title: 'Aprofundamentos',
+    links: [
+      { id: 'carga-cenario-uso', title: 'Carga não é número — é cenário de uso' },
+      { id: 'subestimacao-carga', title: 'Subestimação de carga: o erro que não aparece' },
+      { id: 'cargas-adicionais', title: 'Cargas adicionais: o que entra depois e ninguém revisa' },
+      { id: 'distribuicao-carga', title: 'Distribuição de carga: onde a conta está errada' },
+      { id: 'mudanca-uso-6120', title: 'Mudança de uso: quando a estrutura fica incompatível' },
+      { id: 'premissas-projeto', title: 'Premissas de projeto: o que ninguém revisita' },
+    ],
+  },
+}
+
 const nbr6122Blocks = {
   ondeEntra: {
     title: 'Onde entra na obra',
@@ -341,105 +440,6 @@ const nbr6118Blocks = {
   },
 }
 
-const nbr6120Blocks = {
-  ondeEntra: {
-    title: 'Onde entra na obra',
-    content:
-      'Essa norma entra antes de qualquer desenho ou dimensionamento. É a base invisível de todas as premissas estruturais.',
-    bullets: [
-      'definição do uso futuro dos ambientes',
-      'levantamento do peso próprio de todos os acabamentos e fechamentos',
-      'consideração de cargas acidentais e móveis',
-      'documentação do que a estrutura "foi avisada" que suportaria',
-    ],
-    takeaway: 'se a carga está errada, não importa quão perfeito seja o cálculo: o prédio falhará.',
-  },
-  controle: {
-    title: 'O que realmente controla',
-    content: 'Não controla espessura ou resistência. Controla o cenário de uso.',
-    bullets: [
-      'Cargas permanentes (peso dos materiais, vedações, revestimentos pesados).',
-      'Cargas variáveis/acidentais (pessoas, móveis, pequenas divisórias móveis).',
-      'Cargas excepcionais (reservatórios, equipamentos pesados).',
-      'A distribuição teórica das cargas ao longo do tempo.',
-    ],
-    takeaway: 'carga invisível deforma; carga ignorada colapsa.',
-  },
-  erros: {
-    title: 'Onde todo mundo erra',
-    bullets: [
-      'Adotar cargas variáveis mínimas para escritórios e permitir instalação de arquivos deslizantes super pesados.',
-      'Substituir forro leve e piso laminado por gesso denso e porcelanato de grande formato sem avisar o calculista.',
-      'Construir platibandas e marquises exuberantes na obra que não constavam no primeiro projeto arquitetônico enviado ao estrutural.',
-      'Assumir que carga variável atua igualmente distribuída quando ela muitas vezes atua concentrada num pequeno trecho da laje.',
-      'Esquecer de somar o peso da água nas tubulações penduradas e nos mega reservatórios de cobertura.',
-    ],
-    takeaway:
-      'O erro da NBR 6120 não aparece na concretagem, aparece 5 anos depois quando a esquadria trava e a parede amassa.',
-  },
-  consequencias: {
-    title: 'O que acontece quando erra',
-    bullets: [
-      'Flechas (embarrigamentos) crônicas e irreversíveis nas lajes.',
-      'Esmagamento severo de paredes de alvenaria por deflexão da estrutura superior.',
-      'Surgimento de fissuras cortantes ativas (sinal de limite de ruptura) próximas aos pilares e vigas.',
-      'Desconforto vibratório (laje que "pula" ao caminhar).',
-      'Inviabilização de reformas futuras ou necessidade de reforços estruturais caríssimos.',
-    ],
-    takeaway:
-      'Estrutura não mente. Se ela deformou sem erro de Fck, é porque a carga superou a premissa.',
-  },
-  praticas: {
-    title: 'Como fazer certo na prática',
-    bullets: [
-      'Registrar formalmente as premissas de carga nos projetos As-Built e no Manual do Proprietário.',
-      'Criar "Placas de Carga Máxima" em ambientes críticos (ex: áreas técnicas, garagens suspensas, bibliotecas).',
-      'Cruzar a arquitetura de interiores executiva com o memorial estrutural antes de aprovar a compra de acabamentos pesados.',
-      'Não aprovar "puxadinhos" ou acréscimos na cobertura sem recálculo completo da prumada.',
-    ],
-  },
-  insights: {
-    title: 'Insights rápidos de decisão',
-    insights: [
-      {
-        name: 'Mudança de Piso',
-        description:
-          'Trocar um piso vinílico por granito com argamassa espessa pode adicionar mais de 100kg/m² de carga permanente morta que consumirá toda a margem de segurança da laje.',
-      },
-      {
-        name: 'Arquivos e Estoques',
-        description:
-          'O uso de arquivos deslizantes altera a carga de 250kg/m² (escritório padrão) para facilmente 800 a 1000kg/m², esgotando a capacidade da laje e causando fissuração imediata no pavimento de baixo.',
-      },
-      {
-        name: 'Água é pesada',
-        description:
-          'Uma piscina de plástico montada no terraço ou um ofurô não previsto pode ultrapassar a carga acidental projetada com folga. 1m³ de água pesa 1 tonelada exata.',
-      },
-    ],
-    takeaway:
-      'A estrutura é passiva e obediente; se você colocar o peso, ela fará a força para segurar, nem que para isso precise se deformar até romper.',
-  },
-  perito: {
-    title: 'Visão de perito',
-    content:
-      'Em disputas sobre danos estruturais, a primeira defesa técnica é o memorial de cargas. Se o usuário alterou o uso do imóvel, adicionou paredes pesadas onde não existiam, ou lotou o espaço com itens não previstos, a responsabilidade civil pelo dano é exclusivamente dele. Sem registro claro de quais foram as cargas da NBR 6120 no Manual de Entrega, o construtor paga a conta de uma reforma que ele nem fez.',
-    takeaway:
-      'Se a carga projetada não está registrada e clara, qualquer peso adicionado será considerado "uso normal" pelo juiz.',
-  },
-  aprofundamentos: {
-    title: 'Aprofundamentos',
-    links: [
-      { id: 'carga-cenario-uso', title: 'Carga não é número — é cenário de uso' },
-      { id: 'subestimacao-carga', title: 'Subestimação de carga: o erro que não aparece' },
-      { id: 'cargas-adicionais', title: 'Cargas adicionais: o que entra depois e ninguém revisa' },
-      { id: 'distribuicao-carga', title: 'Distribuição de carga: onde a conta está errada' },
-      { id: 'mudanca-uso-6120', title: 'Mudança de uso: quando a estrutura fica incompatível' },
-      { id: 'premissas-projeto', title: 'Premissas de projeto: o que ninguém revisita' },
-    ],
-  },
-}
-
 const nbr13752Blocks = {
   ondeEntra: {
     title: 'Onde entra na obra',
@@ -635,14 +635,21 @@ const nbr5410Blocks = {
   aprofundamentos: {
     title: 'Aprofundamentos',
     links: [
-      { id: 'dimensionar-circuitos', title: 'Como dimensionar circuitos na prática' },
-      { id: 'erros-disjuntores', title: 'Erros comuns com disjuntores' },
-      { id: 'sobrecarga-sinais', title: 'Sobrecarga: sinais e riscos' },
-      { id: 'curto-circuito', title: 'Curto-circuito: causas reais' },
-      { id: 'aquecimento-condutores', title: 'Aquecimento de condutores' },
-      { id: 'separacao-circuitos', title: 'Separação de circuitos' },
-      { id: 'crescimento-carga', title: 'Crescimento de carga ao longo do tempo' },
-      { id: 'improviso-instalacoes', title: 'Improviso em instalações' },
+      {
+        id: 'eletrica-interferencia',
+        title: 'Elétrica não é só instalação — é interferência na obra',
+      },
+      { id: 'rasgos-passagens', title: 'Rasgos e passagens: onde começa o problema estrutural' },
+      {
+        id: 'falta-compatibilizacao',
+        title: 'Falta de compatibilização: o erro que vira retrabalho',
+      },
+      {
+        id: 'execucao-improvisada-5410',
+        title: 'Execução improvisada: quando o projeto não chega na obra',
+      },
+      { id: 'aquecimento-sobrecarga', title: 'Aquecimento e sobrecarga: o risco invisível' },
+      { id: 'manutencao-ignorada', title: 'Manutenção ignorada: o problema que aparece depois' },
     ],
   },
 }
@@ -1315,6 +1322,142 @@ export const problemas: Problema[] = [
       'Engenharia não se faz de lembrança visual e boca a boca. Sem registro robusto, a qualidade estrutural da obra jamais existiu.',
     aprofundamentoId: 'execucao-sem-controle',
   },
+
+  // ----------------------------------------------------
+  // Problemas NBR 5410
+  // ----------------------------------------------------
+  {
+    id: 'nbr5410-01',
+    title: 'ERRO QUE CUSTA CARO 23: Rasgos e passagens destrutivas',
+    contexto:
+      'Interferência estrutural direta onde a execução da rede elétrica desrespeita a integridade do civil. Em vez de prever shafts ou passagens na concretagem, a equipe elétrica mutila as peças após a desforma para passar a infraestrutura.',
+    naObra:
+      'Vigas estruturais perfuradas irregularmente fora do eixo neutro, pilares escarificados (rasgados) para embutir prumadas de eletrodutos, e lajes cortadas indiscriminadamente gerando trincas e perda de seção.',
+    causa:
+      'Falta de planejamento prévio (furos e esperas na fôrma), ausência de shafts em projeto, e a cultura de que a instalação pode "abrir caminho à força" na obra bruta.',
+    consequencia:
+      'Risco estrutural grave com perda imediata de seção resistente e cobrimento. Custo elevadíssimo com laudos de recuperação e grauteamento, gerando paralisação de frentes de serviço.',
+    comoLer:
+      'A elétrica precisa cruzar a estrutura sem agredi-la. Qualquer corte em peça estrutural após a cura que não foi validado pelo calculista é um ato de vandalismo técnico contra a segurança.',
+    oQueFazer:
+      'Mapear rigorosamente todas as prumadas e furos em projeto. Deixar bainhas de PVC ou isopor (esperas) na fôrma antes de concretar. Proibir absolutamente o uso de martelete em pilares e vigas sem RFI aprovada.',
+    normaId: '5410',
+    normaCode: 'NBR 5410',
+    normaDisplay: 'NBR 5410 — Instalações Elétricas',
+    fechamento:
+      'A infraestrutura elétrica não pode ter o direito de matar a estrutura que a sustenta.',
+    aprofundamentoId: 'rasgos-passagens',
+  },
+  {
+    id: 'nbr5410-02',
+    title: 'ERRO QUE CUSTA CARO 24: Compatibilização inexistente',
+    contexto:
+      'A elétrica não existe em um vácuo no canteiro; o choque com a hidráulica, com o layout arquitetônico e com as estruturas gera adaptações improvisadas e perigosas durante a montagem das frentes.',
+    naObra:
+      'Eletrodutos passando por dentro ou cruzando sem folga tubos de esgoto, caixas elétricas montadas onde a arquitetura previu esquadrias ou pilares, e sobreposição física de bandejamentos em pé-direito reduzido.',
+    causa:
+      'Projetos desenvolvidos em escritórios diferentes sem sobreposição BIM. Elétrica chegando na obra após a consolidação do civil sem o caminho livre para passar.',
+    consequencia:
+      'Atrasos monstruosos (retrabalho constante para desviar instalações), conflito normativo perigoso (água e energia se cruzando no mesmo nicho) e pé-direitos arquitetônicos rebaixados abruptamente.',
+    comoLer:
+      'Uma tubulação de energia que encosta num cano de água não é apenas um problema de "falta de espaço", é a materialização de um curto-circuito em potencial aguardando um simples vazamento.',
+    oQueFazer:
+      'Aplicar clash detection na fase de projetos. Definir corredores e esteiras exclusivas para cada disciplina. A regra de ouro é: energia sempre deve caminhar acima da prumada hidráulica em shafts horizontais.',
+    normaId: '5410',
+    normaCode: 'NBR 5410',
+    normaDisplay: 'NBR 5410 — Instalações Elétricas',
+    fechamento:
+      'Quando o projeto não cruza as linhas na tela, o eletricista e o encanador terão que cruzar os tubos à força na laje.',
+    aprofundamentoId: 'falta-compatibilizacao',
+  },
+  {
+    id: 'nbr5410-03',
+    title: 'ERRO QUE CUSTA CARO 25: Execução puramente improvisada',
+    contexto:
+      'Quando o projeto elétrico não chega na ponta ou é impossível de executar, a equipe de campo cria seus próprios caminhos não previstos, desalinhando caixas e forçando passagem de conduítes.',
+    naObra:
+      'Caixas 4x2 visivelmente fora de esquadro, eletrodutos esmagados dentro da laje por excesso de pisoteio, caixas entupidas com nata de concreto por falta de vedação, e conduítes rasgados onde os cabos depois irão "enganchar".',
+    causa:
+      'Ausência de fiscalização técnica da prumada antes do fechamento das alvenarias, amarração deficiente das mangueiras na malha de aço da laje, e furos mal dimensionados na caixaria.',
+    consequencia:
+      'Impossibilidade futura de enfiar os fios (o guia trava no tubo amassado), obrigando a quebra da laje concretada ou alvenaria já rebocada. Perda massiva de produtividade e custo de retrabalho com acabamentos.',
+    comoLer:
+      'Tubulação não é fio. Se a tubulação estiver estragada na fase civil, a fase de acabamento simplesmente não acontece. O conduíte tem que estar íntegro e perfeitamente amarrado.',
+    oQueFazer:
+      'Vedar todas as caixas com papel ou fita antes da concretagem. Exigir amarração dupla dos eletrodutos na laje (no ferro negativo e positivo). Realizar o teste com a "sonda guia" antes de rebocar as paredes.',
+    normaId: '5410',
+    normaCode: 'NBR 5410',
+    normaDisplay: 'NBR 5410 — Instalações Elétricas',
+    fechamento:
+      'O conduíte amassado na hora de concretar é o revestimento quebrado na hora de entregar.',
+    aprofundamentoId: 'execucao-improvisada-5410',
+  },
+  {
+    id: 'nbr5410-04',
+    title: 'ERRO QUE CUSTA CARO 26: Sobrecarga e aquecimento oculto',
+    contexto:
+      'A inobservância da correta dissipação térmica das fiações (fator de agrupamento) ou o uso de seções menores que o demandado gera uma resistência invisível que derrete isolamentos silenciosamente dentro da obra civil.',
+    naObra:
+      'Cabos derretendo a isolação dentro de eletrodutos superlotados, quadros de distribuição quentes ao toque, disjuntores desarmando sem motivo aparente ou sinais de chamuscado em tomadas revestidas.',
+    causa:
+      'Subdimensionamento de condutores por economia. Ignorar a ventilação do condutor ao empilhar dezenas de fios na mesma prumada apertada. Erro no aperto das conexões dos quadros (mau contato que gera aquecimento).',
+    consequencia:
+      'Risco extremo e iminente de incêndio e colapso total do sistema. Além do perigo à vida, há a queima frequente de equipamentos caros e o acionamento judicial do construtor por insegurança operacional.',
+    comoLer:
+      'A energia elétrica gera calor por efeito Joule. Se esse calor não puder escapar porque o tubo está entupido de fios, ele vai derreter o plástico e fechar arco com o vizinho.',
+    oQueFazer:
+      'Respeitar religiosamente o fator de agrupamento da NBR 5410 (nunca entupir conduítes além de 40% da área útil). Usar termografia no comissionamento de quadros para identificar pontos quentes por conexões frouxas.',
+    normaId: '5410',
+    normaCode: 'NBR 5410',
+    normaDisplay: 'NBR 5410 — Instalações Elétricas',
+    fechamento:
+      'O fogo na instalação não começa com uma faísca externa, mas com o calor acumulado por meses dentro de um tubo subdimensionado.',
+    aprofundamentoId: 'aquecimento-sobrecarga',
+  },
+  {
+    id: 'nbr5410-05',
+    title: 'ERRO QUE CUSTA CARO 27: Sistemas embutidos sem acesso',
+    contexto:
+      'Instalações vitais são sepultadas dentro de alvenarias e gessos sem prever nenhuma rota de resgate. A manutenção, que é certa que ocorrerá, vira uma operação de demolição civil.',
+    naObra:
+      'Caixas de passagem e inspeção sendo emparedadas pelo reboco ou azulejo (ficando cegas), forros de gesso monolíticos escondendo centrais de emendas, ou shafts permanentemente lacrados com drywall sem alçapão.',
+    causa:
+      'Predomínio da estética sobre a funcionalidade na fase de acabamentos. A arquitetura decide esconder o "feio" das caixas sem desenhar os acessos técnicos.',
+    consequencia:
+      'Quando o primeiro problema de cabo partido, curto ou expansão de circuito ocorrer, o condomínio precisará quebrar acabamentos caros (mármores, pintura, gesso), gerando sujeira, ódio e custo excessivo.',
+    comoLer:
+      'Uma instalação elétrica sem caixa de passagem acessível é um sistema de uso único. Na engenharia de manutenção, o que você não consegue ver e tocar, você não consegue consertar.',
+    oQueFazer:
+      'Marcar rigidamente no projeto arquitetônico os tampos de shafts, caixas de piso e alçapões no gesso sob nós vitais da fiação. As caixas de passagem não podem jamais ser revestidas definitivamente.',
+    normaId: '5410',
+    normaCode: 'NBR 5410',
+    normaDisplay: 'NBR 5410 — Instalações Elétricas',
+    fechamento:
+      'Esconder o ponto de manutenção por estética não torna a obra mais bonita, apenas garante que sua parede será destruída no primeiro reparo.',
+    aprofundamentoId: 'manutencao-ignorada',
+  },
+  {
+    id: 'nbr5410-06',
+    title: 'ERRO QUE CUSTA CARO 28: O projeto "resolvido em obra"',
+    contexto:
+      'A falta de coordenação entre o projeto executivo real e a prática. O projeto não detalha ou está completamente defasado em relação à alvenaria levantada, forçando o eletricista a virar o projetista autônomo da edificação.',
+    naObra:
+      'A documentação (As-Built) final não representa em nada o caminho real dos cabos. O eletricista adotou atalhos, mudou a bitola de condutores com o que tinha no almoxarifado e alterou a configuração do quadro central.',
+    causa:
+      'Entregar projetos executivos básicos (linhas genéricas) em vez de detalhamento real, ou desconsiderar as mudanças de layout civil que ocorreram ao longo dos meses sem avisar a projetista de elétrica.',
+    consequencia:
+      'Uma edificação orfã. Nenhum técnico futuro saberá por onde passa a prumada, qual disjuntor atende qual circuito e qual o limite de carga real, transformando qualquer reforma futura num risco mortal.',
+    comoLer:
+      'Se o As-Built elétrico é apenas uma cópia xerox do projeto básico original, o prédio foi entregue com um "mapa do tesouro" falso. A obra elétrica não rastreável é uma bomba relógio civil.',
+    oQueFazer:
+      'Exigir que a equipe de elétrica valide a fiação puxada versus a prancha antes do fechamento dos quadros. O As-Built deve ser dinâmico. Marcar os conduítes em laje com tinta colorida antes da concretagem e fotografar exaustivamente.',
+    normaId: '5410',
+    normaCode: 'NBR 5410',
+    normaDisplay: 'NBR 5410 — Instalações Elétricas',
+    fechamento:
+      'Deixar o mestre de obras decidir a rota elétrica por conveniência na laje é jogar o projeto da norma no lixo e assinar o desconhecido.',
+    aprofundamentoId: 'falta-compatibilizacao', // Mapping to the relevant deep dive
+  },
 ]
 
 export type Aprofundamento = {
@@ -1381,7 +1524,7 @@ const aprofundamentosDetalhes: Record<string, Partial<Aprofundamento>> = {
     erroComum:
       'Omitir o estudo de cargas pontuais ou linhas de tensão. Transformar todos os pesos em cargas "uniformemente distribuídas" no software de cálculo para tentar ganhar velocidade na modelagem.',
     comoInterpretar:
-      'Distribuição é diluição. Sem diluição por vigas secundárias ou engrossamentos na capa de concreto estrutural, a carga excepcional cria cisalhamento extremo (punção), rompendo a peça brutalmente por rasgamento.',
+      'Distribuição é diluição. Sem diluição por vigas secundárias ou engrossamentos na capa de concreto estrutural, a carga exceptional cria cisalhamento extremo (punção), rompendo a peça brutalmente por rasgamento.',
     oQueFazer:
       'Mapear no projeto de arquitetura todos os pesados itens técnicos. O projeto estrutural deve prover maciços, lajes com espessura duplicada local ou pórticos rígidos sob estes apoios de alta compressão.',
     fechamento:
@@ -1416,7 +1559,7 @@ const aprofundamentosDetalhes: Record<string, Partial<Aprofundamento>> = {
       'Se o canteiro e as compras rodam num mundo livre ignorando a folha de cargas do projetista, a edificação finalizada já nasce doente e condenada.',
   },
 
-  // Outros aprofundamentos...
+  // Outros aprofundamentos... (keeping existing ones below and adding NBR 5410 ones)
   'spt-pratica': {
     context:
       'SPT não é número. É leitura de comportamento do solo. O erro começa quando o resultado é tratado como valor absoluto, sem contexto de profundidade, material e condição de execução.',
@@ -1461,7 +1604,7 @@ const aprofundamentosDetalhes: Record<string, Partial<Aprofundamento>> = {
     context:
       'Capacidade de carga não é um número fixo. 👉 é o resultado de uma interação entre solo, fundação e condição de carregamento. O erro começa quando ela é tratada como valor isolado.',
     naPratica:
-      'Definição do tipo de fundação; dimensionamento de sapatas e estacas; validação de soluções “econômicas”; análise de segurança. 👉 principalmente quando o valor “fecha no cálculo”, mas o comportamento não acompanha.',
+      'Definição do tipo de fundação; dimensionamento de sapatas e estacas; validação de solutions “econômicas”; análise de segurança. 👉 principalmente quando o valor “fecha no cálculo”, mas o comportamento não acompanha.',
     erroComum:
       'Confiar cegamente em correlação de NSPT; desconsiderar tipo de solo; ignorar influência da água; não avaliar mecanismo de ruptura; tratar capacidade como valor único (e não faixa). 👉 resultado: fundação dimensionada no limite… sem margem real.',
     comoInterpretar:
@@ -1718,6 +1861,92 @@ const aprofundamentosDetalhes: Record<string, Partial<Aprofundamento>> = {
     fechamento:
       'Vício escondido em massa forte ou argamassa fina hoje vira laudo cautelar desastroso amanhã. Controle se documenta.',
   },
+
+  // Aprofundamentos NBR 5410
+  'eletrica-interferencia': {
+    context:
+      'O foco da norma 5410 na visão da construção civil não é debater seções de cabos elétricos, mas mapear o impacto físico brutal que uma infraestrutura negligenciada causa na alvenaria, na estrutura e no layout.',
+    naPratica:
+      'Lajes de piso perdendo recobrimento por cruzamento de múltiplos eletrodutos não previstos; tetos de gesso sendo rebaixados à força perdendo o pé-direito projetado; e alvenarias desestabilizadas por sucessivos cortes horizontais.',
+    erroComum:
+      'Tratar o projeto elétrico como "passar fio depois que estiver tudo pronto", esquecendo que o tubo tem volume físico e que esse volume compete por espaço milimétrico com vigas, pilares e forros.',
+    comoInterpretar:
+      'As instalações são "corpos estranhos" que ocupam espaço dentro da estrutura. Se a arquitetura e a engenharia não desenharem o caminho desses tubos antes da obra, a marreta do pedreiro o fará durante a execução.',
+    oQueFazer:
+      'Exigir que todas as prumadas elétricas e bandejamentos verticais/horizontais sejam lançados e resolvidos em plataforma BIM ou 3D na fase executiva, garantindo os recuos e shafts definidos.',
+    fechamento:
+      'A energia elétrica pode ser invisível, mas o duto que a transporta é duro, ocupa espaço e destrói acabamentos mal planejados.',
+  },
+  'rasgos-passagens': {
+    context:
+      'O conflito mortal entre a disciplina de instalações e a NBR 6118 (concreto armado). Quando o furo ou a espera não foi locado na fôrma de madeira, a alternativa de campo frequentemente rompe com a segurança global.',
+    naPratica:
+      'Vigas de transição altamente carregadas sendo furadas fora do seu eixo neutro; pilares escarificados 4 ou 5 centímetros apenas para embutir prumadas grossas de força, expondo os estribos ao ar livre.',
+    erroComum:
+      'O eletricista acreditar que "cortar um pouquinho" do concreto com a maquita ou martelete não faz mal, ou que a massa forte de fechamento do buraco devolverá a resistência que o concreto armado possuía originalmente.',
+    comoInterpretar:
+      'Na engenharia estrutural não existe "furo inofensivo" se ele não estiver na planta aprovada de formas. Uma seção removida significa uma quebra do monolitismo da peça; se cortou o estribo, a capacidade cortante da viga foi mutilada.',
+    oQueFazer:
+      'Estabelecer um protocolo intransigente: furo em concreto só é feito mediante RFI assinada pelo engenheiro calculista validando o ponto exato da serra copo. O ideal é deixar isopor ou bainhas embutidas antes da concretagem.',
+    fechamento:
+      'Estrutura pronta não é parede de bloco. Rasgar pilar para passar conduíte não é instalação — é sabotagem mecânica.',
+  },
+  'falta-compatibilizacao': {
+    context:
+      'A desintegração temporal dos projetos faz com que as diferentes especialidades nunca dialoguem no computador, colidindo frontalmente durante a montagem física no teto da obra.',
+    naPratica:
+      'Calhas elétricas (eletrocalhas) trombando ou sobrepostas a tubos sanitários com caimento. Caixas de distribuição locadas exatamente no encontro de shafts de água. Caixas de parede (4x2) desenhadas atrás de pilares estruturais.',
+    erroComum:
+      'Achar que o mestre de obras ou o encarregado da elétrica tem a obrigação de "desviar por baixo" no momento em que as interferências aparecerem no forro.',
+    comoInterpretar:
+      'O "desvio" de campo sempre cobra um preço: ou o teto falso será rebaixado, ou o tubo de água perderá caimento adequado (causando entupimentos), ou a tubulação elétrica ficará prensada/esmagada na laje.',
+    oQueFazer:
+      'Estabelecer matriz de prioridades (Ex: 1º Esgoto por gravidade, 2º Água limpa, 3º Dutos de ar e energia). Adotar reuniões semanais de compatibilização onde nenhuma prancha isolada pode ir para a obra com incompatibilidade de 3D pendente.',
+    fechamento:
+      'O que o papel aceita por falta de compatibilização, a física do canteiro barra causando custo, quebração e atritos.',
+  },
+  'execucao-improvisada-5410': {
+    context:
+      'Quando a prancha elétrica se resume a um diagrama unifilar e marcações de luz, a execução dos tubos e caixas fica refém da capacidade de adivinhação geométrica do peão.',
+    naPratica:
+      'Interruptores e tomadas que nunca ficam no prumo ou na mesma cota nas salas; conduítes que foram atados na ferragem de forma tão esticada que "estrangularam" e bloquearam a passagem da sonda guia; caixas preenchidas com nata endurecida.',
+    erroComum:
+      'Desprezar a proteção das bocas dos tubos e caixas antes da concretagem e reboco, acreditando que "dá para limpar depois rasgando o papel".',
+    comoInterpretar:
+      'Se não há rota clara predefinida, o conduíte toma o caminho mais caótico. Se ele for pisoteado, dobrado a 90 graus secos sem curvas suaves, ele inutiliza aquele circuito inteiro, obrigando quebra de acabamentos recém feitos.',
+    oQueFazer:
+      'Amarrar firmemente todos os eletrodutos corrugados tanto na malha inferior quanto na malha superior da laje. Vedar compulsivamente as caixas octogonais. Realizar ensaio do "passa-fio" em 100% dos tubos imediatamente após desforma e antes do reboco.',
+    fechamento:
+      'Se a sonda guia não passar no tubo vazio, de nada adiantou colocar as caixas bonitas na parede.',
+  },
+  'aquecimento-sobrecarga': {
+    context:
+      'Instalações elétricas mal planejadas sofrem do fenômeno letal e furtivo do aquecimento. A sobrecarga (ou conexões frouxas) ataca a capa isolante muito antes de os fios ou disjuntores aparentarem qualquer dano visível no ambiente civil.',
+    naPratica:
+      'Painéis do drywall amarelados/chamuscados próximos a tomadas, emendas improvisadas pingando fita isolante derretida, ou a queda misteriosa de energia (disjuntor caindo) quando o uso do ambiente apenas chega ao previsto em norma.',
+    erroComum:
+      'Concentrar absurdamente múltiplos circuitos pesados passando pelo exato mesmo conduíte fino apenas para "economizar tubo longo", superando amplamente os fatores de agrupamento.',
+    comoInterpretar:
+      'O plástico do cabo tem limites térmicos. Se dezenas de fios compartilham um tubo fechado e mal ventilado, eles trocam calor entre si, o limite isolante cai e a corrente necessária para gerar derretimento despenca perigosamente.',
+    oQueFazer:
+      'Dimensionar cabos aplicando restritamente os fatores de agrupamento da 5410. Garantir o aperto (torqueamento) correto e certificado nas conexões do QDC. Nunca permitir que emendas ocorram dentro de tubulações (sempre em caixas de passagem).',
+    fechamento:
+      'Fogo em edificações quase sempre começa como um calor invisível numa tubulação espremida. A prevenção mora no tamanho certo do tubo.',
+  },
+  'manutencao-ignorada': {
+    context:
+      'Toda e qualquer instalação predial precisará de manutenção, substituição ou acréscimos num horizonte de 5 a 15 anos. Entregar a edificação sem acessibilidade à rede é entregar uma sentença futura de demolição cega.',
+    naPratica:
+      'Caixas de passagem e derivação instaladas nas paredes e depois cobertas integralmente por rodapés, massa corrida espessa, painéis de madeira colados ou lajotas cerâmicas do banheiro (enterrando a caixa viva).',
+    erroComum:
+      'A estética do projeto de interiores sobrepor a exigência mecânica normativa, gerando a ordem direta do cliente de "esconde essa caixa feia aí debaixo do azulejo".',
+    comoInterpretar:
+      'Uma fiação escondida sem inspeção torna qualquer curto-circuito em um pesadelo investigativo. Se os cabos romperem, a única forma de passar o guia e refazer as pontas é estourar a marretadas o acabamento fino entregue pela construtora.',
+    oQueFazer:
+      'Nenhuma conexão elétrica ou caixa de passagem deve ser obstruída. Utilizar tampas discretas (tipo piso-sobre-piso ou com rebaixos para massa) ou criar alçapões com dobradiças adequados. O manual de as-built deve apontar a posição real milimétrica de todas as caixas.',
+    fechamento:
+      'O "feio" que você escondeu sem tampa de acesso, fará uma cratera no seu acabamento nobilíssimo quando for a hora de arrumar um fio torrado.',
+  },
 }
 
 export const getAprofundamento = (normaId: string, id: string): Aprofundamento | undefined => {
@@ -1750,39 +1979,3 @@ export const getAprofundamento = (normaId: string, id: string): Aprofundamento |
     fechamento: detalhe.fechamento,
   }
 }
-
-export type Diagnostico = {
-  id: string
-  title: string
-  oQueEstaAcontecendo: string
-  oQueObservarEmCampo: string
-  leituraTecnica: string
-  hipotesesProvaveis: string
-  comoConfirmar: string
-  estrategiasTecnicas: string
-  oQueNaoFazer: string
-  erroComum: string
-  quandoSeTornaCritico: string
-  sinteseTecnica: string
-  baseTecnica: string
-}
-
-// Keeping the old diagnostic mock structure available for simple references,
-// the main data is exported from diagnostico.ts which is a different shape.
-export const diagnosticos: Diagnostico[] = [
-  {
-    id: 'recalque-trinca-inclinada',
-    title: 'Recalque com trinca inclinada em alvenaria',
-    oQueEstaAcontecendo: '[Inserir descrição técnica do que está ocorrendo aqui]',
-    oQueObservarEmCampo: '[Inserir os sinais e evidências visuais a serem buscados na obra]',
-    leituraTecnica: '[Inserir a interpretação do comportamento estrutural/geotécnico]',
-    hipotesesProvaveis: '[Inserir as principais causas que podem estar gerando o problema]',
-    comoConfirmar: '[Inserir ensaios, medições ou análises para confirmar a causa]',
-    estrategiasTecnicas: '[Inserir as abordagens possíveis para solução ou mitigação]',
-    oQueNaoFazer: '[Inserir o que NÃO fazer para não agravar o problema]',
-    erroComum: '[Inserir o que profissionais geralmente erram ao lidar com isso]',
-    quandoSeTornaCritico: '[Inserir os sinais de que a situação exige ação imediata]',
-    sinteseTecnica: '[Inserir um resumo executivo para rápida tomada de decisão]',
-    baseTecnica: '[Inserir normas, referências e literatura técnica aplicável]',
-  },
-]

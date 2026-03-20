@@ -16,6 +16,86 @@ export type Diagnostico = {
 
 export const diagnosticos: Diagnostico[] = [
   {
+    id: 'diagnostico-interferencia-eletrica-civil',
+    title: 'Interferência Elétrica na Civil (Risco 5410 cruzado)',
+    oQueEstaAcontecendo: [
+      'A estrutura ou os acabamentos civis começam a manifestar falhas ao redor da infraestrutura elétrica recém-executada ou já em uso.',
+      'Fissuras irradiando de caixas de luz, cheiro de plástico quente nas paredes, ou manchas de umidade onde apenas deveriam passar conduítes.',
+      '👉 O problema parece civil, mas a causa raiz é o choque entre a eletricidade mal instalada e o espaço físico da edificação.',
+    ],
+    oQueObservarEmCampo: {
+      pontos: [
+        '🔹 Fissuras geométricas: Trincas perfeitamente retas e rasas subindo ou descendo das caixas de tomada/interruptor.',
+        '🔹 Aquecimento invisível: Alvenaria ou drywall morno ao toque próximo a caixas de passagem; cheiro de fio derretido.',
+        '🔹 Infiltração oculta: Água descendo por dentro do eletroduto no quadro de luz (falha de vedação em laje ou caixas externas).',
+        '🔹 Esmagamento de conduíte: Obras onde a equipe não consegue passar a sonda guia devido à deformação do tubo na concretagem.',
+        '🔹 Comprometimento estrutural: Armadura exposta ou seccionada perto de tubulações muito grossas instaladas em pilares.',
+      ],
+      erroClassico:
+        'Tratar a trinca rebocando a parede novamente sem olhar se existe um agrupamento massivo de fios superaquecendo ou uma tubulação que cortou o bloco de vedação de ponta a ponta sem verga.',
+    },
+    hipotesesProvaveis: [
+      'Rasgo excessivo na alvenaria sem aplicação de tela metálica antes do reboco.',
+      "Tubulações elétricas atuando como calhas d'água vindas da cobertura (vedação falha em caixas de passagem externas).",
+      'Sobrecarga térmica crônica de fios mal dimensionados dissipando calor na parede (risco de incêndio).',
+      'Interferência estrutural bruta (vigas e pilares fatiados pós-desforma para passar conduítes ignorados no projeto).',
+    ],
+    leituraTecnica: {
+      leituraDireta:
+        'A eletricidade demanda espaço, refrigeração e isolamento. Se o espaço for roubado da estrutura, a estrutura enfraquece. Se a ventilação do cabo for nula, o isolamento derrete e queima a alvenaria.',
+      interpretacaoEssencial:
+        'Os sinais visuais civis (água, calor e rachadura) são o último aviso antes de um curto-circuito catastrófico ou falha mecânica do fechamento. O limite não é elétrico, é de habitabilidade e segurança geral.',
+    },
+    comoConfirmar: [
+      'Termografia na parede/quadro elétrico para validar picos de temperatura com o circuito sob carga máxima.',
+      'Ensaio de "passa-fio" ou câmera endoscópica para atestar se a tubulação está esmagada, partida ou alagada.',
+      'Retirada do espelho da tomada para verificar se o bloco cerâmico foi arrebentado sem uso de serra mármore (gerando instabilidade da parede).',
+      'Cruzamento do projeto arquitetônico/estrutural com o as-built elétrico.',
+    ],
+    caminhosTecnicos: [
+      'Refazer o lançamento da tubulação externamente (eletrocalhas/perfilados aparentes) caso a prumada embutida esteja comprometida ou entupida.',
+      'Redimensionamento imediato de cabos e disjuntores em casos de detecção térmica de alto risco (adequar ao fator de agrupamento NBR 5410).',
+      'Selamento elástico e instalação de pingadeiras em todas as caixas de derivação externas para estancar a "água no eletroduto".',
+      'Grauteamento de recomposição estrutural caso pilares tenham sido escarificados indevidamente.',
+    ],
+    oQueNaoFazer: [
+      'Simplesmente trocar o disjuntor por um de maior amperagem para "parar de desarmar", o que garante o incêndio na parede.',
+      'Passar argamassa forte sobre os eletrodutos expostos sem usar tela de estuque de transição, a fissura voltará em 1 mês.',
+      'Tentar "desentupir" conduíte com barra de ferro batida na marreta, destruindo o duto e a laje.',
+    ],
+    erroComum:
+      'Chamar o pedreiro para arrumar a mancha preta ou rachadura perto do interruptor, ignorando a contratação do eletricista. A mancha preta muitas vezes é fuligem de arco elétrico oculto, não sujeira comum.',
+    quandoSeTornaCritico: {
+      triggers: [
+        'Desarme frequente de disjuntores gerais sem adição de novos aparelhos.',
+        'Quadros de luz vertendo água durante fortes chuvas.',
+        'Cheiro persistente de queimado vindo das tomadas ou drywalls mornos/quentes.',
+        'Sinais de ruptura ao redor de pilares cortados por prumadas elétricas.',
+      ],
+      decisao: [
+        {
+          estado: 'Trincas geométricas inativas',
+          acao: 'Limpar, escarear a trinca, aplicar tela metálica/fita telada e refazer a massa.',
+        },
+        {
+          estado: 'Aquecimento detectado no circuito',
+          acao: 'Desligar circuito imediatamente, recalcular seção do cabo e fator de agrupamento.',
+        },
+        {
+          estado: 'Água vazando do QDC (quadro)',
+          acao: 'Ação crítica: Desenergizar sistema, investigar lajes e shafts, refazer selamentos.',
+        },
+      ],
+    },
+    sinteseTecnica:
+      'A elétrica e a civil compartilham a mesma carne do edifício. A elétrica mal pensada se manifesta primeiro como patologia civil. Ao rastrear a origem do calor, da água no conduíte ou do corte no pilar, a NBR 5410 atua como salvaguarda não só da energia, mas da integridade de toda a obra.',
+    baseTecnica: [
+      'NBR 5410:2004 - Instalações elétricas de baixa tensão',
+      'NBR 6118:2023 - Projeto de estruturas de concreto',
+      'NBR 15575:2021 - Norma de Desempenho (Segurança contra incêndio)',
+    ],
+  },
+  {
     id: 'diagnostico-6120-raciocinio',
     title: 'Premissas Invisíveis de Carga (Engenharia de Raciocínio NBR 6120)',
     oQueEstaAcontecendo: [
@@ -291,7 +371,7 @@ export const diagnosticos: Diagnostico[] = [
     ],
     leituraTecnica: {
       leituraDireta:
-        'A peça estrutural está se deformando ou degradando além dos limites normativos aceitáveis. O concreto armado é um material compósito: se o concreto não protege ou não ancora o aço, e o aço não absorve a tração, o sistema falha conjuntamente.',
+        'A peça estrutural está se deformando ou degradando além dos limites normativos aceitáveis. O concreto armado é um material compósito: se o concreto não protege ou não anchors o aço, e o aço não absorve a tração, o sistema falha conjuntamente.',
       interpretacaoEssencial:
         'Os sinais visuais (fissuras, deformações, desplacamentos) são o mapa de tensões da estrutura desenhado em escala real. A falha quase nunca é no cálculo de ruptura (ELU), mas sim na previsão de deformabilidade (ELS) ou no desrespeito tecnológico no canteiro.',
     },
