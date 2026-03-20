@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils'
 
 const categories = [
   { id: 'all', title: 'Todos', subtitle: 'Os Módulos' },
+  { id: '6120', title: 'Cargas', subtitle: 'Módulo NBR 6120' },
   { id: '6122', title: 'Fundações', subtitle: 'Módulo NBR 6122' },
   { id: '6118', title: 'Estruturas', subtitle: 'Módulo NBR 6118' },
   { id: '15575', title: 'Desempenho', subtitle: 'Módulo NBR 15575' },

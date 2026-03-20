@@ -16,6 +16,79 @@ export type Diagnostico = {
 
 export const diagnosticos: Diagnostico[] = [
   {
+    id: 'diagnostico-6120-raciocinio',
+    title: 'Premissas Invisíveis de Carga (Engenharia de Raciocínio NBR 6120)',
+    oQueEstaAcontecendo: [
+      'A estrutura apresenta sinais de stress grave ou deformação excessiva anos após a entrega (flechas não estabilizadas, esmagamentos em alvenaria).',
+      'Não houve falha executiva ou erro matemático no cálculo (Fck atende, armadura conferida, sondagem correta).',
+      '👉 O colapso ou dano vem do comportamento: a estrutura está suportando silenciosamente um cenário para o qual nunca foi avisada que suportaria.',
+    ],
+    oQueObservarEmCampo: {
+      pontos: [
+        '📌 Engenharia de raciocínio, não de inspeção direta: O diagnóstico não foca no concreto, mas na carga invisível.',
+        '🔹 O Projeto: Levantar memórias de cálculo e cruzar as cargas acidentais/permanentes assumidas na época da concepção.',
+        '🔹 O Uso Real: Inspecionar como o ambiente está sendo operado hoje (equipamentos pesados, arquivos adensados, novos usos não previstos).',
+        '🔹 As Alterações ao longo do tempo: Houve troca de piso leve por granito espesso? Fachadas densas ou marquises adicionadas pós-habite-se?',
+        '🔹 Interferência de terceiros: Sistemas hidrossanitários gigantes instalados depois pendurados diretamente na laje?',
+      ],
+      erroClassico:
+        'Procurar incessantemente falhas no concreto (NBR 6118) ou na fundação (NBR 6122) batendo martelo e esclerômetro, ignorando completamente que a premissa de peso da NBR 6120 foi violada.',
+    },
+    hipotesesProvaveis: [
+      'Subestimação silenciosa de carga durante o projeto inicial (foco excessivo em valores mínimos de norma ignorando a realidade).',
+      'Adição de cargas não consideradas (novos reservatórios, painéis, equipamentos não mapeados).',
+      'Mudança radical de destinação do ambiente ao longo dos anos (residencial virando estoque comercial).',
+      'Cargas pontuais concentradas e tratadas indevidamente como cargas uniformemente distribuídas na memória.',
+    ],
+    leituraTecnica: {
+      leituraDireta:
+        'A estrutura nunca desmorona ou deforma "do nada". Ela reage rigorosamente de forma matemática à gravidade e à carga que lhe é imposta. Se a deformação é incompatível e o Fck está bom, a carga real é maior que a de projeto.',
+      interpretacaoEssencial:
+        'A NBR 6120 é uma norma de premissas. O diagnóstico foca em provar documental e visualmente que o carregamento efetivo no campo transbordou os limites da premissa assumida. É um laudo investigativo de linha do tempo.',
+    },
+    comoConfirmar: [
+      'Auditoria documental profunda do As-Built arquitetônico cruzado com memórias de cálculo estruturais originais.',
+      'Pesagem técnica estimada por amostragem dos equipamentos ou do estoque físico operante no ambiente afetado.',
+      'Mapeamento cronológico rígido das reformas e adaptações realizadas pelo usuário pós-entrega.',
+      'Modelagem retroativa: inserir a carga "atual" descoberta em campo no software de cálculo para validar que o esforço bate com a fissura encontrada.',
+    ],
+    caminhosTecnicos: [
+      'Remoção ou remanejamento imediato da sobrecarga agressiva não prevista (esvaziamento do ambiente crítico).',
+      'Reforço estrutural direcionado justificado e custeado pela nova alteração de layout do usuário.',
+      'Restabelecimento irrevogável da destinação arquitetônica original do espaço.',
+    ],
+    oQueNaoFazer: [
+      'Realizar "macacos hidráulicos" ou escoramentos e reforços cegos sem antes atuar na causa do excesso de carga.',
+      'Assumir a responsabilidade civil por "falha construtiva" antes de realizar uma auditoria real de uso perante as premissas da NBR 6120.',
+      'Aumentar seção de peças injetando graute sem perceber que isso, por si só, adicionará mais carga permanente ao sistema fadigado.',
+    ],
+    erroComum:
+      'Tratar o sintoma fechando a fissura e ignorar a carga invisível que a provocou. Se a premissa de projeto for rompida pelo proprietário e o laudo capturar isso de forma clara, o construtor tem um alicerce de defesa técnica formidável.',
+    quandoSeTornaCritico: {
+      triggers: [
+        'Flechas visíveis a olho nu acompanhadas de estalos e que continuam evoluindo após o remanejamento da sobrecarga temporária.',
+        'Alterações volumosas recentes em edifícios mais antigos (como retrofit de fachada com pesados caixilhos isolantes) sem recálculo.',
+      ],
+      decisao: [
+        {
+          estado: 'Uso alterado sem dano visível além de esmagamento de vedações',
+          acao: 'Emitir notificação formal de risco, esvaziar ambiente crítico de sobrecarga, corrigir arquitetura.',
+        },
+        {
+          estado: 'Dano estrutural progressivo com a carga estacionada',
+          acao: 'Ação crítica: Interdição urgente da laje e pavimentos abaixo, escoramento pesado, laudo pericial emergencial.',
+        },
+      ],
+    },
+    sinteseTecnica:
+      'O diagnóstico balizado na NBR 6120 é o ápice da engenharia de raciocínio. A resposta para o colapso não mora no microscópio batendo no concreto, ela reside no levantamento forense das intenções originais frente aos abusos da realidade. Se a carga está invisível na obra, ela deve ser evidenciada no laudo.',
+    baseTecnica: [
+      'NBR 6120:2019 - Ações para o cálculo de estruturas de edificações',
+      'NBR 15575:2021 - Edificações Habitacionais - Desempenho (Habitabilidade)',
+      'NBR 13752:2024 - Perícias de Engenharia na Construção Civil',
+    ],
+  },
+  {
     id: 'recalque-trinca-inclinada',
     title: 'Recalque com trinca inclinada em alvenaria',
     oQueEstaAcontecendo: [

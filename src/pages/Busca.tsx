@@ -2,13 +2,14 @@ import { useState } from 'react'
 import { Input } from '@/components/ui/input'
 import { Search, History, TrendingUp, BookOpen, AlertTriangle, Link2, Activity } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import { normas, problemas, diagnosticos } from '@/lib/data'
+import { normas, problemas } from '@/lib/data'
+import { diagnosticos } from '@/lib/diagnostico'
 
 export default function Busca() {
   const [query, setQuery] = useState('')
 
-  const trendings = ['recalque', 'fissura', 'SPT não converge', 'trinca']
-  const history = ['NBR 6122', 'NBR 6118']
+  const trendings = ['recalque', 'fissura', 'SPT não converge', 'trinca', 'sobrecarga']
+  const history = ['NBR 6120', 'NBR 6122', 'NBR 6118']
 
   const allAprofundamentos = normas.flatMap((n) =>
     (n.blocks.aprofundamentos?.links || []).map((l) => ({
@@ -61,7 +62,7 @@ export default function Busca() {
             .filter(
               (d) =>
                 d.title.toLowerCase().includes(query.toLowerCase()) ||
-                d.oQueEstaAcontecendo.toLowerCase().includes(query.toLowerCase()),
+                d.oQueEstaAcontecendo.join(' ').toLowerCase().includes(query.toLowerCase()),
             )
             .map((d) => ({
               id: d.id,

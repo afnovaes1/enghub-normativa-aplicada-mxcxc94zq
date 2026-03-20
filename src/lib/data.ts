@@ -344,109 +344,98 @@ const nbr6118Blocks = {
 const nbr6120Blocks = {
   ondeEntra: {
     title: 'Onde entra na obra',
-    content: 'Essa norma entra antes de qualquer dimensionamento.',
+    content:
+      'Essa norma entra antes de qualquer desenho ou dimensionamento. É a base invisível de todas as premissas estruturais.',
     bullets: [
-      'definição das cargas atuantes',
-      'entendimento do uso da edificação',
-      'base para o cálculo estrutural',
-      'premissas iniciais do projeto',
+      'definição do uso futuro dos ambientes',
+      'levantamento do peso próprio de todos os acabamentos e fechamentos',
+      'consideração de cargas acidentais e móveis',
+      'documentação do que a estrutura "foi avisada" que suportaria',
     ],
-    takeaway: 'se a carga está errada, todo o resto nasce errado',
+    takeaway: 'se a carga está errada, não importa quão perfeito seja o cálculo: o prédio falhará.',
   },
   controle: {
     title: 'O que realmente controla',
-    content: 'Não controla estrutura. Controla o que chega nela.',
+    content: 'Não controla espessura ou resistência. Controla o cenário de uso.',
     bullets: [
-      'cargas permanentes',
-      'cargas variáveis',
-      'sobrecargas de uso',
-      'ações acidentais',
-      'combinações de carregamento',
+      'Cargas permanentes (peso dos materiais, vedações, revestimentos pesados).',
+      'Cargas variáveis/acidentais (pessoas, móveis, pequenas divisórias móveis).',
+      'Cargas excepcionais (reservatórios, equipamentos pesados).',
+      'A distribuição teórica das cargas ao longo do tempo.',
     ],
-    takeaway: 'não existe cálculo certo com carga errada',
+    takeaway: 'carga invisível deforma; carga ignorada colapsa.',
   },
   erros: {
     title: 'Onde todo mundo erra',
     bullets: [
-      'Subestimar carga de uso (considera cenário ideal, não real)',
-      'Ignorar mudanças futuras (uso da edificação muda com o tempo)',
-      'Simplificar demais cargas permanentes (peso próprio mal estimado)',
-      'Não considerar combinações críticas (usa combinação “padrão” sem avaliar pior caso)',
-      'Desconsiderar cargas não previstas (equipamentos, reservatórios, sobrecargas localizadas)',
+      'Adotar cargas variáveis mínimas para escritórios e permitir instalação de arquivos deslizantes super pesados.',
+      'Substituir forro leve e piso laminado por gesso denso e porcelanato de grande formato sem avisar o calculista.',
+      'Construir platibandas e marquises exuberantes na obra que não constavam no primeiro projeto arquitetônico enviado ao estrutural.',
+      'Assumir que carga variável atua igualmente distribuída quando ela muitas vezes atua concentrada num pequeno trecho da laje.',
+      'Esquecer de somar o peso da água nas tubulações penduradas e nos mega reservatórios de cobertura.',
     ],
-    takeaway: 'carga não é número — é cenário de uso',
+    takeaway:
+      'O erro da NBR 6120 não aparece na concretagem, aparece 5 anos depois quando a esquadria trava e a parede amassa.',
   },
   consequencias: {
     title: 'O que acontece quando erra',
     bullets: [
-      'deformações excessivas',
-      'fissuração fora do esperado',
-      'sobrecarga estrutural',
-      'reforços corretivos',
-      'redução de vida útil',
-      'risco estrutural progressivo',
+      'Flechas (embarrigamentos) crônicas e irreversíveis nas lajes.',
+      'Esmagamento severo de paredes de alvenaria por deflexão da estrutura superior.',
+      'Surgimento de fissuras cortantes ativas (sinal de limite de ruptura) próximas aos pilares e vigas.',
+      'Desconforto vibratório (laje que "pula" ao caminhar).',
+      'Inviabilização de reformas futuras ou necessidade de reforços estruturais caríssimos.',
     ],
-    takeaway: 'a estrutura responde exatamente ao que você mandou para ela',
+    takeaway:
+      'Estrutura não mente. Se ela deformou sem erro de Fck, é porque a carga superou a premissa.',
   },
   praticas: {
     title: 'Como fazer certo na prática',
     bullets: [
-      'entender o uso real da edificação',
-      'considerar cenários desfavoráveis',
-      'avaliar possibilidade de mudança de uso',
-      'estimar corretamente cargas permanentes',
-      'verificar combinações críticas',
-      'validar premissas antes de calcular',
+      'Registrar formalmente as premissas de carga nos projetos As-Built e no Manual do Proprietário.',
+      'Criar "Placas de Carga Máxima" em ambientes críticos (ex: áreas técnicas, garagens suspensas, bibliotecas).',
+      'Cruzar a arquitetura de interiores executiva com o memorial estrutural antes de aprovar a compra de acabamentos pesados.',
+      'Não aprovar "puxadinhos" ou acréscimos na cobertura sem recálculo completo da prumada.',
     ],
   },
   insights: {
     title: 'Insights rápidos de decisão',
     insights: [
       {
-        name: 'Carga de uso',
+        name: 'Mudança de Piso',
         description:
-          'não é só tabela mas: depende do comportamento do usuário; pode ser superada facilmente em uso real',
+          'Trocar um piso vinílico por granito com argamassa espessa pode adicionar mais de 100kg/m² de carga permanente morta que consumirá toda a margem de segurança da laje.',
       },
       {
-        name: 'Peso próprio',
+        name: 'Arquivos e Estoques',
         description:
-          'parece trivial mas: aumento de seção impacta diretamente; materiais adicionais são frequentemente ignorados',
+          'O uso de arquivos deslizantes altera a carga de 250kg/m² (escritório padrão) para facilmente 800 a 1000kg/m², esgotando a capacidade da laje e causando fissuração imediata no pavimento de baixo.',
       },
       {
-        name: 'Reservatórios e equipamentos',
-        description: 'não são detalhe mas: concentram carga; geram esforços localizados críticos',
-      },
-      {
-        name: 'Mudança de uso',
+        name: 'Água é pesada',
         description:
-          'quase sempre ignorada mas: transforma estrutura segura em problema; ocorre com frequência maior do que se considera',
+          'Uma piscina de plástico montada no terraço ou um ofurô não previsto pode ultrapassar a carga acidental projetada com folga. 1m³ de água pesa 1 tonelada exata.',
       },
     ],
-    takeaway: 'estrutura não é dimensionada para hoje — é para o que pode acontecer',
+    takeaway:
+      'A estrutura é passiva e obediente; se você colocar o peso, ela fará a força para segurar, nem que para isso precise se deformar até romper.',
   },
   perito: {
     title: 'Visão de perito',
-    bullets: [
-      'erro raramente está no cálculo estrutural',
-      'está na premissa de carga adotada',
-      'muitos projetos assumem uso ideal',
-      'a realidade entrega uso extremo',
-      'ausência de definição clara de cargas fragiliza defesa',
-      'sem premissa registrada, tudo vira questionável',
-    ],
-    takeaway: 'quem não define carga claramente, assume risco oculto',
+    content:
+      'Em disputas sobre danos estruturais, a primeira defesa técnica é o memorial de cargas. Se o usuário alterou o uso do imóvel, adicionou paredes pesadas onde não existiam, ou lotou o espaço com itens não previstos, a responsabilidade civil pelo dano é exclusivamente dele. Sem registro claro de quais foram as cargas da NBR 6120 no Manual de Entrega, o construtor paga a conta de uma reforma que ele nem fez.',
+    takeaway:
+      'Se a carga projetada não está registrada e clara, qualquer peso adicionado será considerado "uso normal" pelo juiz.',
   },
   aprofundamentos: {
     title: 'Aprofundamentos',
     links: [
-      { id: 'carga-uso', title: 'Como definir carga de uso na prática' },
-      { id: 'peso-proprio', title: 'Erros comuns em estimativa de peso próprio' },
-      { id: 'cargas-concentradas', title: 'Cargas concentradas: onde mora o risco' },
-      { id: 'reservatorios', title: 'Reservatórios: impacto estrutural real' },
-      { id: 'mudanca-uso', title: 'Mudança de uso: o problema silencioso' },
-      { id: 'combinacoes', title: 'Combinações de carga: o que realmente importa' },
-      { id: 'alem-tabela', title: 'Quando a tabela não é suficiente' },
-      { id: 'documentar-cargas', title: 'Como documentar premissas de carga' },
+      { id: 'carga-cenario-uso', title: 'Carga não é número — é cenário de uso' },
+      { id: 'subestimacao-carga', title: 'Subestimação de carga: o erro que não aparece' },
+      { id: 'cargas-adicionais', title: 'Cargas adicionais: o que entra depois e ninguém revisa' },
+      { id: 'distribuicao-carga', title: 'Distribuição de carga: onde a conta está errada' },
+      { id: 'mudanca-uso-6120', title: 'Mudança de uso: quando a estrutura fica incompatível' },
+      { id: 'premissas-projeto', title: 'Premissas de projeto: o que ninguém revisita' },
     ],
   },
 }
@@ -763,6 +752,13 @@ const nbr5626Blocks = {
 
 export const normas: Norma[] = [
   {
+    id: '6120',
+    code: 'NBR 6120',
+    title: 'Ações para o cálculo de estruturas de edificações',
+    category: 'Estrutural',
+    blocks: nbr6120Blocks,
+  },
+  {
     id: '6122',
     code: 'NBR 6122',
     title: 'Projeto e Execução de Fundações',
@@ -782,13 +778,6 @@ export const normas: Norma[] = [
     title: 'Projeto de Estruturas de Concreto',
     category: 'Estrutural',
     blocks: nbr6118Blocks,
-  },
-  {
-    id: '6120',
-    code: 'NBR 6120',
-    title: 'Ações para o cálculo de estruturas de edificações',
-    category: 'Estrutural',
-    blocks: nbr6120Blocks,
   },
   {
     id: '13752',
@@ -830,9 +819,148 @@ export type Problema = {
 }
 
 export const problemas: Problema[] = [
+  // ----------------------------------------------------
+  // Problemas NBR 6120
+  // ----------------------------------------------------
+  {
+    id: 'nbr6120-01',
+    title: 'ERRO QUE CUSTA CARO 01: Subestimação de carga real',
+    contexto:
+      'A estrutura foi calculada para um uso genérico (ex: escritório mínimo), mas a realidade traz estoques pesados, arquivos deslizantes pesados e mobiliário denso. A carga real transborda o valor teórico da memória de cálculo.',
+    naObra:
+      'Surgimento de flechas visíveis no meio de vãos de laje; paredes abaixo trincando horizontalmente por esmagamento; portas travando sem causa aparente.',
+    causa:
+      'Projetista adotou cegamente o "valor mínimo de norma" sem questionar a arquitetura ou o cliente sobre a operação real. Arquivo deslizante foi tratado como "móvel comum".',
+    consequencia:
+      'Sobrecarga silenciosa constante. Fadiga dos materiais. Deformação contínua que inutiliza o uso do andar inferior ou exige escoramento pericial de emergência.',
+    comoLer:
+      'Se a laje não tem fissura de retração, o cobrimento está bom e o concreto atendeu ao Fck, mas ela deforma sem parar... a matemática não erra. A laje está carregando mais peso do que sabe suportar.',
+    oQueFazer:
+      'Auditar imediatamente o uso atual (o que há no ambiente). Interditar se necessário. Reforço estrutural e readequação de layout para diluir ou remover as zonas de carga super densa.',
+    normaId: '6120',
+    normaCode: 'NBR 6120',
+    normaDisplay: 'NBR 6120 — Ações em Estruturas',
+    fechamento:
+      'Subestimar carga no projeto não economiza aço. Apenas transfere a conta multiplicada por mil para a recuperação judicial.',
+    aprofundamentoId: 'subestimacao-carga',
+  },
+  {
+    id: 'nbr6120-02',
+    title: 'ERRO QUE CUSTA CARO 02: Carga adicionada (o que entra depois)',
+    contexto:
+      'A estrutura foi concretada e aprovada, mas ao longo do ciclo de obra (ou nas reformas dos proprietários) são adicionados elementos que nunca estiveram no memorial de cálculo original.',
+    naObra:
+      'Fachadas leves trocadas por brises metálicos pesados apoiados em balanços esbeltos; ofurôs instalados em varandas não preparadas; enchimentos grossos de contrapiso para nivelar laje desregulada.',
+    causa:
+      'Desconexão total entre arquitetura/cliente e engenharia estrutural. Falta de revisão das premissas durante o "as-built". Obras de acabamento tratadas como "peso zero".',
+    consequencia:
+      'Balanços (marquises, varandas) fissurando severamente na tração superior (negativos); colapso parcial ou total de elementos esbeltos sob o novo peso permanente que não havia sido avisado.',
+    comoLer:
+      'A estrutura reage a quilos. Se o piso que seria vinílico virou um granito de 3cm com mais 4cm de argamassa, foram adicionados quase 150kg/m² de carga permanente morta extra consumindo a margem de segurança.',
+    oQueFazer:
+      'Nenhuma mudança de material pesado ou adição de enchimento pode ocorrer na obra sem uma ART de recálculo atestando que a seção original suporta o novo cenário.',
+    normaId: '6120',
+    normaCode: 'NBR 6120',
+    normaDisplay: 'NBR 6120 — Ações em Estruturas',
+    fechamento:
+      'O peso não liga se o prédio já tem Habite-se. Adicionou carga invisível, a estrutura sofrerá de forma bem visível.',
+    aprofundamentoId: 'cargas-adicionais',
+  },
+  {
+    id: 'nbr6120-03',
+    title: 'ERRO QUE CUSTA CARO 03: Distribuição de carga mal entendida',
+    contexto:
+      'O calculista previu 300kg/m² uniformemente distribuídos. O usuário pegou uma máquina de 3 toneladas e a apoiou inteira num espaço de 1m² (quatro pés pontiagudos).',
+    naObra:
+      'Punção imediata (perfuração/cisalhamento) na laje pontualmente; fissuras concêntricas ao redor de um equipamento pesado; afundamento local.',
+    causa:
+      'Ignorar que cargas excepcionais ou pontuais precisam ser detalhadas especificamente. Falta de coxins ou vigas de distribuição sob equipamentos pesados.',
+    consequencia:
+      'Dano estrutural focalizado agudo. Risco iminente do equipamento perfurar a laje e despencar para o pavimento inferior (colapso progressivo por punção).',
+    comoLer:
+      'A carga total do ambiente pode até ser menor do que a prevista, mas a forma como ela se comunica com a laje é destrutiva se for concentrada em uma agulha.',
+    oQueFazer:
+      'Levantar peso e dimensões dos apoios de máquinas (como chillers, geradores, cofres). Criar bases inerciais, estrados metálicos ou posicioná-las diretamente sobre lajes reforçadas ou pilares.',
+    normaId: '6120',
+    normaCode: 'NBR 6120',
+    normaDisplay: 'NBR 6120 — Ações em Estruturas',
+    fechamento:
+      'Três toneladas de areia espalhadas na laje é uma coisa. Três toneladas equilibradas em quatro pontas de ferro é uma arma perfurante.',
+    aprofundamentoId: 'distribuicao-carga',
+  },
+  {
+    id: 'nbr6120-04',
+    title: 'ERRO QUE CUSTA CARO 04: Interação fatal com as instalações (MEP)',
+    contexto:
+      'As tubulações de ar-condicionado, bandejas de cabos gigantescas e a rede de incêndio cheia d’água são penduradas num teto (ou furam vigas) sem nenhuma análise de peso.',
+    naObra:
+      'Tirantes hidrossanitários sendo fixados aleatoriamente em lajes nervuradas muito finas; furos não autorizados em vigas para passar prumadas, alterando a seção resistente.',
+    causa:
+      'Projetos MEP (Mecânica, Elétrica e Hidráulica) compatibilizados geometricamente (para não baterem), mas não compatibilizados ESTRUTURALMENTE (para aguentar o peso do sistema cheio).',
+    consequencia:
+      'Lajes de cobertura e forros sendo literalmente puxadas para baixo pelas tubulações. Vigas fragilizadas perdendo inércia. Carga pendurada rompendo o cobrimento dos estribos.',
+    comoLer:
+      'A água nos tubos de incêndio é pesadíssima. Uma central de ar tem motores vibratórios. Esse "teto falso" é muitas vezes uma ancoragem maciça ignorada.',
+    oQueFazer:
+      'Entregar as cargas pontuais dos suportes das instalações para o estrutural validar na NBR 6120 antes da concretagem. Usar insertos previstos.',
+    normaId: '6120',
+    normaCode: 'NBR 6120',
+    normaDisplay: 'NBR 6120 — Ações em Estruturas',
+    fechamento:
+      'Cano de água também pesa. Quando a compatibilização é só desenho 3D e não envolve peso, a física cobra a conta.',
+    aprofundamentoId: 'cargas-adicionais',
+  },
+  {
+    id: 'nbr6120-05',
+    title: 'ERRO QUE CUSTA CARO 05: Mudança de uso e "retrofit" cego',
+    contexto:
+      'Um imóvel projetado e calculado há 20 anos como puramente residencial é comprado para ser transformado numa academia de crossfit ou num depósito de e-commerce.',
+    naObra:
+      'Prédio tremendo fortemente sob atividades dinâmicas rítmicas; paredes estalando; surgimento abrupto de recalques nas fundações antigas que agora suportam um peso para o qual nunca foram pensadas.',
+    causa:
+      'Proprietários e arquitetos tratando reformas apenas como "tinta e revestimento", ignorando totalmente que a "Categoria de Uso" da NBR 6120 foi alterada de 150kg/m² para talvez 500kg/m² ou mais.',
+    consequencia:
+      'Esgotamento completo da capacidade resistente. Fadiga acelerada. Interdição do edifício por risco de desabamento pelo órgão público ao identificar o desvio grave.',
+    comoLer:
+      'Estruturas velhas não ganham força sozinhas. Se a destinação do edifício muda, a Norma 6120 precisa ser reaplicada sobre a estrutura existente (laudo de vistoria estrutural) antes do negócio ser fechado.',
+    oQueFazer:
+      'Exigir Laudo Estrutural de Viabilidade (com base em ensaios e recálculo das vigas/pilares atuais) antes de mudar o uso legal de um imóvel.',
+    normaId: '6120',
+    normaCode: 'NBR 6120',
+    normaDisplay: 'NBR 6120 — Ações em Estruturas',
+    fechamento:
+      'Não se transforma uma casa numa fábrica apenas trocando as portas. A estrutura avisa, com rachaduras, que o contrato não foi combinado com ela.',
+    aprofundamentoId: 'mudanca-uso-6120',
+  },
+  {
+    id: 'nbr6120-06',
+    title: 'ERRO QUE CUSTA CARO 06: Parede que virou carga "flutuante"',
+    contexto:
+      'Na hora de projetar, assumiu-se que as paredes estariam todas perfeitamente apoiadas sobre vigas. Na execução, a parede mudou de lugar e foi erguida no meio do vão de uma laje fina.',
+    naObra:
+      'Paredes inteiras trincando em formato de "V" invertido ou arco romano; laje claramente afundada (defletida) exatamente na linha inferior onde a nova parede passa.',
+    causa:
+      'Deslocamento arbitrário de alvenaria em obra (paredes não estruturais) para "melhorar o layout" sem avisar a engenharia. A carga linear da parede, que devia descer pela viga, foi parar no ponto mais fraco da laje.',
+    consequencia:
+      'Deformação excessiva permanente na laje. Trincas estéticas crônicas impossíveis de sanar enquanto o peso não for retirado. Comprometimento de encanamentos contidos na parede/piso empenado.',
+    comoLer:
+      'Alvenaria parece leve, mas uma parede de 3 metros de altura é uma lâmina maciça de tijolo e argamassa exercendo uma enorme carga linear constante. A laje sem reforço subjacente vai ceder.',
+    oQueFazer:
+      'As paredes de bloco cerâmico ou concreto devem ser levantadas estritamente nas posições referenciadas do cálculo. Se o layout mudar, ou muda para dry-wall (muito mais leve) ou recalcula a laje.',
+    normaId: '6120',
+    normaCode: 'NBR 6120',
+    normaDisplay: 'NBR 6120 — Ações em Estruturas',
+    fechamento:
+      'O "jeitinho" de mudar a parede um metro pro lado condena a laje a suportar um peso invisível para a qual nunca foi armada.',
+    aprofundamentoId: 'premissas-projeto',
+  },
+
+  // ----------------------------------------------------
+  // Problemas NBR 6122
+  // ----------------------------------------------------
   {
     id: 'nbr6122-01',
-    title: 'ERRO QUE CUSTA CARO 01: Recalque diferencial em sapatas',
+    title: 'ERRO QUE CUSTA CARO 07: Recalque diferencial em sapatas',
     contexto:
       'A fundação está se movimentando de forma desigual. Não é a estrutura que está falhando, é o solo respondendo de forma diferente sob cargas próximas. Sapata não “erra”. Ela responde ao que o solo entrega.',
     naObra:
@@ -854,7 +982,7 @@ export const problemas: Problema[] = [
   },
   {
     id: 'nbr6122-02',
-    title: 'ERRO QUE CUSTA CARO 02: SPT não converge e a decisão ignora isso',
+    title: 'ERRO QUE CUSTA CARO 08: SPT não converge e a decisão ignora isso',
     contexto:
       'Os furos de sondagem mostram comportamentos diferentes, mas a decisão de fundação trata o solo como se fosse uniforme. O dado está mostrando incerteza, o projeto está assumindo certeza.',
     naObra:
@@ -876,7 +1004,7 @@ export const problemas: Problema[] = [
   },
   {
     id: 'nbr6122-03',
-    title: 'ERRO QUE CUSTA CARO 03: Radier adotado como solução universal',
+    title: 'ERRO QUE CUSTA CARO 09: Radier adotado como solução universal',
     contexto:
       'O radier está sendo escolhido não porque é a melhor solução, mas porque “resolve tudo de uma vez”. Só que isso é percepção — não comportamento real.',
     naObra:
@@ -898,7 +1026,7 @@ export const problemas: Problema[] = [
   },
   {
     id: 'nbr6122-04',
-    title: 'ERRO QUE CUSTA CARO 04: Capacidade de carga superestimada por correlação simplificada',
+    title: 'ERRO QUE CUSTA CARO 10: Capacidade de carga superestimada',
     contexto:
       'A capacidade de carga está sendo estimada por correlação direta com NSPT sem considerar o tipo de solo, condição de saturação e mecanismo real de ruptura. O número aparece, mas o comportamento não foi entendido.',
     naObra:
@@ -920,7 +1048,7 @@ export const problemas: Problema[] = [
   },
   {
     id: 'nbr6122-05',
-    title: 'ERRO QUE CUSTA CARO 05: Execução de estaca sem controle = capacidade fictícia',
+    title: 'ERRO QUE CUSTA CARO 11: Execução de estaca sem controle',
     contexto:
       'A estaca foi dimensionada corretamente, mas a execução não garantiu que ela realmente existe como projetada. O projeto prevê uma capacidade, a obra entrega outra.',
     naObra:
@@ -941,7 +1069,7 @@ export const problemas: Problema[] = [
   },
   {
     id: 'nbr6122-06',
-    title: 'ERRO QUE CUSTA CARO 06: Falta de investigação adequada = decisão no escuro',
+    title: 'ERRO QUE CUSTA CARO 12: Falta de investigação adequada',
     contexto:
       'A fundação está sendo definida com base em informação insuficiente do solo. Não é que a decisão esteja errada, é que ela foi tomada sem base suficiente.',
     naObra:
@@ -960,30 +1088,13 @@ export const problemas: Problema[] = [
     fechamento: 'sem investigação, não existe projeto de fundação — existe tentativa com risco.',
     aprofundamentoId: 'spt-pratica',
   },
-  {
-    id: 'nbr6122-07',
-    title: 'ERRO QUE CUSTA CARO 07: Falta de registro técnico = perda de defesa',
-    contexto:
-      'As decisões foram tomadas e a obra executada, mas não existe registro técnico consistente. O problema não é só técnico, é ausência de evidência.',
-    naObra:
-      'ausência de relatório de sondagem formal anexado; falta de registro de alterações de projeto; inexistência de diário de obra técnico; execução sem documentação fotográfica adequada; decisões tomadas verbalmente.',
-    causa:
-      'subestimação da importância do registro; foco apenas na execução; falta de organização técnica; confiança excessiva entre as partes; ausência de cultura de rastreabilidade.',
-    consequencia:
-      'impossibilidade de comprovar decisões técnicas; perda de defesa em caso de litígio; responsabilização indevida; dificuldade de análise pericial; conflitos prolongados.',
-    comoLer:
-      'registro técnico não é burocracia, é instrumento de proteção; decisão sem registro → vulnerável; execução sem evidência → questionável; ausência de histórico → interpretação livre de terceiros.',
-    oQueFazer:
-      'manter registro formal de premissas de projeto; documentar todas as alterações; registrar execução (fotos, relatórios, medições); manter rastreabilidade de decisões; organizar documentação técnica da obra.',
-    normaId: '6122',
-    normaCode: 'NBR 6122',
-    normaDisplay: 'NBR 6122 — Fundações (Complementar: NBR 13752:2024 – Perícias de Engenharia)',
-    fechamento: 'quem não registra o que fez, aceita que outros definam o que aconteceu.',
-    aprofundamentoId: 'registro-obra',
-  },
+
+  // ----------------------------------------------------
+  // Problemas NBR 15575
+  // ----------------------------------------------------
   {
     id: 'nbr15575-01',
-    title: 'ERRO QUE CUSTA CARO 08: Tratar desempenho como detalhe opcional (NBR 15575)',
+    title: 'ERRO QUE CUSTA CARO 13: Tratar desempenho como opcional',
     contexto:
       'Ignorar os requisitos de desempenho acústico, térmico e lumínico durante a fase de concepção e projeto, tratando-os como "melhorias de luxo" e não como requisitos e obrigações inegociáveis.',
     naObra:
@@ -1004,8 +1115,7 @@ export const problemas: Problema[] = [
   },
   {
     id: 'nbr15575-02',
-    title:
-      'ERRO QUE CUSTA CARO 09: Confiar cegamente em materiais e esquecer o sistema (NBR 15575)',
+    title: 'ERRO QUE CUSTA CARO 14: Confiar em materiais, esquecer o sistema',
     contexto:
       'A falha clássica na interface. O desempenho geral da vedação (acústico, água) depende crucialmente de como o sistema é instalado, e não apenas de ser um material de alto padrão com selo no catálogo.',
     naObra:
@@ -1027,7 +1137,7 @@ export const problemas: Problema[] = [
   },
   {
     id: 'nbr15575-03',
-    title: 'ERRO QUE CUSTA CARO 10: Ignorar olimpicamente a percepção do usuário (NBR 15575)',
+    title: 'ERRO QUE CUSTA CARO 15: Ignorar a percepção do usuário',
     contexto:
       'Construir focado apenas na estabilidade estática. Se o usuário sente profundo desconforto e as funções básicas de habitação estão prejudicadas, o problema técnico (e jurídico) existe sim.',
     naObra:
@@ -1049,7 +1159,7 @@ export const problemas: Problema[] = [
   },
   {
     id: 'nbr15575-04',
-    title: 'ERRO QUE CUSTA CARO 11: Não documentar critérios nem VUP (NBR 15575)',
+    title: 'ERRO QUE CUSTA CARO 16: Não documentar critérios nem VUP',
     contexto:
       'Entregar o empreendimento sem defining e registrar formalmente (em Manuais) a Vida Útil de Projeto (VUP), condições de manutenção ou classes de isolamento, tirando toda chance de defesa no futuro.',
     naObra:
@@ -1071,7 +1181,7 @@ export const problemas: Problema[] = [
   },
   {
     id: 'nbr15575-05',
-    title: 'ERRO QUE CUSTA CARO 12: Ausência de provas de execução em campo (NBR 15575)',
+    title: 'ERRO QUE CUSTA CARO 17: Ausência de provas de execução',
     contexto:
       'Falta de rastreabilidade construtiva e de ensaios in loco das fases da obra que determinam o desempenho e que ficam ocultas debaixo de argamassas e forros (como mantas acústicas e mantas de laje).',
     naObra:
@@ -1091,31 +1201,13 @@ export const problemas: Problema[] = [
       'A obra mais bem feita do mundo é perfeitamente inútil perante um tribunal sem os registros probatórios dessa excelência.',
     aprofundamentoId: 'documentar-desempenho',
   },
-  {
-    id: 'nbr15575-06',
-    title: 'ERRO QUE CUSTA CARO 13: Tratar patologia de forma não-sistêmica (NBR 15575)',
-    contexto:
-      'Abordar os sintomas evidentes sem buscar compreender ou atacar a origem verdadeira da falha. O desempenho de um prédio é como o corpo humano: raramente uma febre é apenas um problema de pele.',
-    naObra:
-      'Vedar por fora os caixilhos com mastique tentando estancar água sem refazer a calafetação da soleira ou preencher de espuma um vão sem tratar a laje contínua entre ambientes.',
-    causa:
-      'Falta da visão integral "Sintomática vs Sistêmica". Impaciência em aplicar a engenharia investigativa e vontade de resolver no curto prazo com a opção mais barata e rápida.',
-    consequencia:
-      'Patologias e vazamentos completamente recorrentes, custos operacionais inflados por garantias eternas, desgaste crônico de relacionamento com os proprietários condôminos.',
-    comoLer:
-      'Uma patologia habitacional de isolamento não é equivalente a um "corte a ser tapado", e sim ao sintoma de um sistema em desequilíbrio ou rompido em sua cadeia construtiva.',
-    oQueFazer:
-      'Mapear a fundo origens de falha (pontes térmicas não tratadas, caminhos de fuga do som estrutural, rotas ocultas de percolação de líquidos) e sanar a rede defeituosa.',
-    normaId: '15575',
-    normaCode: 'NBR 15575',
-    normaDisplay: 'NBR 15575 — Desempenho Habitacional',
-    fechamento:
-      'Cuidar apenas do sintoma sem entender o sistema é a garantia absoluta de que a dor voltará, mais grave, e talvez noutro ponto vizinho.',
-    aprofundamentoId: 'estanqueidade',
-  },
+
+  // ----------------------------------------------------
+  // Problemas NBR 6118
+  // ----------------------------------------------------
   {
     id: 'nbr6118-01',
-    title: 'ERRO QUE CUSTA CARO 14: Detalhamento mal resolvido',
+    title: 'ERRO QUE CUSTA CARO 18: Detalhamento mal resolvido',
     contexto:
       'O projeto no papel é uma coisa, a montagem na fôrma é outra. Os erros começam no campo com armadura mal posicionada, flagrante falta de continuidade nas emendas e ancoragem inadequada nos apoios.',
     naObra:
@@ -1137,7 +1229,7 @@ export const problemas: Problema[] = [
   },
   {
     id: 'nbr6118-02',
-    title: 'ERRO QUE CUSTA CARO 15: Execução fora do que foi projetado',
+    title: 'ERRO QUE CUSTA CARO 19: Execução fora do projeto',
     contexto:
       'Decisões de campo que alteram a geometria e a proteção da peça armada. Isso se manifesta em cobrimento não respeitado, espaçamento alterado em obra e excesso de improviso em armadura.',
     naObra:
@@ -1159,7 +1251,7 @@ export const problemas: Problema[] = [
   },
   {
     id: 'nbr6118-03',
-    title: 'ERRO QUE CUSTA CARO 16: Fissuração descontrolada',
+    title: 'ERRO QUE CUSTA CARO 20: Fissuração descontrolada',
     contexto:
       'O concreto trinca por natureza, mas a obra trata a movimentação como imprevisto. O erro sistêmico ocorre quando há retração ignorada, falta de controle de deformação geométrica e ausência de juntas de indução.',
     naObra:
@@ -1181,7 +1273,7 @@ export const problemas: Problema[] = [
   },
   {
     id: 'nbr6118-04',
-    title: 'ERRO QUE CUSTA CARO 17: Concreto na prática (não no papel)',
+    title: 'ERRO QUE CUSTA CARO 21: Concreto diferente do laboratório',
     contexto:
       'O caminhão entrega o material ensaiado, mas o canteiro o destrói. O concreto na prática sofre danos irreversíveis com traço alterado (adição de água), lançamento incorreto (alturas excessivas) e adensamento mal feito.',
     naObra:
@@ -1203,29 +1295,7 @@ export const problemas: Problema[] = [
   },
   {
     id: 'nbr6118-05',
-    title: 'ERRO QUE CUSTA CARO 18: Interação estrutura × vedação',
-    contexto:
-      'Tratar a estrutura como inerte, quando na verdade ela se move e flete. O erro clássico surge como fissuras em alvenaria devido à transferência de deformação da laje e total incompatibilidade entre sistemas (rígido vs flexível).',
-    naObra:
-      'Surgimento de trincas de esmagamento (horizontais) no topo das paredes logo abaixo das vigas de grandes vãos; portas e esquadrias que empenam repentinamente logo nos primeiros meses de ocupação.',
-    causa:
-      'Retirada ultra-precoce do escoramento levando à fluência excessiva; estruturas dimensionadas nos limites de serviço (super flexíveis); e chumbamento rígido (argamassa fechada) da alvenaria na estrutura superior.',
-    consequencia:
-      'A parede, que não foi projetada para receber peso de andares superiores, passa a trabalhar como um suporte estrutural forçado, levando à ruptura cisalhante de blocos, afundamento e colapso estético sistêmico.',
-    comoLer:
-      'A estrutura deforma ao assumir o seu próprio peso (flecha inercial). Se você não deixar um espaço seguro (folga) preenchido de material resiliente entre o concreto que desce e a alvenaria, ela inevitavelmente vai quebrar.',
-    oQueFazer:
-      'Manter o tempo de desforma rigorosamente; executar encunhamento com argamassas flexíveis ou espumas de PU expansivas; detalhar e executar de forma correta as contra-flechas de projeto estrutural.',
-    normaId: '6118',
-    normaCode: 'NBR 6118',
-    normaDisplay: 'NBR 6118 — Estruturas de Concreto',
-    fechamento:
-      'A estrutura de concreto precisa de espaço para se "acomodar". Quem trava seu caminho pagará o preço do esmagamento.',
-    aprofundamentoId: 'fissuracao-aviso',
-  },
-  {
-    id: 'nbr6118-06',
-    title: 'ERRO QUE CUSTA CARO 19: Controle que não existe',
+    title: 'ERRO QUE CUSTA CARO 22: Controle que não existe',
     contexto:
       'A execução ocorre às cegas, sem lastro técnico. A gestão falha devido à ausência de inspeção real, contínua falta de registro das etapas críticas e o uso irresponsável da aceitação visual como critério de liberação.',
     naObra:
@@ -1260,6 +1330,93 @@ export type Aprofundamento = {
 }
 
 const aprofundamentosDetalhes: Record<string, Partial<Aprofundamento>> = {
+  // Aprofundamentos NBR 6120
+  'carga-cenario-uso': {
+    context:
+      'Carga não é um número aleatório selecionado numa tabela; ela é a tradução física do cenário de uso arquitetônico que a estrutura precisará tolerar ininterruptamente por décadas.',
+    naPratica:
+      'Dimensionar toda a área de escritórios com carga genérica de 2.0 kN/m² e esquecer que os lojistas instalariam um "data center" ou uma sala cofre concentrando 10.0 kN/m² na mesma laje esbelta.',
+    erroComum:
+      'Omitir uma reunião obrigatória de "kick-off de cargas" onde a Arquitetura define formalmente para a Estrutura o que de fato será instalado nos ambientes, baseando-se apenas em suposições genéricas de norma.',
+    comoInterpretar:
+      'O valor de norma é o limite inferior mínimo de sobrevivência. A verdadeira engenharia mapeia o que o cliente realmente tenciona usar (equipamentos, caixas, veículos pesados).',
+    oQueFazer:
+      'Estabelecer um Memorial Descritivo de Premissas de Carga exaustivo, colher a assinatura do cliente/incorporador e fixá-lo como o anexo principal indissociável do projeto estrutural.',
+    fechamento:
+      'Se você não sabe para que o ambiente serve, você está chutando o peso, e o concreto não tolera matemática baseada em fé.',
+  },
+  'subestimacao-carga': {
+    context:
+      'O erro mais invisível e traiçoeiro da engenharia. Trata-se do descompasso entre a premissa otimista do projetista (que tenta "deixar o aço mais barato") e a realidade punitiva da gravidade.',
+    naPratica:
+      'Lajes de garagens dimensionadas apenas para "carros de passeio" sem restrições de pé-direito, permitindo a entrada contínua de caminhões de mudança ou SUVs blindadas pesadíssimas sobre lajes nervuradas.',
+    erroComum:
+      'Adotar cargas mínimas extremas no cálculo e simultaneamente ignorar majoradores de impacto (vibração), acreditando que "os coeficientes de segurança da norma cobrem qualquer exagero". (Eles não cobrem).',
+    comoInterpretar:
+      'Quando uma laje apresenta flecha crônica e ininterrupta, mas o ensaio esclerométrico atesta a qualidade do concreto, a laje não faliu: ela simplesmente está carregando o que não foi dimensionada para carregar.',
+    oQueFazer:
+      'Adotar premissas realistas, sempre puxadas para o cenário de longo prazo. Em áreas suscetíveis à troca de ocupação (térreo comercial), utilizar lajes mais parrudas com reservas técnicas intencionais.',
+    fechamento:
+      'Um carregamento subestimado não derruba o prédio de imediato, mas transforma a sua vida útil num inferno de trincas irreparáveis e ações judiciais.',
+  },
+  'cargas-adicionais': {
+    context:
+      'A estrutura nasce compatível com a teoria, mas vai sendo assassinada lentamente na prática construtiva pelas alterações feitas durante a execução sem aviso à projetista estrutural.',
+    naPratica:
+      'Decidir na obra rebaixar todo o piso com um "enchimento de argamassa e entulho" de 10cm, adicionando 200kg por metro quadrado permanente sobre uma laje que só previa cerâmica colada.',
+    erroComum:
+      'Achar que porque o concreto "parece duro e grosso", ele aguenta "qualquer coisinha a mais". Nenhuma carga "a mais" é pequena quando multiplicada pela área total de uma edificação.',
+    comoInterpretar:
+      "Qualquer camada não prevista no memorial (forros pesados de acartonado, espelhos d'água paisagísticos, terra para jardins suspensos) age como um veneno corrosivo contra a capacidade portante restante da peça.",
+    oQueFazer:
+      'Qualquer mudança arquitetônica ou de revestimento pós-projeto aprovado deve obrigatoriamente gerar uma Requisição de Informação (RFI) para o escritório de cálculo validar a capacidade remanescente.',
+    fechamento:
+      'Estrutura não tem "um pouco de sobra" para quem adiciona caminhões de enchimento invisíveis. Cada quilo posto no campo, deve ter sido pesada no computador.',
+  },
+  'distribuicao-carga': {
+    context:
+      'Tratar forças violentas como se fossem suaves nuvens matemáticas. Um peso total aceitável no ambiente, quando aplicado concentrado na ponta de agulha de quatro sapatas metálicas, perfura a laje em vez de flexioná-la.',
+    naPratica:
+      'Instalação de centrais de ar condicionado (chillers) enormes ou cofres de banco apoiados diretamente sobre a capa da laje, sem vigas de transição ou coxins emborrachados para dissipar o golpe.',
+    erroComum:
+      'Omitir o estudo de cargas pontuais ou linhas de tensão. Transformar todos os pesos em cargas "uniformemente distribuídas" no software de cálculo para tentar ganhar velocidade na modelagem.',
+    comoInterpretar:
+      'Distribuição é diluição. Sem diluição por vigas secundárias ou engrossamentos na capa de concreto estrutural, a carga excepcional cria cisalhamento extremo (punção), rompendo a peça brutalmente por rasgamento.',
+    oQueFazer:
+      'Mapear no projeto de arquitetura todos os pesados itens técnicos. O projeto estrutural deve prover maciços, lajes com espessura duplicada local ou pórticos rígidos sob estes apoios de alta compressão.',
+    fechamento:
+      'A laje pode suportar 10 elefantes caminhando espalhados, mas pode colapsar com apenas um caminhando sobre uma única pata metálica.',
+  },
+  'mudanca-uso-6120': {
+    context:
+      'A NBR 6120 vincula estritamente a "classe de peso" de um prédio à sua utilidade declarada. Mudar o negócio que opera dentro do prédio, destrói essa premissa instantaneamente.',
+    naPratica:
+      'Alugar uma laje de andar corrido residencial (prevista para 1.5 a 2.0 kN/m²) e transformá-la numa grande academia de ginástica lotada de equipamentos e impactos dinâmicos (que demandaria de 3.0 a 5.0 kN/m²).',
+    erroComum:
+      'Síndicos ou administradoras autorizarem "Retrofits" visuais profundos ou mudanças radicais de zoneamento comercial sem exigirem dos locatários a emissão de um Laudo Estrutural (ART) que confirme a viabilidade.',
+    comoInterpretar:
+      'Estruturas velhas e já construídas não se adaptam sozinhas a novos propósitos industriais. O risco de fadiga das peças pela introdução não monitorada de vibrações contínuas e pesos excedentes é gigantesco.',
+    oQueFazer:
+      'Exigir que todo projeto de "change of use" (reforma para novo fim) contenha a recertificação analítica de vigas e lajes, acompanhada da instalação de reforços sistêmicos com fibras de carbono ou chapas soldadas quando a norma não for mais atendida.',
+    fechamento:
+      'Comprar uma casa para montar uma estamparia é assinar um contrato cego de colapso estrutural, se a laje jamais for testada para o que ela vai enfrentar.',
+  },
+  'premissas-projeto': {
+    context:
+      'Uma vez fechadas e arquivadas as pastas de cálculos na época da fundação, o documento vira tabu e nunca mais é visitado durante os três ou mais anos de construção do edifício.',
+    naPratica:
+      'O estande de vendas "deu uma ideia" e alterou a fachada inteira no meio da obra. O setor de suprimentos comprou uma caixilharia importada e dupla com o triplo do peso original por "oportunidade" de mercado. A estrutura seguiu com o cálculo velho.',
+    erroComum:
+      'Tratar o projeto estrutural apenas como os "desenhos de montagem de forma e corte de ferro". Esquecer que atrelado a ele há um documento matemático imutável que foi balizado pelos produtos originais da arquitetura daquele ano.',
+    comoInterpretar:
+      'Nenhum projeto estrutural é um monolito blindado contra mudanças comerciais. Cada grande alteração em catálogos, sistemas hidrossanitários e vedações reflete imediatamente na prancha de fôrmas, devendo retroalimentar o calculista.',
+    oQueFazer:
+      'Impor auditorias de premissas a cada nova revisão arquitetônica (checkpoint). Uma rotina clara onde o time de obra e projeto declaram: "Isso mudou de peso. Sr. Calculista, autoriza essa nova parede flutuante ou precisa de viga nova?"',
+    fechamento:
+      'Se o canteiro e as compras rodam num mundo livre ignorando a folha de cargas do projetista, a edificação finalizada já nasce doente e condenada.',
+  },
+
+  // Outros aprofundamentos...
   'spt-pratica': {
     context:
       'SPT não é número. É leitura de comportamento do solo. O erro começa quando o resultado é tratado como valor absoluto, sem contexto de profundidade, material e condição de execução.',
