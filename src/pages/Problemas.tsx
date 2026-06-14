@@ -11,6 +11,7 @@ const categories = [
   { id: '6118', title: 'Estruturas', subtitle: 'Módulo NBR 6118' },
   { id: '15575', title: 'Desempenho', subtitle: 'Módulo NBR 15575' },
   { id: '5410', title: 'Elétrica', subtitle: 'Módulo NBR 5410' },
+  { id: '5626', title: 'Hidráulica', subtitle: 'Módulo NBR 5626' },
 ]
 
 export default function Problemas() {
@@ -119,3 +120,4 @@ export default function Problemas() {
     </div>
   )
 }
+
